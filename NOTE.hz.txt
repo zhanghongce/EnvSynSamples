@@ -1,0 +1,5 @@
+use pono: /opt/moved/woodpecker/generic-sqed-demo/pono/build/pono
+
+AES: don't know if constraints are too tight
+PICO: start from reset needs debugging
+
