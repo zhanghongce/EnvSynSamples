@@ -1,0 +1,12 @@
+read_verilog -sv ../verilog/aes_128_abs.v ../verilog/aes_top.v ../verilog/reg2byte.v ../verilog/reg16byte.v ../verilog/reg32byte.v  ../verilog/reg256byte.v
+prep -top aes_top
+
+hierarchy -check
+proc
+chformal -assume -early;
+
+memory -nomap;
+flatten
+setundef -undriven -expose;
+sim -clock clk -reset rst -rstlen 1 -n 1 -w aes_top
+write_btor -s design.btor

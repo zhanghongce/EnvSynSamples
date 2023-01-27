@@ -1,0 +1,501 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Wolf <claire@symbioticeda.com>          |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+2406 (git sha1 c37a278d, gcc 7.5.0-3ubuntu1~18.04 -fPIC -Os)
+
+
+-- Executing script file `gen_btor.ys' --
+
+1. Executing Verilog-2005 frontend: wrapper.v
+Parsing SystemVerilog input from `wrapper.v' to AST representation.
+Generating RTLIL representation for module `\wrapper'.
+Generating RTLIL representation for module `\counter__DOT__INC'.
+Generating RTLIL representation for module `\opposite'.
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \wrapper
+Used module:     \opposite
+Used module:     \counter__DOT__INC
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \wrapper
+Used module:     \opposite
+Used module:     \counter__DOT__INC
+Removed 0 unused modules.
+Module wrapper directly or indirectly contains formal properties -> setting "keep" attribute.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$wrapper.v:211$56 in module opposite.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:204$54 in module opposite.
+Marked 2 switch rules as full_case in process $proc$wrapper.v:181$48 in module counter__DOT__INC.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:104$10 in module wrapper.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:100$9 in module wrapper.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:96$8 in module wrapper.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:92$6 in module wrapper.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:88$1 in module wrapper.
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\opposite.$proc$wrapper.v:211$56'.
+     1/1: $0\imp[3:0]
+Creating decoders for process `\opposite.$proc$wrapper.v:204$54'.
+     1/1: $0\v[3:0]
+Creating decoders for process `\counter__DOT__INC.$proc$wrapper.v:181$48'.
+     1/2: $0\__COUNTER_start__n2[7:0]
+     2/2: $0\v[3:0]
+Creating decoders for process `\wrapper.$proc$wrapper.v:108$17'.
+     1/1: $0\__RESETED__[0:0]
+Creating decoders for process `\wrapper.$proc$wrapper.v:104$10'.
+     1/1: $0\__2ndENDED__[0:0]
+Creating decoders for process `\wrapper.$proc$wrapper.v:100$9'.
+     1/1: $0\__ENDED__[0:0]
+Creating decoders for process `\wrapper.$proc$wrapper.v:96$8'.
+     1/1: $0\__STARTED__[0:0]
+Creating decoders for process `\wrapper.$proc$wrapper.v:92$6'.
+     1/1: $0\__START__[0:0]
+Creating decoders for process `\wrapper.$proc$wrapper.v:88$1'.
+     1/1: $0\__CYCLE_CNT__[4:0]
+
+2.2.7. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.8. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\opposite.\imp' using process `\opposite.$proc$wrapper.v:211$56'.
+  created $dff cell `$procdff$115' with positive edge clock.
+Creating register for signal `\opposite.\v' using process `\opposite.$proc$wrapper.v:204$54'.
+  created $dff cell `$procdff$116' with positive edge clock.
+Creating register for signal `\counter__DOT__INC.\v' using process `\counter__DOT__INC.$proc$wrapper.v:181$48'.
+  created $dff cell `$procdff$117' with positive edge clock.
+Creating register for signal `\counter__DOT__INC.\__COUNTER_start__n2' using process `\counter__DOT__INC.$proc$wrapper.v:181$48'.
+  created $dff cell `$procdff$118' with positive edge clock.
+Creating register for signal `\wrapper.\__RESETED__' using process `\wrapper.$proc$wrapper.v:108$17'.
+  created $dff cell `$procdff$119' with positive edge clock.
+Creating register for signal `\wrapper.\__2ndENDED__' using process `\wrapper.$proc$wrapper.v:104$10'.
+  created $dff cell `$procdff$120' with positive edge clock.
+Creating register for signal `\wrapper.\__ENDED__' using process `\wrapper.$proc$wrapper.v:100$9'.
+  created $dff cell `$procdff$121' with positive edge clock.
+Creating register for signal `\wrapper.\__STARTED__' using process `\wrapper.$proc$wrapper.v:96$8'.
+  created $dff cell `$procdff$122' with positive edge clock.
+Creating register for signal `\wrapper.\__START__' using process `\wrapper.$proc$wrapper.v:92$6'.
+  created $dff cell `$procdff$123' with positive edge clock.
+Creating register for signal `\wrapper.\__CYCLE_CNT__' using process `\wrapper.$proc$wrapper.v:88$1'.
+  created $dff cell `$procdff$124' with positive edge clock.
+
+2.2.9. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `\opposite.$proc$wrapper.v:211$56'.
+Removing empty process `opposite.$proc$wrapper.v:211$56'.
+Found and cleaned up 2 empty switches in `\opposite.$proc$wrapper.v:204$54'.
+Removing empty process `opposite.$proc$wrapper.v:204$54'.
+Found and cleaned up 5 empty switches in `\counter__DOT__INC.$proc$wrapper.v:181$48'.
+Removing empty process `counter__DOT__INC.$proc$wrapper.v:181$48'.
+Found and cleaned up 1 empty switch in `\wrapper.$proc$wrapper.v:108$17'.
+Removing empty process `wrapper.$proc$wrapper.v:108$17'.
+Found and cleaned up 2 empty switches in `\wrapper.$proc$wrapper.v:104$10'.
+Removing empty process `wrapper.$proc$wrapper.v:104$10'.
+Found and cleaned up 2 empty switches in `\wrapper.$proc$wrapper.v:100$9'.
+Removing empty process `wrapper.$proc$wrapper.v:100$9'.
+Found and cleaned up 2 empty switches in `\wrapper.$proc$wrapper.v:96$8'.
+Removing empty process `wrapper.$proc$wrapper.v:96$8'.
+Found and cleaned up 2 empty switches in `\wrapper.$proc$wrapper.v:92$6'.
+Removing empty process `wrapper.$proc$wrapper.v:92$6'.
+Found and cleaned up 2 empty switches in `\wrapper.$proc$wrapper.v:88$1'.
+Removing empty process `wrapper.$proc$wrapper.v:88$1'.
+Cleaned up 20 empty switches.
+
+2.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module opposite.
+Optimizing module counter__DOT__INC.
+<suppressed ~2 debug messages>
+Optimizing module wrapper.
+<suppressed ~1 debug messages>
+
+2.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \opposite..
+Finding unused cells or wires in module \counter__DOT__INC..
+Finding unused cells or wires in module \wrapper..
+Removed 3 unused cells and 50 unused wires.
+<suppressed ~6 debug messages>
+
+2.5. Executing CHECK pass (checking for obvious problems).
+checking module counter__DOT__INC..
+Warning: Wire counter__DOT__INC.\v_randinit [3] is used but has no driver.
+Warning: Wire counter__DOT__INC.\v_randinit [2] is used but has no driver.
+Warning: Wire counter__DOT__INC.\v_randinit [1] is used but has no driver.
+Warning: Wire counter__DOT__INC.\v_randinit [0] is used but has no driver.
+checking module opposite..
+checking module wrapper..
+found and reported 4 problems.
+
+2.6. Executing OPT pass (performing simple optimizations).
+
+2.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter__DOT__INC.
+Optimizing module opposite.
+Optimizing module wrapper.
+
+2.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter__DOT__INC'.
+Finding identical cells in module `\opposite'.
+Finding identical cells in module `\wrapper'.
+<suppressed ~21 debug messages>
+Removed a total of 7 cells.
+
+2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter__DOT__INC..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \opposite..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+2.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter__DOT__INC.
+  Optimizing cells in module \opposite.
+  Optimizing cells in module \wrapper.
+Performed a total of 0 changes.
+
+2.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter__DOT__INC'.
+Finding identical cells in module `\opposite'.
+Finding identical cells in module `\wrapper'.
+Removed a total of 0 cells.
+
+2.6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter__DOT__INC..
+Finding unused cells or wires in module \opposite..
+Finding unused cells or wires in module \wrapper..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~1 debug messages>
+
+2.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter__DOT__INC.
+Optimizing module opposite.
+Optimizing module wrapper.
+
+2.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter__DOT__INC..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \opposite..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+2.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter__DOT__INC.
+  Optimizing cells in module \opposite.
+  Optimizing cells in module \wrapper.
+Performed a total of 0 changes.
+
+2.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter__DOT__INC'.
+Finding identical cells in module `\opposite'.
+Finding identical cells in module `\wrapper'.
+Removed a total of 0 cells.
+
+2.6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter__DOT__INC..
+Finding unused cells or wires in module \opposite..
+Finding unused cells or wires in module \wrapper..
+
+2.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter__DOT__INC.
+Optimizing module opposite.
+Optimizing module wrapper.
+
+2.6.16. Finished OPT passes. (There is nothing left to do.)
+
+2.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 3 bits (of 4) from port B of cell counter__DOT__INC.$add$wrapper.v:180$47 ($add).
+Removed top 31 bits (of 32) from port B of cell counter__DOT__INC.$ge$wrapper.v:189$50 ($ge).
+Removed top 24 bits (of 32) from port B of cell counter__DOT__INC.$lt$wrapper.v:189$51 ($lt).
+Removed top 31 bits (of 32) from port B of cell counter__DOT__INC.$add$wrapper.v:190$53 ($add).
+Removed top 24 bits (of 32) from port Y of cell counter__DOT__INC.$add$wrapper.v:190$53 ($add).
+Removed top 24 bits (of 32) from wire counter__DOT__INC.$add$wrapper.v:190$53_Y.
+Removed top 31 bits (of 32) from port B of cell opposite.$add$wrapper.v:208$55 ($add).
+Removed top 28 bits (of 32) from port Y of cell opposite.$add$wrapper.v:208$55 ($add).
+Removed top 31 bits (of 32) from port B of cell opposite.$sub$wrapper.v:215$58 ($sub).
+Removed top 28 bits (of 32) from port Y of cell opposite.$sub$wrapper.v:215$58 ($sub).
+Removed top 28 bits (of 32) from wire opposite.$add$wrapper.v:208$55_Y.
+Removed top 28 bits (of 32) from wire opposite.$sub$wrapper.v:215$58_Y.
+Removed top 28 bits (of 32) from port B of cell wrapper.$lt$wrapper.v:90$3 ($lt).
+Removed top 31 bits (of 32) from port B of cell wrapper.$add$wrapper.v:90$5 ($add).
+Removed top 27 bits (of 32) from port Y of cell wrapper.$add$wrapper.v:90$5 ($add).
+Removed top 4 bits (of 5) from port B of cell wrapper.$eq$wrapper.v:122$18 ($eq).
+Removed top 27 bits (of 32) from wire wrapper.$add$wrapper.v:90$5_Y.
+
+2.8. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter__DOT__INC..
+Finding unused cells or wires in module \opposite..
+Finding unused cells or wires in module \wrapper..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~3 debug messages>
+
+2.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.11. Executing OPT pass (performing simple optimizations).
+
+2.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter__DOT__INC.
+Optimizing module opposite.
+Optimizing module wrapper.
+
+2.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter__DOT__INC'.
+Finding identical cells in module `\opposite'.
+Finding identical cells in module `\wrapper'.
+Removed a total of 0 cells.
+
+2.11.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter__DOT__INC..
+Finding unused cells or wires in module \opposite..
+Finding unused cells or wires in module \wrapper..
+
+2.11.5. Finished fast OPT passes.
+
+2.12. Printing statistics.
+
+=== counter__DOT__INC ===
+
+   Number of wires:                 24
+   Number of wire bits:             87
+   Number of public wires:          13
+   Number of public wire bits:      32
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 14
+     $add                            2
+     $dff                            2
+     $ge                             1
+     $logic_and                      1
+     $lt                             1
+     $mux                            7
+
+=== opposite ===
+
+   Number of wires:                 17
+   Number of wire bits:             84
+   Number of public wires:           9
+   Number of public wire bits:      24
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 11
+     $add                            1
+     $and                            1
+     $dff                            2
+     $mux                            4
+     $not                            1
+     $sub                            2
+
+=== wrapper ===
+
+   Number of wires:                 59
+   Number of wire bits:             87
+   Number of public wires:          29
+   Number of public wire bits:      45
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 49
+     $add                            1
+     $assert                         1
+     $assume                         1
+     $dff                            6
+     $eq                             3
+     $logic_and                     10
+     $logic_not                      5
+     $logic_or                       7
+     $lt                             1
+     $mux                           11
+     $not                            1
+     counter__DOT__INC               1
+     opposite                        1
+
+=== design hierarchy ===
+
+   wrapper                           1
+     counter__DOT__INC               1
+     opposite                        1
+
+   Number of wires:                100
+   Number of wire bits:            258
+   Number of public wires:          51
+   Number of public wire bits:     101
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 72
+     $add                            4
+     $and                            1
+     $assert                         1
+     $assume                         1
+     $dff                           10
+     $eq                             3
+     $ge                             1
+     $logic_and                     11
+     $logic_not                      5
+     $logic_or                       7
+     $lt                             2
+     $mux                           22
+     $not                            2
+     $sub                            2
+
+2.13. Executing CHECK pass (checking for obvious problems).
+checking module counter__DOT__INC..
+Warning: Wire counter__DOT__INC.\v_randinit [3] is used but has no driver.
+Warning: Wire counter__DOT__INC.\v_randinit [2] is used but has no driver.
+Warning: Wire counter__DOT__INC.\v_randinit [1] is used but has no driver.
+Warning: Wire counter__DOT__INC.\v_randinit [0] is used but has no driver.
+checking module opposite..
+checking module wrapper..
+found and reported 4 problems.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \wrapper
+Used module:     \counter__DOT__INC
+Used module:     \opposite
+
+3.2. Analyzing design hierarchy..
+Top module:  \wrapper
+Used module:     \counter__DOT__INC
+Used module:     \opposite
+Removed 0 unused modules.
+Module wrapper directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+4.7. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+4.8. Executing PROC_DFF pass (convert process syncs to FFs).
+
+4.9. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5. Executing MEMORY pass.
+
+5.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+5.2. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+5.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter__DOT__INC..
+Finding unused cells or wires in module \opposite..
+Finding unused cells or wires in module \wrapper..
+
+5.4. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+5.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter__DOT__INC..
+Finding unused cells or wires in module \opposite..
+Finding unused cells or wires in module \wrapper..
+
+5.6. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+6. Executing FLATTEN pass (flatten design).
+Using template counter__DOT__INC for cells of type counter__DOT__INC.
+Using template opposite for cells of type opposite.
+<suppressed ~2 debug messages>
+No more expansions possible.
+Deleting now unused module counter__DOT__INC.
+Deleting now unused module opposite.
+
+7. Executing SETUNDEF pass (replace undef values with defined constants).
+Using default as -undef with -expose.
+Exposing undriven wire \ILA.v_randinit as input.
+
+8. Executing SIM pass (simulate the circuit).
+Simulating cycle 0.
+Warning: Assert wrapper.normalassert (wrapper.v:140.1-140.54) failed.
+Assumption wrapper.all_assume (wrapper.v:143.1-143.52) failed.
+Warning: Assert wrapper.normalassert (wrapper.v:140.1-140.54) failed.
+Assumption wrapper.all_assume (wrapper.v:143.1-143.52) failed.
+Simulating cycle 1.
+Assumption wrapper.all_assume (wrapper.v:143.1-143.52) failed.
+
+9. Executing BTOR backend.
+
+Warnings: 5 unique messages, 10 total
+End of script. Logfile hash: 36cd48cce1, CPU: user 0.04s system 0.00s, MEM: 11.32 MB peak
+Yosys 0.9+2406 (git sha1 c37a278d, gcc 7.5.0-3ubuntu1~18.04 -fPIC -Os)
+Time spent: 24% 7x opt_clean (0 sec), 21% 5x opt_expr (0 sec), ...

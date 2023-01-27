@@ -1,0 +1,12 @@
+read_verilog -sv ../verilog/opposite.v
+prep -top opposite
+
+hierarchy -check
+proc
+chformal -assume -early;
+
+memory -nomap;
+flatten
+setundef -undriven -expose;
+sim -clock clk -reset rst -rstlen 1 -n 1 -w opposite
+write_btor -s design.btor

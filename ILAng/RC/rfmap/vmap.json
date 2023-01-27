@@ -1,0 +1,12 @@
+{
+  "state mapping": {  
+  	"v":"RTL.out"
+  },
+  "input mapping" : {
+    "en" : "RTL.en"
+  },
+  "rtl-interface-connection" : {
+    "CLOCK" : "clk",
+    "RESET" : "rst"
+  }
+}

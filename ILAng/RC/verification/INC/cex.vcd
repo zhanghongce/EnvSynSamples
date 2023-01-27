@@ -1,0 +1,132 @@
+$date
+Friday 2023/01/27  11:28:33
+$end
+$version PONO $end
+$timescale 1 ns $end
+$var reg 1 v16 RTL__DOT__en $end
+$var reg 1 v26 __2ndENDED__ $end
+$var reg 5 v17 __CYCLE_CNT__[4:0] $end
+$var reg 1 v3 __ENDED__ $end
+$var reg 1 v9 __ILA_I_en $end
+$var reg 4 v22 __ILA_SO_v[3:0] $end
+$var reg 1 v5 __ILA_counter_decode_of_INC__ $end
+$var reg 1 v6 __RESETED__ $end
+$var reg 1 v7 __STARTED__ $end
+$var reg 1 v43 __START__ $end
+$var reg 1 v2 __VLG_I_en $end
+$var reg 1 v1 dummy_reset $end
+$var wire 4 v23 RTL__DOT__out[3:0] $end
+$var wire 1 v31 __EDCOND__ $end
+$var wire 1 v25 __IEND__ $end
+$var wire 1 v48 __ILA_counter_valid__ $end
+$var wire 1 v49 __ISSUE__ $end
+$var wire 4 v4 __VLG_I_ui[3:0] $end
+$var wire 4 v0 __VLG_O_out[3:0] $end
+$var wire 1 v12 __all_assert_wire__ $end
+$var wire 1 v27 __all_assume_wire__ $end
+$var wire 1 v11 clk $end
+$var wire 1 v14 input_map_assume___p0__ $end
+$var wire 1 v28 issue_decode__p1__ $end
+$var wire 1 v32 issue_valid__p2__ $end
+$var wire 1 v50 noreset__p3__ $end
+$var wire 1 v19 rst $end
+$var wire 1 v29 variable_map_assert__p5__ $end
+$var wire 1 v35 variable_map_assume___p4__ $end
+$scope module ILA $end
+$var reg 8 v47 __COUNTER_start__n2[7:0] $end
+$var reg 1 v46 __ILA_counter_decode_of_INC__ $end
+$var reg 1 v24 __START__ $end
+$var reg 1 v36 en $end
+$var reg 1 v41 n1 $end
+$var reg 4 v30 v[3:0] $end
+$var wire 1 v45 __ILA_counter_valid__ $end
+$var wire 1 v10 bv_1_1_n0 $end
+$var wire 4 v44 bv_4_1_n3[3:0] $end
+$var wire 1 v42 clk $end
+$var wire 4 v40 n4[3:0] $end
+$var wire 1 v8 rst $end
+$var wire 4 v15 v_randinit[3:0] $end
+$upscope $end
+$scope module RTL $end
+$var reg 1 v20 RTL__DOT__en $end
+$var reg 1 v38 en $end
+$var reg 4 v21 imp[3:0] $end
+$var reg 1 v37 rst $end
+$var reg 4 v34 v[3:0] $end
+$var wire 4 v18 RTL__DOT__out[3:0] $end
+$var wire 1 v39 clk $end
+$var wire 4 v33 out[3:0] $end
+$var wire 4 v13 ui[3:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+b1100 v0
+b0 v1
+b1 v2
+b0 v3
+b1111 v4
+b1 v5
+b1 v6
+b0 v7
+b0 v8
+b1 v9
+b1 v10
+b0 v11
+b1 v12
+b1111 v13
+b1 v14
+b1111 v15
+b1 v16
+b00000 v17
+b1100 v18
+b0 v19
+b1 v20
+b0011 v21
+b1100 v22
+b1100 v23
+b1 v24
+b0 v25
+b0 v26
+b1 v27
+b1 v28
+b1 v29
+b1100 v30
+b0 v31
+b1 v32
+b1100 v33
+b1101 v34
+b1 v35
+b1 v36
+b0 v37
+b1 v38
+b0 v39
+b1101 v40
+b1 v41
+b0 v42
+b1 v43
+b0001 v44
+b1 v45
+b1 v46
+b00000000 v47
+b1 v48
+b1 v49
+b1 v50
+#1
+b0000 v4
+b1 v7
+b0 v12
+b0000 v13
+b0000 v15
+b00001 v17
+b0010 v21
+b1101 v22
+b0 v24
+b1 v25
+b0 v29
+b1101 v30
+b1 v31
+b1110 v34
+b1110 v40
+b0 v43
+b00000001 v47
+#2
