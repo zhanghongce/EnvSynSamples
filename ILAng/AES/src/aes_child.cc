@@ -72,12 +72,12 @@ void AES::AddChild(InstrRef& inst) {
 
     instr.SetUpdate(blk_cnt,
                     Ite(byte_cnt == 15,
-                        Ite(blk_cnt + 16 < length, blk_cnt + 16, blk_cnt),
+                        Ite(Ult(blk_cnt + 16 , length), blk_cnt + 16, blk_cnt),
                         blk_cnt));
 
     instr.SetUpdate(status,
                     Ite(byte_cnt == 15, // the last byte has been written to
-                        Ite(blk_cnt + 16 < length, // if we reach the length
+                        Ite(Ult(blk_cnt + 16 , length), // if we reach the length
                             BvConst(AES_STATE_READ_DATA, 2), //
                             BvConst(AES_STATE_IDLE, 2)),
                         status));

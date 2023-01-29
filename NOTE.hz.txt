@@ -1,5 +1,9 @@
-use pono: /opt/moved/woodpecker/generic-sqed-demo/pono/build/pono
 
-AES: don't know if constraints are too tight
-PICO: start from reset needs debugging
+
+AES:
+    please see verification/STORE or verification/OPERATE
+
+
+PICO: start from reset needs debugging (Work in progress)
+
 

@@ -17,6 +17,12 @@ __VLG_I_stb,
 __VLG_I_wr,
 __VLG_I_xram_ack,
 __VLG_I_xram_data_in,
+____auxvar2__recorder_init__,
+____auxvar3__recorder_init__,
+____auxvar4__recorder_init__,
+____auxvar5__recorder_init__,
+____auxvar6__recorder_init__,
+____auxvar7__recorder_init__,
 clk,
 dummy_reset,
 rst,
@@ -26,6 +32,7 @@ RTL__DOT__aes_reg_key0_i__DOT__reg_out,
 RTL__DOT__aes_reg_opaddr_i__DOT__reg_out,
 RTL__DOT__aes_reg_oplen_i__DOT__reg_out,
 RTL__DOT__aes_reg_state,
+RTL__DOT__aes_time_enough,
 RTL__DOT__block_counter,
 RTL__DOT__byte_counter,
 RTL__DOT__data_in,
@@ -35,6 +42,7 @@ RTL__DOT__mem_data_buf,
 RTL__DOT__wr,
 RTL__DOT__xram_ack,
 RTL__DOT__xram_addr,
+RTL__DOT__xram_data_in,
 RTL__DOT__xram_data_out,
 RTL__DOT__xram_stb,
 RTL__DOT__xram_wr,
@@ -66,32 +74,58 @@ __all_assert_wire__,
 __all_assume_wire__,
 __auxvar0__delay_d_0,
 __auxvar1__delay_d_0,
-input_map_assume___p0__,
+additional_mapping_control_assume__p0__,
 input_map_assume___p1__,
 input_map_assume___p2__,
-issue_decode__p3__,
-issue_valid__p4__,
-noreset__p5__,
-variable_map_assert__p16__,
-variable_map_assert__p17__,
-variable_map_assert__p18__,
-variable_map_assert__p19__,
-variable_map_assume___p10__,
-variable_map_assume___p11__,
-variable_map_assume___p12__,
-variable_map_assume___p13__,
+input_map_assume___p3__,
+issue_decode__p4__,
+issue_valid__p5__,
+noreset__p6__,
+post_value_holder__p10__,
+post_value_holder__p11__,
+post_value_holder__p12__,
+post_value_holder__p7__,
+post_value_holder__p8__,
+post_value_holder__p9__,
+rfassumptions__p13__,
+variable_map_assert__p24__,
+variable_map_assert__p25__,
+variable_map_assert__p26__,
+variable_map_assert__p27__,
 variable_map_assume___p14__,
 variable_map_assume___p15__,
-variable_map_assume___p6__,
-variable_map_assume___p7__,
-variable_map_assume___p8__,
-variable_map_assume___p9__,
+variable_map_assume___p16__,
+variable_map_assume___p17__,
+variable_map_assume___p18__,
+variable_map_assume___p19__,
+variable_map_assume___p20__,
+variable_map_assume___p21__,
+variable_map_assume___p22__,
+variable_map_assume___p23__,
 __CYCLE_CNT__,
 __START__,
 __STARTED__,
 __ENDED__,
 __2ndENDED__,
 __RESETED__,
+__auxvar2__recorder,
+__auxvar2__recorder_sn_vhold,
+__auxvar2__recorder_sn_condmet,
+__auxvar3__recorder,
+__auxvar3__recorder_sn_vhold,
+__auxvar3__recorder_sn_condmet,
+__auxvar4__recorder,
+__auxvar4__recorder_sn_vhold,
+__auxvar4__recorder_sn_condmet,
+__auxvar5__recorder,
+__auxvar5__recorder_sn_vhold,
+__auxvar5__recorder_sn_condmet,
+__auxvar6__recorder,
+__auxvar6__recorder_sn_vhold,
+__auxvar6__recorder_sn_condmet,
+__auxvar7__recorder,
+__auxvar7__recorder_sn_vhold,
+__auxvar7__recorder_sn_condmet,
 __auxvar0__delay_d_1,
 __auxvar1__delay_d_1,
 __IMEM_XRAM_0_wdata_d1,
@@ -107,6 +141,12 @@ input            __VLG_I_stb;
 input            __VLG_I_wr;
 input            __VLG_I_xram_ack;
 input      [7:0] __VLG_I_xram_data_in;
+input     [15:0] ____auxvar2__recorder_init__;
+input      [7:0] ____auxvar3__recorder_init__;
+input            ____auxvar4__recorder_init__;
+input     [15:0] ____auxvar5__recorder_init__;
+input      [7:0] ____auxvar6__recorder_init__;
+input            ____auxvar7__recorder_init__;
 input            clk;
 input            dummy_reset;
 input            rst;
@@ -116,6 +156,7 @@ output    [127:0] RTL__DOT__aes_reg_key0_i__DOT__reg_out;
 output     [15:0] RTL__DOT__aes_reg_opaddr_i__DOT__reg_out;
 output     [15:0] RTL__DOT__aes_reg_oplen_i__DOT__reg_out;
 output      [1:0] RTL__DOT__aes_reg_state;
+output            RTL__DOT__aes_time_enough;
 output     [15:0] RTL__DOT__block_counter;
 output      [3:0] RTL__DOT__byte_counter;
 output      [7:0] RTL__DOT__data_in;
@@ -125,6 +166,7 @@ output    [127:0] RTL__DOT__mem_data_buf;
 output            RTL__DOT__wr;
 output            RTL__DOT__xram_ack;
 output     [15:0] RTL__DOT__xram_addr;
+output      [7:0] RTL__DOT__xram_data_in;
 output      [7:0] RTL__DOT__xram_data_out;
 output            RTL__DOT__xram_stb;
 output            RTL__DOT__xram_wr;
@@ -156,32 +198,58 @@ output            __all_assert_wire__;
 output            __all_assume_wire__;
 output            __auxvar0__delay_d_0;
 output            __auxvar1__delay_d_0;
-output            input_map_assume___p0__;
+output            additional_mapping_control_assume__p0__;
 output            input_map_assume___p1__;
 output            input_map_assume___p2__;
-output            issue_decode__p3__;
-output            issue_valid__p4__;
-output            noreset__p5__;
-output            variable_map_assert__p16__;
-output            variable_map_assert__p17__;
-output            variable_map_assert__p18__;
-output            variable_map_assert__p19__;
-output            variable_map_assume___p10__;
-output            variable_map_assume___p11__;
-output            variable_map_assume___p12__;
-output            variable_map_assume___p13__;
+output            input_map_assume___p3__;
+output            issue_decode__p4__;
+output            issue_valid__p5__;
+output            noreset__p6__;
+output            post_value_holder__p10__;
+output            post_value_holder__p11__;
+output            post_value_holder__p12__;
+output            post_value_holder__p7__;
+output            post_value_holder__p8__;
+output            post_value_holder__p9__;
+output            rfassumptions__p13__;
+output            variable_map_assert__p24__;
+output            variable_map_assert__p25__;
+output            variable_map_assert__p26__;
+output            variable_map_assert__p27__;
 output            variable_map_assume___p14__;
 output            variable_map_assume___p15__;
-output            variable_map_assume___p6__;
-output            variable_map_assume___p7__;
-output            variable_map_assume___p8__;
-output            variable_map_assume___p9__;
+output            variable_map_assume___p16__;
+output            variable_map_assume___p17__;
+output            variable_map_assume___p18__;
+output            variable_map_assume___p19__;
+output            variable_map_assume___p20__;
+output            variable_map_assume___p21__;
+output            variable_map_assume___p22__;
+output            variable_map_assume___p23__;
 output reg      [5:0] __CYCLE_CNT__;
 output reg            __START__;
 output reg            __STARTED__;
 output reg            __ENDED__;
 output reg            __2ndENDED__;
 output reg            __RESETED__;
+output reg     [15:0] __auxvar2__recorder;
+output reg     [15:0] __auxvar2__recorder_sn_vhold;
+output reg            __auxvar2__recorder_sn_condmet;
+output reg      [7:0] __auxvar3__recorder;
+output reg      [7:0] __auxvar3__recorder_sn_vhold;
+output reg            __auxvar3__recorder_sn_condmet;
+output reg            __auxvar4__recorder;
+output reg            __auxvar4__recorder_sn_vhold;
+output reg            __auxvar4__recorder_sn_condmet;
+output reg     [15:0] __auxvar5__recorder;
+output reg     [15:0] __auxvar5__recorder_sn_vhold;
+output reg            __auxvar5__recorder_sn_condmet;
+output reg      [7:0] __auxvar6__recorder;
+output reg      [7:0] __auxvar6__recorder_sn_vhold;
+output reg            __auxvar6__recorder_sn_condmet;
+output reg            __auxvar7__recorder;
+output reg            __auxvar7__recorder_sn_vhold;
+output reg            __auxvar7__recorder_sn_condmet;
 output reg            __auxvar0__delay_d_1;
 output reg            __auxvar1__delay_d_1;
 output reg      [7:0] __IMEM_XRAM_0_wdata_d1;
@@ -193,6 +261,7 @@ output reg            __IMEM_XRAM_0_wen_d1;
 (* keep *) wire     [15:0] RTL__DOT__aes_reg_opaddr_i__DOT__reg_out;
 (* keep *) wire     [15:0] RTL__DOT__aes_reg_oplen_i__DOT__reg_out;
 (* keep *) wire      [1:0] RTL__DOT__aes_reg_state;
+(* keep *) wire            RTL__DOT__aes_time_enough;
 (* keep *) wire     [15:0] RTL__DOT__block_counter;
 (* keep *) wire      [3:0] RTL__DOT__byte_counter;
 (* keep *) wire      [7:0] RTL__DOT__data_in;
@@ -202,6 +271,7 @@ output reg            __IMEM_XRAM_0_wen_d1;
 (* keep *) wire            RTL__DOT__wr;
 (* keep *) wire            RTL__DOT__xram_ack;
 (* keep *) wire     [15:0] RTL__DOT__xram_addr;
+(* keep *) wire      [7:0] RTL__DOT__xram_data_in;
 (* keep *) wire      [7:0] RTL__DOT__xram_data_out;
 (* keep *) wire            RTL__DOT__xram_stb;
 (* keep *) wire            RTL__DOT__xram_wr;
@@ -245,35 +315,61 @@ wire            __2ndIEND__;
 (* keep *) wire      [7:0] __VLG_O_xram_data_out;
 (* keep *) wire            __VLG_O_xram_stb;
 (* keep *) wire            __VLG_O_xram_wr;
+wire     [15:0] ____auxvar2__recorder_init__;
+wire      [7:0] ____auxvar3__recorder_init__;
+wire            ____auxvar4__recorder_init__;
+wire     [15:0] ____auxvar5__recorder_init__;
+wire      [7:0] ____auxvar6__recorder_init__;
+wire            ____auxvar7__recorder_init__;
 (* keep *) wire            __all_assert_wire__;
 (* keep *) wire            __all_assume_wire__;
 wire            __auxvar0__delay;
 (* keep *) wire            __auxvar0__delay_d_0;
 wire            __auxvar1__delay;
 (* keep *) wire            __auxvar1__delay_d_0;
+wire            __auxvar2__recorder_sn_cond;
+wire     [15:0] __auxvar2__recorder_sn_value;
+wire            __auxvar3__recorder_sn_cond;
+wire      [7:0] __auxvar3__recorder_sn_value;
+wire            __auxvar4__recorder_sn_cond;
+wire            __auxvar4__recorder_sn_value;
+wire            __auxvar5__recorder_sn_cond;
+wire     [15:0] __auxvar5__recorder_sn_value;
+wire            __auxvar6__recorder_sn_cond;
+wire      [7:0] __auxvar6__recorder_sn_value;
+wire            __auxvar7__recorder_sn_cond;
+wire            __auxvar7__recorder_sn_value;
+wire            additional_mapping_control_assume__p0__;
 wire            clk;
 (* keep *) wire            dummy_reset;
-wire            input_map_assume___p0__;
 wire            input_map_assume___p1__;
 wire            input_map_assume___p2__;
-wire            issue_decode__p3__;
-wire            issue_valid__p4__;
-wire            noreset__p5__;
+wire            input_map_assume___p3__;
+wire            issue_decode__p4__;
+wire            issue_valid__p5__;
+wire            noreset__p6__;
+wire            post_value_holder__p10__;
+wire            post_value_holder__p11__;
+wire            post_value_holder__p12__;
+wire            post_value_holder__p7__;
+wire            post_value_holder__p8__;
+wire            post_value_holder__p9__;
+wire            rfassumptions__p13__;
 wire            rst;
-wire            variable_map_assert__p16__;
-wire            variable_map_assert__p17__;
-wire            variable_map_assert__p18__;
-wire            variable_map_assert__p19__;
-wire            variable_map_assume___p10__;
-wire            variable_map_assume___p11__;
-wire            variable_map_assume___p12__;
-wire            variable_map_assume___p13__;
+wire            variable_map_assert__p24__;
+wire            variable_map_assert__p25__;
+wire            variable_map_assert__p26__;
+wire            variable_map_assert__p27__;
 wire            variable_map_assume___p14__;
 wire            variable_map_assume___p15__;
-wire            variable_map_assume___p6__;
-wire            variable_map_assume___p7__;
-wire            variable_map_assume___p8__;
-wire            variable_map_assume___p9__;
+wire            variable_map_assume___p16__;
+wire            variable_map_assume___p17__;
+wire            variable_map_assume___p18__;
+wire            variable_map_assume___p19__;
+wire            variable_map_assume___p20__;
+wire            variable_map_assume___p21__;
+wire            variable_map_assume___p22__;
+wire            variable_map_assume___p23__;
 always @(posedge clk) begin
 if (rst) __CYCLE_CNT__ <= 0;
 else if ( ( __START__ || __STARTED__ ) &&  __CYCLE_CNT__ < 50) __CYCLE_CNT__ <= __CYCLE_CNT__ + 1;
@@ -326,28 +422,48 @@ AES_BLOCK__DOT__STORE ILA (
 );
 assign __EDCOND__ = (__auxvar1__delay)&&(__STARTED__) ;
 assign __IEND__ = ((((__auxvar1__delay)&&(__STARTED__))&&(__RESETED__))&&(!(__ENDED__)))&&(1'b1) ;
+assign __auxvar2__recorder_sn_cond = (((__CYCLE_CNT__)==(0))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar2__recorder_sn_value = RTL__DOT__xram_addr ;
+assign __auxvar3__recorder_sn_cond = ((RTL__DOT__xram_ack)&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar3__recorder_sn_value = RTL__DOT__xram_data_in ;
+assign __auxvar4__recorder_sn_cond = (((__CYCLE_CNT__)==(0))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar4__recorder_sn_value = (~(RTL__DOT__xram_wr))&(RTL__DOT__xram_stb) ;
+assign __auxvar5__recorder_sn_cond = (((__CYCLE_CNT__)==(0))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar5__recorder_sn_value = RTL__DOT__xram_addr ;
+assign __auxvar6__recorder_sn_cond = (((__CYCLE_CNT__)==(0))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar6__recorder_sn_value = RTL__DOT__xram_data_out ;
+assign __auxvar7__recorder_sn_cond = (((__CYCLE_CNT__)==(0))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar7__recorder_sn_value = (RTL__DOT__xram_wr)&(RTL__DOT__xram_stb) ;
 assign __auxvar0__delay_d_0 = RTL__DOT__xram_ack ;
 assign __auxvar1__delay_d_0 = RTL__DOT__xram_ack ;
-assign input_map_assume___p0__ = (!(__START__))||((__ILA_I_cmd)==(((RTL__DOT__wr)==(1))?(2'd2):(2'd1))) ;
-assign input_map_assume___p1__ = (!(__START__))||((__ILA_I_cmdaddr)==(RTL__DOT__addr)) ;
-assign input_map_assume___p2__ = (!(__START__))||((__ILA_I_cmddata)==(RTL__DOT__data_in)) ;
-assign issue_decode__p3__ = (!(__START__))||(__ILA_AES_BLOCK_decode_of_STORE__) ;
-assign issue_valid__p4__ = (!(__START__))||(__ILA_AES_BLOCK_valid__) ;
-assign noreset__p5__ = (!(__RESETED__))||(!(dummy_reset)) ;
-assign variable_map_assume___p6__ = (!(__START__))||((__ILA_SO_aes_address)==(RTL__DOT__aes_reg_opaddr_i__DOT__reg_out)) ;
-assign variable_map_assume___p7__ = (!(__START__))||((__ILA_SO_aes_counter)==(RTL__DOT__aes_reg_ctr_i__DOT__reg_out)) ;
-assign variable_map_assume___p8__ = (!(__START__))||((__ILA_SO_aes_key)==(RTL__DOT__aes_reg_key0_i__DOT__reg_out)) ;
-assign variable_map_assume___p9__ = (!(__START__))||((__ILA_SO_aes_length)==(RTL__DOT__aes_reg_oplen_i__DOT__reg_out)) ;
-assign variable_map_assume___p10__ = (!(__START__))||((__ILA_SO_aes_status)==(RTL__DOT__aes_reg_state)) ;
-assign variable_map_assume___p11__ = (!(__START__))||((__ILA_SO_blk_cnt)==(RTL__DOT__block_counter)) ;
-assign variable_map_assume___p12__ = (!(__START__))||((__ILA_SO_byte_cnt)==(RTL__DOT__byte_counter)) ;
-assign variable_map_assume___p13__ = (!(__START__))||((__ILA_SO_enc_data)==(RTL__DOT__encrypted_data_buf)) ;
-assign variable_map_assume___p14__ = (!(__START__))||((__ILA_SO_outdata)==(RTL__DOT__data_out_reg)) ;
-assign variable_map_assume___p15__ = (!(__START__))||((__ILA_SO_rd_data)==(RTL__DOT__mem_data_buf)) ;
-assign variable_map_assert__p16__ = (!(__IEND__))||(((__IMEM_XRAM_0_wen_d1)==((RTL__DOT__xram_wr)&(RTL__DOT__xram_stb)))&&((!(__IMEM_XRAM_0_wen_d1))||(((__IMEM_XRAM_0_waddr_d1)==(RTL__DOT__xram_addr))&&((__IMEM_XRAM_0_wdata_d1)==(RTL__DOT__xram_data_out))))) ;
-assign variable_map_assert__p17__ = (!(__IEND__))||((__ILA_SO_aes_status)==(RTL__DOT__aes_reg_state)) ;
-assign variable_map_assert__p18__ = (!(__IEND__))||((__ILA_SO_blk_cnt)==(RTL__DOT__block_counter)) ;
-assign variable_map_assert__p19__ = (!(__IEND__))||((__ILA_SO_byte_cnt)==(RTL__DOT__byte_counter)) ;
+assign additional_mapping_control_assume__p0__ = (!((RTL__DOT__aes_reg_state)==(2)))||((RTL__DOT__xram_ack)==(0)) ;
+assign input_map_assume___p1__ = (!(__START__))||((__ILA_I_cmd)==(((RTL__DOT__wr)==(1))?(2'd2):(2'd1))) ;
+assign input_map_assume___p2__ = (!(__START__))||((__ILA_I_cmdaddr)==(RTL__DOT__addr)) ;
+assign input_map_assume___p3__ = (!(__START__))||((__ILA_I_cmddata)==(RTL__DOT__data_in)) ;
+assign issue_decode__p4__ = (!(__START__))||(__ILA_AES_BLOCK_decode_of_STORE__) ;
+assign issue_valid__p5__ = (!(__START__))||(__ILA_AES_BLOCK_valid__) ;
+assign noreset__p6__ = (!(__RESETED__))||(!(dummy_reset)) ;
+assign post_value_holder__p7__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar2__recorder_sn_condmet)))&&((__CYCLE_CNT__)==(0))))||((__auxvar2__recorder)==(RTL__DOT__xram_addr)) ;
+assign post_value_holder__p8__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar3__recorder_sn_condmet)))&&(RTL__DOT__xram_ack)))||((__auxvar3__recorder)==(RTL__DOT__xram_data_in)) ;
+assign post_value_holder__p9__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar4__recorder_sn_condmet)))&&((__CYCLE_CNT__)==(0))))||((__auxvar4__recorder)==((~(RTL__DOT__xram_wr))&(RTL__DOT__xram_stb))) ;
+assign post_value_holder__p10__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar5__recorder_sn_condmet)))&&((__CYCLE_CNT__)==(0))))||((__auxvar5__recorder)==(RTL__DOT__xram_addr)) ;
+assign post_value_holder__p11__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar6__recorder_sn_condmet)))&&((__CYCLE_CNT__)==(0))))||((__auxvar6__recorder)==(RTL__DOT__xram_data_out)) ;
+assign post_value_holder__p12__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar7__recorder_sn_condmet)))&&((__CYCLE_CNT__)==(0))))||((__auxvar7__recorder)==((RTL__DOT__xram_wr)&(RTL__DOT__xram_stb))) ;
+assign rfassumptions__p13__ = (!((RTL__DOT__aes_reg_state)==(2)))||((RTL__DOT__aes_time_enough)==(1)) ;
+assign variable_map_assume___p14__ = (!(__START__))||((__ILA_SO_aes_address)==(RTL__DOT__aes_reg_opaddr_i__DOT__reg_out)) ;
+assign variable_map_assume___p15__ = (!(__START__))||((__ILA_SO_aes_counter)==(RTL__DOT__aes_reg_ctr_i__DOT__reg_out)) ;
+assign variable_map_assume___p16__ = (!(__START__))||((__ILA_SO_aes_key)==(RTL__DOT__aes_reg_key0_i__DOT__reg_out)) ;
+assign variable_map_assume___p17__ = (!(__START__))||((__ILA_SO_aes_length)==(RTL__DOT__aes_reg_oplen_i__DOT__reg_out)) ;
+assign variable_map_assume___p18__ = (!(__START__))||((__ILA_SO_aes_status)==(RTL__DOT__aes_reg_state)) ;
+assign variable_map_assume___p19__ = (!(__START__))||((__ILA_SO_blk_cnt)==(RTL__DOT__block_counter)) ;
+assign variable_map_assume___p20__ = (!(__START__))||((__ILA_SO_byte_cnt)==(RTL__DOT__byte_counter)) ;
+assign variable_map_assume___p21__ = (!(__START__))||((__ILA_SO_enc_data)==(RTL__DOT__encrypted_data_buf)) ;
+assign variable_map_assume___p22__ = (!(__START__))||((__ILA_SO_outdata)==(RTL__DOT__data_out_reg)) ;
+assign variable_map_assume___p23__ = (!(__START__))||((__ILA_SO_rd_data)==(RTL__DOT__mem_data_buf)) ;
+assign variable_map_assert__p24__ = (!(__IEND__))||(((__IMEM_XRAM_0_wen_d1)==(__auxvar7__recorder))&&((!(__IMEM_XRAM_0_wen_d1))||(((__IMEM_XRAM_0_waddr_d1)==(__auxvar5__recorder))&&((__IMEM_XRAM_0_wdata_d1)==(__auxvar6__recorder))))) ;
+assign variable_map_assert__p25__ = (!(__IEND__))||((__ILA_SO_aes_status)==(RTL__DOT__aes_reg_state)) ;
+assign variable_map_assert__p26__ = (!(__IEND__))||((__ILA_SO_blk_cnt)==(RTL__DOT__block_counter)) ;
+assign variable_map_assert__p27__ = (!(__IEND__))||((__ILA_SO_byte_cnt)==(RTL__DOT__byte_counter)) ;
 aes_top RTL(
     .RTL__DOT__addr(RTL__DOT__addr),
     .RTL__DOT__aes_reg_ctr_i__DOT__reg_out(RTL__DOT__aes_reg_ctr_i__DOT__reg_out),
@@ -355,6 +471,7 @@ aes_top RTL(
     .RTL__DOT__aes_reg_opaddr_i__DOT__reg_out(RTL__DOT__aes_reg_opaddr_i__DOT__reg_out),
     .RTL__DOT__aes_reg_oplen_i__DOT__reg_out(RTL__DOT__aes_reg_oplen_i__DOT__reg_out),
     .RTL__DOT__aes_reg_state(RTL__DOT__aes_reg_state),
+    .RTL__DOT__aes_time_enough(RTL__DOT__aes_time_enough),
     .RTL__DOT__block_counter(RTL__DOT__block_counter),
     .RTL__DOT__byte_counter(RTL__DOT__byte_counter),
     .RTL__DOT__data_in(RTL__DOT__data_in),
@@ -364,6 +481,7 @@ aes_top RTL(
     .RTL__DOT__wr(RTL__DOT__wr),
     .RTL__DOT__xram_ack(RTL__DOT__xram_ack),
     .RTL__DOT__xram_addr(RTL__DOT__xram_addr),
+    .RTL__DOT__xram_data_in(RTL__DOT__xram_data_in),
     .RTL__DOT__xram_data_out(RTL__DOT__xram_data_out),
     .RTL__DOT__xram_stb(RTL__DOT__xram_stb),
     .RTL__DOT__xram_wr(RTL__DOT__xram_wr),
@@ -388,18 +506,42 @@ aes_top RTL(
     .xram_stb(__VLG_O_xram_stb),
     .xram_wr(__VLG_O_xram_wr)
 );
-assign __all_assert_wire__ = (variable_map_assert__p16__) && (variable_map_assert__p17__) && (variable_map_assert__p18__) && (variable_map_assert__p19__) ;
+assign __all_assert_wire__ = (variable_map_assert__p24__) && (variable_map_assert__p25__) && (variable_map_assert__p26__) && (variable_map_assert__p27__) ;
 normalassert: assert property ( __all_assert_wire__ ); // the only assertion 
 
-assign __all_assume_wire__ = (input_map_assume___p0__)&& (input_map_assume___p1__)&& (input_map_assume___p2__)&& (issue_decode__p3__)&& (issue_valid__p4__)&& (noreset__p5__)&& (variable_map_assume___p6__)&& (variable_map_assume___p7__)&& (variable_map_assume___p8__)&& (variable_map_assume___p9__)&& (variable_map_assume___p10__)&& (variable_map_assume___p11__)&& (variable_map_assume___p12__)&& (variable_map_assume___p13__)&& (variable_map_assume___p14__)&& (variable_map_assume___p15__) ;
+assign __all_assume_wire__ = (additional_mapping_control_assume__p0__)&& (input_map_assume___p1__)&& (input_map_assume___p2__)&& (input_map_assume___p3__)&& (issue_decode__p4__)&& (issue_valid__p5__)&& (noreset__p6__)&& (post_value_holder__p7__)&& (post_value_holder__p8__)&& (post_value_holder__p9__)&& (post_value_holder__p10__)&& (post_value_holder__p11__)&& (post_value_holder__p12__)&& (rfassumptions__p13__)&& (variable_map_assume___p14__)&& (variable_map_assume___p15__)&& (variable_map_assume___p16__)&& (variable_map_assume___p17__)&& (variable_map_assume___p18__)&& (variable_map_assume___p19__)&& (variable_map_assume___p20__)&& (variable_map_assume___p21__)&& (variable_map_assume___p22__)&& (variable_map_assume___p23__) ;
 all_assume: assume property ( __all_assume_wire__ ); // the only sanity assertion 
 
 always @(posedge clk) begin
    if(rst) begin
+       __auxvar2__recorder <= ____auxvar2__recorder_init__;
+       __auxvar2__recorder_sn_condmet <= 1'b0;
+       __auxvar3__recorder <= ____auxvar3__recorder_init__;
+       __auxvar3__recorder_sn_condmet <= 1'b0;
+       __auxvar4__recorder <= ____auxvar4__recorder_init__;
+       __auxvar4__recorder_sn_condmet <= 1'b0;
+       __auxvar5__recorder <= ____auxvar5__recorder_init__;
+       __auxvar5__recorder_sn_condmet <= 1'b0;
+       __auxvar6__recorder <= ____auxvar6__recorder_init__;
+       __auxvar6__recorder_sn_condmet <= 1'b0;
+       __auxvar7__recorder <= ____auxvar7__recorder_init__;
+       __auxvar7__recorder_sn_condmet <= 1'b0;
        __auxvar0__delay_d_1<= 0;
        __auxvar1__delay_d_1<= 0;
    end
    else if(1) begin
+       __auxvar2__recorder <= __auxvar2__recorder;
+       if (__auxvar2__recorder_sn_cond ) begin __auxvar2__recorder_sn_condmet <= 1'b1; __auxvar2__recorder_sn_vhold <= __auxvar2__recorder_sn_value; end
+       __auxvar3__recorder <= __auxvar3__recorder;
+       if (__auxvar3__recorder_sn_cond ) begin __auxvar3__recorder_sn_condmet <= 1'b1; __auxvar3__recorder_sn_vhold <= __auxvar3__recorder_sn_value; end
+       __auxvar4__recorder <= __auxvar4__recorder;
+       if (__auxvar4__recorder_sn_cond ) begin __auxvar4__recorder_sn_condmet <= 1'b1; __auxvar4__recorder_sn_vhold <= __auxvar4__recorder_sn_value; end
+       __auxvar5__recorder <= __auxvar5__recorder;
+       if (__auxvar5__recorder_sn_cond ) begin __auxvar5__recorder_sn_condmet <= 1'b1; __auxvar5__recorder_sn_vhold <= __auxvar5__recorder_sn_value; end
+       __auxvar6__recorder <= __auxvar6__recorder;
+       if (__auxvar6__recorder_sn_cond ) begin __auxvar6__recorder_sn_condmet <= 1'b1; __auxvar6__recorder_sn_vhold <= __auxvar6__recorder_sn_value; end
+       __auxvar7__recorder <= __auxvar7__recorder;
+       if (__auxvar7__recorder_sn_cond ) begin __auxvar7__recorder_sn_condmet <= 1'b1; __auxvar7__recorder_sn_vhold <= __auxvar7__recorder_sn_value; end
        __auxvar0__delay_d_1 <= __auxvar0__delay_d_0 ;
        __auxvar1__delay_d_1 <= __auxvar1__delay_d_0 ;
        if (__START__) __IMEM_XRAM_0_wdata_d1 <= __IMEM_XRAM_0_wdata;
@@ -585,7 +727,7 @@ assign bv_4_15_n6 = 4'hf ;
 assign n7 =  ( byte_cnt ) == ( bv_4_15_n6 )  ;
 assign bv_16_16_n8 = 16'h10 ;
 assign n9 =  ( blk_cnt ) + ( bv_16_16_n8 )  ;
-assign n10 =  $signed( n9 ) < $signed( aes_length )  ;
+assign n10 =  ( n9 ) < ( aes_length )  ;
 assign bv_2_1_n11 = 2'h1 ;
 assign n12 =  ( n10 ) ? ( bv_2_1_n11 ) : ( bv_2_0_n0 ) ;
 assign n13 =  ( n7 ) ? ( n12 ) : ( aes_status ) ;
@@ -674,7 +816,7 @@ assign XRAM_wen0 = (n4)&&__START__ ? ( 1'b1 ) : (1'b0) ;
 assign n93 =  ( byte_cnt ) + ( bv_4_1_n74 )  ;
 assign n94 =  ( byte_cnt ) == ( bv_4_15_n6 )  ;
 assign n95 =  ( blk_cnt ) + ( bv_16_16_n8 )  ;
-assign n96 =  $signed( n95 ) < $signed( aes_length )  ;
+assign n96 =  ( n95 ) < ( aes_length )  ;
 assign n97 =  ( blk_cnt ) + ( bv_16_16_n8 )  ;
 assign n98 =  ( n96 ) ? ( n97 ) : ( blk_cnt ) ;
 assign n99 =  ( n94 ) ? ( n98 ) : ( blk_cnt ) ;
@@ -774,25 +916,27 @@ module aes_top (
     aes_ctr,
     aes_key0,
     aes_step
-, RTL__DOT__data_in, RTL__DOT__xram_data_out, RTL__DOT__xram_stb, RTL__DOT__xram_addr, RTL__DOT__block_counter, RTL__DOT__encrypted_data_buf, RTL__DOT__data_out_reg, RTL__DOT__wr, RTL__DOT__mem_data_buf, RTL__DOT__xram_wr, RTL__DOT__aes_reg_ctr_i__DOT__reg_out, RTL__DOT__addr, RTL__DOT__byte_counter, RTL__DOT__xram_ack, RTL__DOT__aes_reg_opaddr_i__DOT__reg_out, RTL__DOT__aes_reg_key0_i__DOT__reg_out, RTL__DOT__aes_reg_state, RTL__DOT__aes_reg_oplen_i__DOT__reg_out);
- output [7:0] RTL__DOT__data_in;
- output [7:0] RTL__DOT__xram_data_out;
- output  RTL__DOT__xram_stb;
+, RTL__DOT__addr, RTL__DOT__xram_addr, RTL__DOT__block_counter, RTL__DOT__encrypted_data_buf, RTL__DOT__data_out_reg, RTL__DOT__wr, RTL__DOT__aes_time_enough, RTL__DOT__mem_data_buf, RTL__DOT__data_in, RTL__DOT__aes_reg_ctr_i__DOT__reg_out, RTL__DOT__xram_wr, RTL__DOT__byte_counter, RTL__DOT__xram_ack, RTL__DOT__aes_reg_opaddr_i__DOT__reg_out, RTL__DOT__aes_reg_key0_i__DOT__reg_out, RTL__DOT__aes_reg_state, RTL__DOT__aes_reg_oplen_i__DOT__reg_out, RTL__DOT__xram_data_in, RTL__DOT__xram_data_out, RTL__DOT__xram_stb);
+ output [15:0] RTL__DOT__addr;
  output [15:0] RTL__DOT__xram_addr;
  output [15:0] RTL__DOT__block_counter;
  output [127:0] RTL__DOT__encrypted_data_buf;
  output [7:0] RTL__DOT__data_out_reg;
  output  RTL__DOT__wr;
+ output  RTL__DOT__aes_time_enough;
  output [127:0] RTL__DOT__mem_data_buf;
- output  RTL__DOT__xram_wr;
+ output [7:0] RTL__DOT__data_in;
  output [127:0] RTL__DOT__aes_reg_ctr_i__DOT__reg_out;
- output [15:0] RTL__DOT__addr;
+ output  RTL__DOT__xram_wr;
  output [3:0] RTL__DOT__byte_counter;
  output  RTL__DOT__xram_ack;
  output [15:0] RTL__DOT__aes_reg_opaddr_i__DOT__reg_out;
  output [127:0] RTL__DOT__aes_reg_key0_i__DOT__reg_out;
  output [1:0] RTL__DOT__aes_reg_state;
  output [15:0] RTL__DOT__aes_reg_oplen_i__DOT__reg_out;
+ output [7:0] RTL__DOT__xram_data_in;
+ output [7:0] RTL__DOT__xram_data_out;
+ output  RTL__DOT__xram_stb;
 
 
 
@@ -1122,19 +1266,21 @@ always @(posedge clk) begin
 end
 
 
- assign RTL__DOT__xram_data_out = xram_data_out;
- assign RTL__DOT__xram_stb = xram_stb;
  assign RTL__DOT__xram_addr = xram_addr;
  assign RTL__DOT__block_counter = block_counter;
  assign RTL__DOT__encrypted_data_buf = encrypted_data_buf;
  assign RTL__DOT__data_out_reg = data_out_reg;
  assign RTL__DOT__wr = wr;
+ assign RTL__DOT__aes_time_enough = aes_time_enough;
  assign RTL__DOT__mem_data_buf = mem_data_buf;
  assign RTL__DOT__data_in = data_in;
  assign RTL__DOT__addr = addr;
  assign RTL__DOT__byte_counter = byte_counter;
  assign RTL__DOT__xram_ack = xram_ack;
  assign RTL__DOT__aes_reg_state = aes_reg_state;
+ assign RTL__DOT__xram_data_in = xram_data_in;
+ assign RTL__DOT__xram_data_out = xram_data_out;
+ assign RTL__DOT__xram_stb = xram_stb;
  assign RTL__DOT__xram_wr = xram_wr;
 endmodule
 

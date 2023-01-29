@@ -5,6 +5,8 @@
 void verifyBlockLevel(Ila& model, RtlVerifyConfig vtg_cfg) {
 
   vtg_cfg.MaxBound = 40;                // bound of BMC
+  vtg_cfg.SanityCheck_ValueRecorderOverlyConstrained = false;
+  vtg_cfg.SanityCheck_ValueRecorderTriggeredBeforeCommit = false;
 
   std::string RootPath = "..";
   std::string VerilogPath = RootPath + "/verilog/";

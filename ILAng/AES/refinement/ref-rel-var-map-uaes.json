@@ -6,12 +6,12 @@
     "aes_key"            : "RTL.aes_reg_key0_i.reg_out",
     "aes_status"         : "RTL.aes_reg_state",
     "XRAM"               : {
-      "wen"   : "RTL.xram_wr & RTL.xram_stb",
-      "waddr" : "RTL.xram_addr",
-      "wdata" : "RTL.xram_data_out",
-      "ren"   : "~RTL.xram_wr & RTL.xram_stb",
-      "raddr" : "RTL.xram_addr",
-      "rdata" : "RTL.xram_data_in"
+      "wen"   : "(RTL.xram_wr & RTL.xram_stb) @ 0",
+      "waddr" : "RTL.xram_addr @ 0",
+      "wdata" : "RTL.xram_data_out @ 0",
+      "ren"   : " (~RTL.xram_wr & RTL.xram_stb) @ 0",
+      "raddr" : "RTL.xram_addr @ 0",
+      "rdata" : "RTL.xram_data_in @(RTL.xram_ack)"
     },
     "outdata"            : "RTL.data_out_reg",
 
@@ -25,6 +25,8 @@
     "cmdaddr": "RTL.addr",
     "cmddata": "RTL.data_in"
   },
+  "additional mapping" :["RTL.aes_reg_state == 2 |-> RTL.xram_ack == 0"],
+  "assumptions" : ["(RTL.aes_reg_state == 2) |-> (RTL.aes_time_enough == 1)"],
   "rtl-interface-connection" : {
     "CLOCK" : "clk",
     "RESET" : "rst"
