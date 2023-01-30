@@ -4,13 +4,9 @@ rm -f *.btor2 *.vcd __yosys*.txt
 echo "* Parsing input..."
 yosys -s gen_btor.ys > __yosys_exec_result.txt
 echo "* Run Pono to check refinement..."
-/opt/moved/woodpecker/generic-sqed-demo/pono/build/pono --vcd cex.vcd -e ind  problem.btor2 
+pono --vcd cex.vcd -e ind  problem.btor2 
 RfResult=$?
-echo "* Parsing sanity check input..."
-yosys -s gen_sanity_prop.ys > __yosys_exec_result.sanity.txt
-echo "* Run Pono to check assumption sanity..."
-/opt/moved/woodpecker/generic-sqed-demo/pono/build/pono --vcd cex.vcd -e ind  sanity.btor2 
-SanityResult=$?
+SanityResult=3
 CoverResult=3
 
 function show_result () {

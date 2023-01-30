@@ -5,11 +5,7 @@ hierarchy -check
 proc
 chformal -assume -early;
 
-select wrapper/sanitycheck
-chformal -remove
-select *
-
-memory -nomap;
+memory ;
 flatten
 setundef -undriven -expose;
 sim -clock clk -reset rst -rstlen 1 -n 1 -w wrapper

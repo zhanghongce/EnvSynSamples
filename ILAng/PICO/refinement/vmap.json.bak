@@ -1,0 +1,51 @@
+{
+  "state mapping": { 
+    "x0"        : "RTL.dbg_reg_x0",
+    "x1"        : "RTL.dbg_reg_x1" ,
+    "x2"        : "RTL.dbg_reg_x2" ,
+    "x3"        : "RTL.dbg_reg_x3" ,
+    "x4"        : "RTL.dbg_reg_x4" ,
+    "x5"        : "RTL.dbg_reg_x5" ,
+    "x6"        : "RTL.dbg_reg_x6" ,
+    "x7"        : "RTL.dbg_reg_x7" ,
+    "x8"        : "RTL.dbg_reg_x8" ,
+    "x9"        : "RTL.dbg_reg_x9" ,
+    "x10"       : "RTL.dbg_reg_x10",
+    "x11"       : "RTL.dbg_reg_x11",
+    "x12"       : "RTL.dbg_reg_x12",
+    "x13"       : "RTL.dbg_reg_x13",
+    "x14"       : "RTL.dbg_reg_x14",
+    "x15"       : "RTL.dbg_reg_x15",
+    "x16"       : "RTL.dbg_reg_x16",
+    "x17"       : "RTL.dbg_reg_x17",
+    "x18"       : "RTL.dbg_reg_x18",
+    "x19"       : "RTL.dbg_reg_x19",
+    "x20"       : "RTL.dbg_reg_x20",
+    "x21"       : "RTL.dbg_reg_x21",
+    "x22"       : "RTL.dbg_reg_x22",
+    "x23"       : "RTL.dbg_reg_x23",
+    "x24"       : "RTL.dbg_reg_x24",
+    "x25"       : "RTL.dbg_reg_x25",
+    "x26"       : "RTL.dbg_reg_x26",
+    "x27"       : "RTL.dbg_reg_x27",
+    "x28"       : "RTL.dbg_reg_x28",
+    "x29"       : "RTL.dbg_reg_x29",
+    "x30"       : "RTL.dbg_reg_x30",
+    "x31"       : "RTL.dbg_reg_x31",
+    "pc"        : "RTL.reg_pc"
+  },
+
+
+  "rtl-interface-connection" : {
+    "CLOCK" : "clk",
+    "NRESET" : "resetn"
+  },
+
+  "input mapping" : {
+    "inst" : "RTL.dbg_insn_opcode"
+  },
+
+  "additional mapping" : [  
+                         "(decode || afterdecode) || (RTL.mem_ready == 0)" // hold the design, if not started
+                      ]
+}

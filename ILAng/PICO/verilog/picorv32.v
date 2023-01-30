@@ -91,7 +91,6 @@ module picorv32 (
 	input      [31:0] irq,
 	output reg [31:0] eoi,
 
-`ifdef RISCV_FORMAL
 	output reg        rvfi_valid,
 	output reg [63:0] rvfi_order,
 	output reg [31:0] rvfi_insn,
@@ -112,7 +111,6 @@ module picorv32 (
 	output reg [ 3:0] rvfi_mem_wmask,
 	output reg [31:0] rvfi_mem_rdata,
 	output reg [31:0] rvfi_mem_wdata,
-`endif
 
 	// Trace Interface
 	output reg        trace_valid,

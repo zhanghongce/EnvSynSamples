@@ -1,38 +1,38 @@
 {
   "state mapping": { 
-    "x0"        : "RTL.dbg_reg_x0",
-    "x1"        : "RTL.dbg_reg_x1" ,
-    "x2"        : "RTL.dbg_reg_x2" ,
-    "x3"        : "RTL.dbg_reg_x3" ,
-    "x4"        : "RTL.dbg_reg_x4" ,
-    "x5"        : "RTL.dbg_reg_x5" ,
-    "x6"        : "RTL.dbg_reg_x6" ,
-    "x7"        : "RTL.dbg_reg_x7" ,
-    "x8"        : "RTL.dbg_reg_x8" ,
-    "x9"        : "RTL.dbg_reg_x9" ,
-    "x10"       : "RTL.dbg_reg_x10",
-    "x11"       : "RTL.dbg_reg_x11",
-    "x12"       : "RTL.dbg_reg_x12",
-    "x13"       : "RTL.dbg_reg_x13",
-    "x14"       : "RTL.dbg_reg_x14",
-    "x15"       : "RTL.dbg_reg_x15",
-    "x16"       : "RTL.dbg_reg_x16",
-    "x17"       : "RTL.dbg_reg_x17",
-    "x18"       : "RTL.dbg_reg_x18",
-    "x19"       : "RTL.dbg_reg_x19",
-    "x20"       : "RTL.dbg_reg_x20",
-    "x21"       : "RTL.dbg_reg_x21",
-    "x22"       : "RTL.dbg_reg_x22",
-    "x23"       : "RTL.dbg_reg_x23",
-    "x24"       : "RTL.dbg_reg_x24",
-    "x25"       : "RTL.dbg_reg_x25",
-    "x26"       : "RTL.dbg_reg_x26",
-    "x27"       : "RTL.dbg_reg_x27",
-    "x28"       : "RTL.dbg_reg_x28",
-    "x29"       : "RTL.dbg_reg_x29",
-    "x30"       : "RTL.dbg_reg_x30",
-    "x31"       : "RTL.dbg_reg_x31",
-    "pc"        : "RTL.reg_pc"
+    "x0"        : [["start","RTL.dbg_reg_x0  @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x0  @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x1"        : [["start","RTL.dbg_reg_x1  @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x1  @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x2"        : [["start","RTL.dbg_reg_x2  @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x2  @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x3"        : [["start","RTL.dbg_reg_x3  @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x3  @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x4"        : [["start","RTL.dbg_reg_x4  @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x4  @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x5"        : [["start","RTL.dbg_reg_x5  @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x5  @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x6"        : [["start","RTL.dbg_reg_x6  @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x6  @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x7"        : [["start","RTL.dbg_reg_x7  @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x7  @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x8"        : [["start","RTL.dbg_reg_x8  @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x8  @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x9"        : [["start","RTL.dbg_reg_x9  @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x9  @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x10"       : [["start","RTL.dbg_reg_x10 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x10 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x11"       : [["start","RTL.dbg_reg_x11 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x11 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x12"       : [["start","RTL.dbg_reg_x12 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x12 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x13"       : [["start","RTL.dbg_reg_x13 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x13 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x14"       : [["start","RTL.dbg_reg_x14 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x14 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x15"       : [["start","RTL.dbg_reg_x15 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x15 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x16"       : [["start","RTL.dbg_reg_x16 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x16 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x17"       : [["start","RTL.dbg_reg_x17 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x17 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x18"       : [["start","RTL.dbg_reg_x18 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x18 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x19"       : [["start","RTL.dbg_reg_x19 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x19 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x20"       : [["start","RTL.dbg_reg_x20 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x20 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x21"       : [["start","RTL.dbg_reg_x21 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x21 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x22"       : [["start","RTL.dbg_reg_x22 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x22 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x23"       : [["start","RTL.dbg_reg_x23 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x23 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x24"       : [["start","RTL.dbg_reg_x24 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x24 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x25"       : [["start","RTL.dbg_reg_x25 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x25 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x26"       : [["start","RTL.dbg_reg_x26 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x26 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x27"       : [["start","RTL.dbg_reg_x27 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x27 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x28"       : [["start","RTL.dbg_reg_x28 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x28 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x29"       : [["start","RTL.dbg_reg_x29 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x29 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x30"       : [["start","RTL.dbg_reg_x30 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x30 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "x31"       : [["start","RTL.dbg_reg_x31 @ ((start | afterstart) & RTL.cpuregs_write)"],["end", "RTL.dbg_reg_x31 @ ( (RTL.cpuregs_write ## 1) & afterstart)"]],
+    "pc"        : [["decode","RTL.rvfi_pc_rdata @ (RTL.rvfi_valid & afterdecode)"],["end","RTL.rvfi_pc_wdata @ (RTL.rvfi_valid & afterdecode)"]]
   },
 
 
@@ -42,10 +42,10 @@
   },
 
   "input mapping" : {
-    "inst" : "RTL.dbg_insn_opcode"
+    "inst" : "RTL.rvfi_insn @ ( RTL.rvfi_valid & afterdecode)"
   },
 
   "additional mapping" : [  
-                         "(decode || afterdecode) || (RTL.mem_ready == 0)" // hold the design, if not started
+                         // "(decode || afterdecode) || (RTL.mem_ready == 0)" // hold the design, if not started
                       ]
 }

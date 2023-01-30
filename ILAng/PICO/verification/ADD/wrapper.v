@@ -9,7 +9,6 @@
 /* END OF PREHEADER */
 module wrapper(
 __ILA_I_inst,
-__ISSUE__,
 __VLG_I_irq,
 __VLG_I_mem_rdata,
 __VLG_I_mem_ready,
@@ -17,13 +16,77 @@ __VLG_I_pcpi_rd,
 __VLG_I_pcpi_ready,
 __VLG_I_pcpi_wait,
 __VLG_I_pcpi_wr,
-____auxvar0__recorder_init__,
+____auxvar32__recorder_init__,
+____auxvar33__recorder_init__,
+____auxvar34__recorder_init__,
+____auxvar35__recorder_init__,
+____auxvar36__recorder_init__,
+____auxvar37__recorder_init__,
+____auxvar38__recorder_init__,
+____auxvar39__recorder_init__,
+____auxvar40__recorder_init__,
+____auxvar41__recorder_init__,
+____auxvar42__recorder_init__,
+____auxvar43__recorder_init__,
+____auxvar44__recorder_init__,
+____auxvar45__recorder_init__,
+____auxvar46__recorder_init__,
+____auxvar47__recorder_init__,
+____auxvar48__recorder_init__,
+____auxvar49__recorder_init__,
+____auxvar50__recorder_init__,
+____auxvar51__recorder_init__,
+____auxvar52__recorder_init__,
+____auxvar53__recorder_init__,
+____auxvar54__recorder_init__,
+____auxvar55__recorder_init__,
+____auxvar56__recorder_init__,
+____auxvar57__recorder_init__,
+____auxvar58__recorder_init__,
+____auxvar59__recorder_init__,
+____auxvar60__recorder_init__,
+____auxvar61__recorder_init__,
+____auxvar62__recorder_init__,
+____auxvar63__recorder_init__,
+____auxvar64__recorder_init__,
+____auxvar65__recorder_init__,
+____auxvar66__recorder_init__,
+____auxvar67__recorder_init__,
+____auxvar68__recorder_init__,
+____auxvar69__recorder_init__,
+____auxvar70__recorder_init__,
+____auxvar71__recorder_init__,
+____auxvar72__recorder_init__,
+____auxvar73__recorder_init__,
+____auxvar74__recorder_init__,
+____auxvar75__recorder_init__,
+____auxvar76__recorder_init__,
+____auxvar77__recorder_init__,
+____auxvar78__recorder_init__,
+____auxvar79__recorder_init__,
+____auxvar80__recorder_init__,
+____auxvar81__recorder_init__,
+____auxvar82__recorder_init__,
+____auxvar83__recorder_init__,
+____auxvar84__recorder_init__,
+____auxvar85__recorder_init__,
+____auxvar86__recorder_init__,
+____auxvar87__recorder_init__,
+____auxvar88__recorder_init__,
+____auxvar89__recorder_init__,
+____auxvar90__recorder_init__,
+____auxvar91__recorder_init__,
+____auxvar92__recorder_init__,
+____auxvar93__recorder_init__,
+____auxvar94__recorder_init__,
+____auxvar95__recorder_init__,
+____auxvar96__recorder_init__,
+____auxvar97__recorder_init__,
+____auxvar98__recorder_init__,
 clk,
 dummy_reset,
 rst,
-RTL__DOT__cpu_state,
 RTL__DOT__cpuregs_write,
-RTL__DOT__dbg_insn_opcode,
 RTL__DOT__dbg_reg_x0,
 RTL__DOT__dbg_reg_x1,
 RTL__DOT__dbg_reg_x10,
@@ -56,24 +119,10 @@ RTL__DOT__dbg_reg_x6,
 RTL__DOT__dbg_reg_x7,
 RTL__DOT__dbg_reg_x8,
 RTL__DOT__dbg_reg_x9,
-RTL__DOT__irq_active,
-RTL__DOT__irq_pending,
-RTL__DOT__latched_branch,
-RTL__DOT__latched_is_lb,
-RTL__DOT__latched_is_lh,
-RTL__DOT__latched_is_lu,
-RTL__DOT__latched_rd,
-RTL__DOT__latched_stalu,
-RTL__DOT__latched_store,
-RTL__DOT__mem_do_rinst,
-RTL__DOT__mem_instr,
-RTL__DOT__mem_la_secondword,
-RTL__DOT__mem_ready,
-RTL__DOT__mem_valid,
-RTL__DOT__mem_wstrb,
-RTL__DOT__reg_next_pc,
-RTL__DOT__reg_pc,
-RTL__DOT__trace_data,
+RTL__DOT__rvfi_insn,
+RTL__DOT__rvfi_pc_rdata,
+RTL__DOT__rvfi_pc_wdata,
+RTL__DOT__rvfi_valid,
 __EDCOND__,
 __IEND__,
 __ILA_SO_pc,
@@ -124,108 +173,442 @@ __VLG_O_pcpi_insn,
 __VLG_O_pcpi_rs1,
 __VLG_O_pcpi_rs2,
 __VLG_O_pcpi_valid,
+__VLG_O_rvfi_halt,
+__VLG_O_rvfi_insn,
+__VLG_O_rvfi_intr,
+__VLG_O_rvfi_mem_addr,
+__VLG_O_rvfi_mem_rdata,
+__VLG_O_rvfi_mem_rmask,
+__VLG_O_rvfi_mem_wdata,
+__VLG_O_rvfi_mem_wmask,
+__VLG_O_rvfi_mode,
+__VLG_O_rvfi_order,
+__VLG_O_rvfi_pc_rdata,
+__VLG_O_rvfi_pc_wdata,
+__VLG_O_rvfi_rd_addr,
+__VLG_O_rvfi_rd_wdata,
+__VLG_O_rvfi_rs1_addr,
+__VLG_O_rvfi_rs1_rdata,
+__VLG_O_rvfi_rs2_addr,
+__VLG_O_rvfi_rs2_rdata,
+__VLG_O_rvfi_trap,
+__VLG_O_rvfi_valid,
 __VLG_O_trace_data,
 __VLG_O_trace_valid,
 __VLG_O_trap,
 __all_assert_wire__,
 __all_assume_wire__,
-__sanitycheck_wire__,
-additional_mapping_control_assume__p0__,
-input_map_assume___p1__,
-invariant_assume__p2__,
-invariant_assume__p3__,
-invariant_assume__p4__,
-invariant_assume__p5__,
-invariant_assume__p6__,
-invariant_assume__p7__,
-noreset__p8__,
+__auxvar0__delay_d_0,
+__auxvar10__delay_d_0,
+__auxvar11__delay_d_0,
+__auxvar12__delay_d_0,
+__auxvar13__delay_d_0,
+__auxvar14__delay_d_0,
+__auxvar15__delay_d_0,
+__auxvar16__delay_d_0,
+__auxvar17__delay_d_0,
+__auxvar18__delay_d_0,
+__auxvar19__delay_d_0,
+__auxvar1__delay_d_0,
+__auxvar20__delay_d_0,
+__auxvar21__delay_d_0,
+__auxvar22__delay_d_0,
+__auxvar23__delay_d_0,
+__auxvar24__delay_d_0,
+__auxvar25__delay_d_0,
+__auxvar26__delay_d_0,
+__auxvar27__delay_d_0,
+__auxvar28__delay_d_0,
+__auxvar29__delay_d_0,
+__auxvar2__delay_d_0,
+__auxvar30__delay_d_0,
+__auxvar31__delay_d_0,
+__auxvar3__delay_d_0,
+__auxvar4__delay_d_0,
+__auxvar5__delay_d_0,
+__auxvar6__delay_d_0,
+__auxvar7__delay_d_0,
+__auxvar8__delay_d_0,
+__auxvar9__delay_d_0,
+input_map_assume___p0__,
+noreset__p1__,
+post_value_holder__p10__,
+post_value_holder__p11__,
+post_value_holder__p12__,
+post_value_holder__p13__,
+post_value_holder__p14__,
+post_value_holder__p15__,
+post_value_holder__p16__,
+post_value_holder__p17__,
+post_value_holder__p18__,
+post_value_holder__p19__,
+post_value_holder__p20__,
+post_value_holder__p21__,
+post_value_holder__p22__,
+post_value_holder__p23__,
+post_value_holder__p24__,
+post_value_holder__p25__,
+post_value_holder__p26__,
+post_value_holder__p27__,
+post_value_holder__p28__,
+post_value_holder__p29__,
+post_value_holder__p2__,
+post_value_holder__p30__,
+post_value_holder__p31__,
+post_value_holder__p32__,
+post_value_holder__p33__,
+post_value_holder__p34__,
+post_value_holder__p35__,
+post_value_holder__p36__,
+post_value_holder__p37__,
+post_value_holder__p38__,
+post_value_holder__p39__,
+post_value_holder__p3__,
+post_value_holder__p40__,
+post_value_holder__p41__,
+post_value_holder__p42__,
+post_value_holder__p43__,
+post_value_holder__p44__,
+post_value_holder__p45__,
+post_value_holder__p46__,
+post_value_holder__p47__,
+post_value_holder__p48__,
+post_value_holder__p49__,
+post_value_holder__p4__,
+post_value_holder__p50__,
+post_value_holder__p51__,
+post_value_holder__p52__,
+post_value_holder__p53__,
+post_value_holder__p54__,
+post_value_holder__p55__,
+post_value_holder__p56__,
+post_value_holder__p57__,
+post_value_holder__p58__,
+post_value_holder__p59__,
+post_value_holder__p5__,
+post_value_holder__p60__,
+post_value_holder__p61__,
+post_value_holder__p62__,
+post_value_holder__p63__,
+post_value_holder__p64__,
+post_value_holder__p65__,
+post_value_holder__p66__,
+post_value_holder__p67__,
+post_value_holder__p68__,
+post_value_holder__p6__,
+post_value_holder__p7__,
+post_value_holder__p8__,
 post_value_holder__p9__,
-post_value_holder_overly_constrained__p82__,
-post_value_holder_triggered__p83__,
-start_condition__p10__,
-start_condition__p11__,
-start_condition__p12__,
-start_condition__p13__,
-start_condition__p14__,
-start_condition__p15__,
-variable_map_assert__p49__,
-variable_map_assert__p50__,
-variable_map_assert__p51__,
-variable_map_assert__p52__,
-variable_map_assert__p53__,
-variable_map_assert__p54__,
-variable_map_assert__p55__,
-variable_map_assert__p56__,
-variable_map_assert__p57__,
-variable_map_assert__p58__,
-variable_map_assert__p59__,
-variable_map_assert__p60__,
-variable_map_assert__p61__,
-variable_map_assert__p62__,
-variable_map_assert__p63__,
-variable_map_assert__p64__,
-variable_map_assert__p65__,
-variable_map_assert__p66__,
-variable_map_assert__p67__,
-variable_map_assert__p68__,
-variable_map_assert__p69__,
-variable_map_assert__p70__,
-variable_map_assert__p71__,
-variable_map_assert__p72__,
-variable_map_assert__p73__,
-variable_map_assert__p74__,
-variable_map_assert__p75__,
-variable_map_assert__p76__,
-variable_map_assert__p77__,
-variable_map_assert__p78__,
-variable_map_assert__p79__,
-variable_map_assert__p80__,
-variable_map_assert__p81__,
-variable_map_assume___p16__,
-variable_map_assume___p17__,
-variable_map_assume___p18__,
-variable_map_assume___p19__,
-variable_map_assume___p20__,
-variable_map_assume___p21__,
-variable_map_assume___p22__,
-variable_map_assume___p23__,
-variable_map_assume___p24__,
-variable_map_assume___p25__,
-variable_map_assume___p26__,
-variable_map_assume___p27__,
-variable_map_assume___p28__,
-variable_map_assume___p29__,
-variable_map_assume___p30__,
-variable_map_assume___p31__,
-variable_map_assume___p32__,
-variable_map_assume___p33__,
-variable_map_assume___p34__,
-variable_map_assume___p35__,
-variable_map_assume___p36__,
-variable_map_assume___p37__,
-variable_map_assume___p38__,
-variable_map_assume___p39__,
-variable_map_assume___p40__,
-variable_map_assume___p41__,
-variable_map_assume___p42__,
-variable_map_assume___p43__,
-variable_map_assume___p44__,
-variable_map_assume___p45__,
-variable_map_assume___p46__,
-variable_map_assume___p47__,
-variable_map_assume___p48__,
+start_condition__p69__,
+start_condition__p70__,
+start_condition__p71__,
+variable_map_assert__p105__,
+variable_map_assert__p106__,
+variable_map_assert__p107__,
+variable_map_assert__p108__,
+variable_map_assert__p109__,
+variable_map_assert__p110__,
+variable_map_assert__p111__,
+variable_map_assert__p112__,
+variable_map_assert__p113__,
+variable_map_assert__p114__,
+variable_map_assert__p115__,
+variable_map_assert__p116__,
+variable_map_assert__p117__,
+variable_map_assert__p118__,
+variable_map_assert__p119__,
+variable_map_assert__p120__,
+variable_map_assert__p121__,
+variable_map_assert__p122__,
+variable_map_assert__p123__,
+variable_map_assert__p124__,
+variable_map_assert__p125__,
+variable_map_assert__p126__,
+variable_map_assert__p127__,
+variable_map_assert__p128__,
+variable_map_assert__p129__,
+variable_map_assert__p130__,
+variable_map_assert__p131__,
+variable_map_assert__p132__,
+variable_map_assert__p133__,
+variable_map_assert__p134__,
+variable_map_assert__p135__,
+variable_map_assert__p136__,
+variable_map_assert__p137__,
+variable_map_assume___p100__,
+variable_map_assume___p101__,
+variable_map_assume___p102__,
+variable_map_assume___p103__,
+variable_map_assume___p104__,
+variable_map_assume___p72__,
+variable_map_assume___p73__,
+variable_map_assume___p74__,
+variable_map_assume___p75__,
+variable_map_assume___p76__,
+variable_map_assume___p77__,
+variable_map_assume___p78__,
+variable_map_assume___p79__,
+variable_map_assume___p80__,
+variable_map_assume___p81__,
+variable_map_assume___p82__,
+variable_map_assume___p83__,
+variable_map_assume___p84__,
+variable_map_assume___p85__,
+variable_map_assume___p86__,
+variable_map_assume___p87__,
+variable_map_assume___p88__,
+variable_map_assume___p89__,
+variable_map_assume___p90__,
+variable_map_assume___p91__,
+variable_map_assume___p92__,
+variable_map_assume___p93__,
+variable_map_assume___p94__,
+variable_map_assume___p95__,
+variable_map_assume___p96__,
+variable_map_assume___p97__,
+variable_map_assume___p98__,
+variable_map_assume___p99__,
 __CYCLE_CNT__,
 __START__,
 __STARTED__,
 __ENDED__,
 __2ndENDED__,
 __RESETED__,
-__auxvar0__recorder,
-__auxvar0__recorder_sn_vhold,
-__auxvar0__recorder_sn_condmet
+__auxvar32__recorder,
+__auxvar32__recorder_sn_vhold,
+__auxvar32__recorder_sn_condmet,
+__auxvar33__recorder,
+__auxvar33__recorder_sn_vhold,
+__auxvar33__recorder_sn_condmet,
+__auxvar34__recorder,
+__auxvar34__recorder_sn_vhold,
+__auxvar34__recorder_sn_condmet,
+__auxvar35__recorder,
+__auxvar35__recorder_sn_vhold,
+__auxvar35__recorder_sn_condmet,
+__auxvar36__recorder,
+__auxvar36__recorder_sn_vhold,
+__auxvar36__recorder_sn_condmet,
+__auxvar37__recorder,
+__auxvar37__recorder_sn_vhold,
+__auxvar37__recorder_sn_condmet,
+__auxvar38__recorder,
+__auxvar38__recorder_sn_vhold,
+__auxvar38__recorder_sn_condmet,
+__auxvar39__recorder,
+__auxvar39__recorder_sn_vhold,
+__auxvar39__recorder_sn_condmet,
+__auxvar40__recorder,
+__auxvar40__recorder_sn_vhold,
+__auxvar40__recorder_sn_condmet,
+__auxvar41__recorder,
+__auxvar41__recorder_sn_vhold,
+__auxvar41__recorder_sn_condmet,
+__auxvar42__recorder,
+__auxvar42__recorder_sn_vhold,
+__auxvar42__recorder_sn_condmet,
+__auxvar43__recorder,
+__auxvar43__recorder_sn_vhold,
+__auxvar43__recorder_sn_condmet,
+__auxvar44__recorder,
+__auxvar44__recorder_sn_vhold,
+__auxvar44__recorder_sn_condmet,
+__auxvar45__recorder,
+__auxvar45__recorder_sn_vhold,
+__auxvar45__recorder_sn_condmet,
+__auxvar46__recorder,
+__auxvar46__recorder_sn_vhold,
+__auxvar46__recorder_sn_condmet,
+__auxvar47__recorder,
+__auxvar47__recorder_sn_vhold,
+__auxvar47__recorder_sn_condmet,
+__auxvar48__recorder,
+__auxvar48__recorder_sn_vhold,
+__auxvar48__recorder_sn_condmet,
+__auxvar49__recorder,
+__auxvar49__recorder_sn_vhold,
+__auxvar49__recorder_sn_condmet,
+__auxvar50__recorder,
+__auxvar50__recorder_sn_vhold,
+__auxvar50__recorder_sn_condmet,
+__auxvar51__recorder,
+__auxvar51__recorder_sn_vhold,
+__auxvar51__recorder_sn_condmet,
+__auxvar52__recorder,
+__auxvar52__recorder_sn_vhold,
+__auxvar52__recorder_sn_condmet,
+__auxvar53__recorder,
+__auxvar53__recorder_sn_vhold,
+__auxvar53__recorder_sn_condmet,
+__auxvar54__recorder,
+__auxvar54__recorder_sn_vhold,
+__auxvar54__recorder_sn_condmet,
+__auxvar55__recorder,
+__auxvar55__recorder_sn_vhold,
+__auxvar55__recorder_sn_condmet,
+__auxvar56__recorder,
+__auxvar56__recorder_sn_vhold,
+__auxvar56__recorder_sn_condmet,
+__auxvar57__recorder,
+__auxvar57__recorder_sn_vhold,
+__auxvar57__recorder_sn_condmet,
+__auxvar58__recorder,
+__auxvar58__recorder_sn_vhold,
+__auxvar58__recorder_sn_condmet,
+__auxvar59__recorder,
+__auxvar59__recorder_sn_vhold,
+__auxvar59__recorder_sn_condmet,
+__auxvar60__recorder,
+__auxvar60__recorder_sn_vhold,
+__auxvar60__recorder_sn_condmet,
+__auxvar61__recorder,
+__auxvar61__recorder_sn_vhold,
+__auxvar61__recorder_sn_condmet,
+__auxvar62__recorder,
+__auxvar62__recorder_sn_vhold,
+__auxvar62__recorder_sn_condmet,
+__auxvar63__recorder,
+__auxvar63__recorder_sn_vhold,
+__auxvar63__recorder_sn_condmet,
+__auxvar64__recorder,
+__auxvar64__recorder_sn_vhold,
+__auxvar64__recorder_sn_condmet,
+__auxvar65__recorder,
+__auxvar65__recorder_sn_vhold,
+__auxvar65__recorder_sn_condmet,
+__auxvar66__recorder,
+__auxvar66__recorder_sn_vhold,
+__auxvar66__recorder_sn_condmet,
+__auxvar67__recorder,
+__auxvar67__recorder_sn_vhold,
+__auxvar67__recorder_sn_condmet,
+__auxvar68__recorder,
+__auxvar68__recorder_sn_vhold,
+__auxvar68__recorder_sn_condmet,
+__auxvar69__recorder,
+__auxvar69__recorder_sn_vhold,
+__auxvar69__recorder_sn_condmet,
+__auxvar70__recorder,
+__auxvar70__recorder_sn_vhold,
+__auxvar70__recorder_sn_condmet,
+__auxvar71__recorder,
+__auxvar71__recorder_sn_vhold,
+__auxvar71__recorder_sn_condmet,
+__auxvar72__recorder,
+__auxvar72__recorder_sn_vhold,
+__auxvar72__recorder_sn_condmet,
+__auxvar73__recorder,
+__auxvar73__recorder_sn_vhold,
+__auxvar73__recorder_sn_condmet,
+__auxvar74__recorder,
+__auxvar74__recorder_sn_vhold,
+__auxvar74__recorder_sn_condmet,
+__auxvar75__recorder,
+__auxvar75__recorder_sn_vhold,
+__auxvar75__recorder_sn_condmet,
+__auxvar76__recorder,
+__auxvar76__recorder_sn_vhold,
+__auxvar76__recorder_sn_condmet,
+__auxvar77__recorder,
+__auxvar77__recorder_sn_vhold,
+__auxvar77__recorder_sn_condmet,
+__auxvar78__recorder,
+__auxvar78__recorder_sn_vhold,
+__auxvar78__recorder_sn_condmet,
+__auxvar79__recorder,
+__auxvar79__recorder_sn_vhold,
+__auxvar79__recorder_sn_condmet,
+__auxvar80__recorder,
+__auxvar80__recorder_sn_vhold,
+__auxvar80__recorder_sn_condmet,
+__auxvar81__recorder,
+__auxvar81__recorder_sn_vhold,
+__auxvar81__recorder_sn_condmet,
+__auxvar82__recorder,
+__auxvar82__recorder_sn_vhold,
+__auxvar82__recorder_sn_condmet,
+__auxvar83__recorder,
+__auxvar83__recorder_sn_vhold,
+__auxvar83__recorder_sn_condmet,
+__auxvar84__recorder,
+__auxvar84__recorder_sn_vhold,
+__auxvar84__recorder_sn_condmet,
+__auxvar85__recorder,
+__auxvar85__recorder_sn_vhold,
+__auxvar85__recorder_sn_condmet,
+__auxvar86__recorder,
+__auxvar86__recorder_sn_vhold,
+__auxvar86__recorder_sn_condmet,
+__auxvar87__recorder,
+__auxvar87__recorder_sn_vhold,
+__auxvar87__recorder_sn_condmet,
+__auxvar88__recorder,
+__auxvar88__recorder_sn_vhold,
+__auxvar88__recorder_sn_condmet,
+__auxvar89__recorder,
+__auxvar89__recorder_sn_vhold,
+__auxvar89__recorder_sn_condmet,
+__auxvar90__recorder,
+__auxvar90__recorder_sn_vhold,
+__auxvar90__recorder_sn_condmet,
+__auxvar91__recorder,
+__auxvar91__recorder_sn_vhold,
+__auxvar91__recorder_sn_condmet,
+__auxvar92__recorder,
+__auxvar92__recorder_sn_vhold,
+__auxvar92__recorder_sn_condmet,
+__auxvar93__recorder,
+__auxvar93__recorder_sn_vhold,
+__auxvar93__recorder_sn_condmet,
+__auxvar94__recorder,
+__auxvar94__recorder_sn_vhold,
+__auxvar94__recorder_sn_condmet,
+__auxvar95__recorder,
+__auxvar95__recorder_sn_vhold,
+__auxvar95__recorder_sn_condmet,
+__auxvar96__recorder,
+__auxvar96__recorder_sn_vhold,
+__auxvar96__recorder_sn_condmet,
+__auxvar97__recorder,
+__auxvar97__recorder_sn_vhold,
+__auxvar97__recorder_sn_condmet,
+__auxvar98__recorder,
+__auxvar98__recorder_sn_vhold,
+__auxvar98__recorder_sn_condmet,
+__auxvar0__delay_d_1,
+__auxvar10__delay_d_1,
+__auxvar11__delay_d_1,
+__auxvar12__delay_d_1,
+__auxvar13__delay_d_1,
+__auxvar14__delay_d_1,
+__auxvar15__delay_d_1,
+__auxvar16__delay_d_1,
+__auxvar17__delay_d_1,
+__auxvar18__delay_d_1,
+__auxvar19__delay_d_1,
+__auxvar1__delay_d_1,
+__auxvar20__delay_d_1,
+__auxvar21__delay_d_1,
+__auxvar22__delay_d_1,
+__auxvar23__delay_d_1,
+__auxvar24__delay_d_1,
+__auxvar25__delay_d_1,
+__auxvar26__delay_d_1,
+__auxvar27__delay_d_1,
+__auxvar28__delay_d_1,
+__auxvar29__delay_d_1,
+__auxvar2__delay_d_1,
+__auxvar30__delay_d_1,
+__auxvar31__delay_d_1,
+__auxvar3__delay_d_1,
+__auxvar4__delay_d_1,
+__auxvar5__delay_d_1,
+__auxvar6__delay_d_1,
+__auxvar7__delay_d_1,
+__auxvar8__delay_d_1,
+__auxvar9__delay_d_1
 );
 input     [31:0] __ILA_I_inst;
-input            __ISSUE__;
 input     [31:0] __VLG_I_irq;
 input     [31:0] __VLG_I_mem_rdata;
 input            __VLG_I_mem_ready;
@@ -233,13 +616,77 @@ input     [31:0] __VLG_I_pcpi_rd;
 input            __VLG_I_pcpi_ready;
 input            __VLG_I_pcpi_wait;
 input            __VLG_I_pcpi_wr;
-input     [31:0] ____auxvar0__recorder_init__;
+input     [31:0] ____auxvar32__recorder_init__;
+input     [31:0] ____auxvar33__recorder_init__;
+input     [31:0] ____auxvar34__recorder_init__;
+input     [31:0] ____auxvar35__recorder_init__;
+input     [31:0] ____auxvar36__recorder_init__;
+input     [31:0] ____auxvar37__recorder_init__;
+input     [31:0] ____auxvar38__recorder_init__;
+input     [31:0] ____auxvar39__recorder_init__;
+input     [31:0] ____auxvar40__recorder_init__;
+input     [31:0] ____auxvar41__recorder_init__;
+input     [31:0] ____auxvar42__recorder_init__;
+input     [31:0] ____auxvar43__recorder_init__;
+input     [31:0] ____auxvar44__recorder_init__;
+input     [31:0] ____auxvar45__recorder_init__;
+input     [31:0] ____auxvar46__recorder_init__;
+input     [31:0] ____auxvar47__recorder_init__;
+input     [31:0] ____auxvar48__recorder_init__;
+input     [31:0] ____auxvar49__recorder_init__;
+input     [31:0] ____auxvar50__recorder_init__;
+input     [31:0] ____auxvar51__recorder_init__;
+input     [31:0] ____auxvar52__recorder_init__;
+input     [31:0] ____auxvar53__recorder_init__;
+input     [31:0] ____auxvar54__recorder_init__;
+input     [31:0] ____auxvar55__recorder_init__;
+input     [31:0] ____auxvar56__recorder_init__;
+input     [31:0] ____auxvar57__recorder_init__;
+input     [31:0] ____auxvar58__recorder_init__;
+input     [31:0] ____auxvar59__recorder_init__;
+input     [31:0] ____auxvar60__recorder_init__;
+input     [31:0] ____auxvar61__recorder_init__;
+input     [31:0] ____auxvar62__recorder_init__;
+input     [31:0] ____auxvar63__recorder_init__;
+input     [31:0] ____auxvar64__recorder_init__;
+input     [31:0] ____auxvar65__recorder_init__;
+input     [31:0] ____auxvar66__recorder_init__;
+input     [31:0] ____auxvar67__recorder_init__;
+input     [31:0] ____auxvar68__recorder_init__;
+input     [31:0] ____auxvar69__recorder_init__;
+input     [31:0] ____auxvar70__recorder_init__;
+input     [31:0] ____auxvar71__recorder_init__;
+input     [31:0] ____auxvar72__recorder_init__;
+input     [31:0] ____auxvar73__recorder_init__;
+input     [31:0] ____auxvar74__recorder_init__;
+input     [31:0] ____auxvar75__recorder_init__;
+input     [31:0] ____auxvar76__recorder_init__;
+input     [31:0] ____auxvar77__recorder_init__;
+input     [31:0] ____auxvar78__recorder_init__;
+input     [31:0] ____auxvar79__recorder_init__;
+input     [31:0] ____auxvar80__recorder_init__;
+input     [31:0] ____auxvar81__recorder_init__;
+input     [31:0] ____auxvar82__recorder_init__;
+input     [31:0] ____auxvar83__recorder_init__;
+input     [31:0] ____auxvar84__recorder_init__;
+input     [31:0] ____auxvar85__recorder_init__;
+input     [31:0] ____auxvar86__recorder_init__;
+input     [31:0] ____auxvar87__recorder_init__;
+input     [31:0] ____auxvar88__recorder_init__;
+input     [31:0] ____auxvar89__recorder_init__;
+input     [31:0] ____auxvar90__recorder_init__;
+input     [31:0] ____auxvar91__recorder_init__;
+input     [31:0] ____auxvar92__recorder_init__;
+input     [31:0] ____auxvar93__recorder_init__;
+input     [31:0] ____auxvar94__recorder_init__;
+input     [31:0] ____auxvar95__recorder_init__;
+input     [31:0] ____auxvar96__recorder_init__;
+input     [31:0] ____auxvar97__recorder_init__;
+input     [31:0] ____auxvar98__recorder_init__;
 input            clk;
 input            dummy_reset;
 input            rst;
-output      [7:0] RTL__DOT__cpu_state;
 output            RTL__DOT__cpuregs_write;
-output     [31:0] RTL__DOT__dbg_insn_opcode;
 output     [31:0] RTL__DOT__dbg_reg_x0;
 output     [31:0] RTL__DOT__dbg_reg_x1;
 output     [31:0] RTL__DOT__dbg_reg_x10;
@@ -272,24 +719,10 @@ output     [31:0] RTL__DOT__dbg_reg_x6;
 output     [31:0] RTL__DOT__dbg_reg_x7;
 output     [31:0] RTL__DOT__dbg_reg_x8;
 output     [31:0] RTL__DOT__dbg_reg_x9;
-output            RTL__DOT__irq_active;
-output     [31:0] RTL__DOT__irq_pending;
-output            RTL__DOT__latched_branch;
-output            RTL__DOT__latched_is_lb;
-output            RTL__DOT__latched_is_lh;
-output            RTL__DOT__latched_is_lu;
-output      [4:0] RTL__DOT__latched_rd;
-output            RTL__DOT__latched_stalu;
-output            RTL__DOT__latched_store;
-output            RTL__DOT__mem_do_rinst;
-output            RTL__DOT__mem_instr;
-output            RTL__DOT__mem_la_secondword;
-output            RTL__DOT__mem_ready;
-output            RTL__DOT__mem_valid;
-output      [3:0] RTL__DOT__mem_wstrb;
-output     [31:0] RTL__DOT__reg_next_pc;
-output     [31:0] RTL__DOT__reg_pc;
-output     [35:0] RTL__DOT__trace_data;
+output     [31:0] RTL__DOT__rvfi_insn;
+output     [31:0] RTL__DOT__rvfi_pc_rdata;
+output     [31:0] RTL__DOT__rvfi_pc_wdata;
+output            RTL__DOT__rvfi_valid;
 output            __EDCOND__;
 output            __IEND__;
 output     [31:0] __ILA_SO_pc;
@@ -340,108 +773,441 @@ output     [31:0] __VLG_O_pcpi_insn;
 output     [31:0] __VLG_O_pcpi_rs1;
 output     [31:0] __VLG_O_pcpi_rs2;
 output            __VLG_O_pcpi_valid;
+output            __VLG_O_rvfi_halt;
+output     [31:0] __VLG_O_rvfi_insn;
+output            __VLG_O_rvfi_intr;
+output     [31:0] __VLG_O_rvfi_mem_addr;
+output     [31:0] __VLG_O_rvfi_mem_rdata;
+output      [3:0] __VLG_O_rvfi_mem_rmask;
+output     [31:0] __VLG_O_rvfi_mem_wdata;
+output      [3:0] __VLG_O_rvfi_mem_wmask;
+output      [1:0] __VLG_O_rvfi_mode;
+output     [63:0] __VLG_O_rvfi_order;
+output     [31:0] __VLG_O_rvfi_pc_rdata;
+output     [31:0] __VLG_O_rvfi_pc_wdata;
+output      [4:0] __VLG_O_rvfi_rd_addr;
+output     [31:0] __VLG_O_rvfi_rd_wdata;
+output      [4:0] __VLG_O_rvfi_rs1_addr;
+output     [31:0] __VLG_O_rvfi_rs1_rdata;
+output      [4:0] __VLG_O_rvfi_rs2_addr;
+output     [31:0] __VLG_O_rvfi_rs2_rdata;
+output            __VLG_O_rvfi_trap;
+output            __VLG_O_rvfi_valid;
 output     [35:0] __VLG_O_trace_data;
 output            __VLG_O_trace_valid;
 output            __VLG_O_trap;
 output            __all_assert_wire__;
 output            __all_assume_wire__;
-output            __sanitycheck_wire__;
-output            additional_mapping_control_assume__p0__;
-output            input_map_assume___p1__;
-output            invariant_assume__p2__;
-output            invariant_assume__p3__;
-output            invariant_assume__p4__;
-output            invariant_assume__p5__;
-output            invariant_assume__p6__;
-output            invariant_assume__p7__;
-output            noreset__p8__;
+output            __auxvar0__delay_d_0;
+output            __auxvar10__delay_d_0;
+output            __auxvar11__delay_d_0;
+output            __auxvar12__delay_d_0;
+output            __auxvar13__delay_d_0;
+output            __auxvar14__delay_d_0;
+output            __auxvar15__delay_d_0;
+output            __auxvar16__delay_d_0;
+output            __auxvar17__delay_d_0;
+output            __auxvar18__delay_d_0;
+output            __auxvar19__delay_d_0;
+output            __auxvar1__delay_d_0;
+output            __auxvar20__delay_d_0;
+output            __auxvar21__delay_d_0;
+output            __auxvar22__delay_d_0;
+output            __auxvar23__delay_d_0;
+output            __auxvar24__delay_d_0;
+output            __auxvar25__delay_d_0;
+output            __auxvar26__delay_d_0;
+output            __auxvar27__delay_d_0;
+output            __auxvar28__delay_d_0;
+output            __auxvar29__delay_d_0;
+output            __auxvar2__delay_d_0;
+output            __auxvar30__delay_d_0;
+output            __auxvar31__delay_d_0;
+output            __auxvar3__delay_d_0;
+output            __auxvar4__delay_d_0;
+output            __auxvar5__delay_d_0;
+output            __auxvar6__delay_d_0;
+output            __auxvar7__delay_d_0;
+output            __auxvar8__delay_d_0;
+output            __auxvar9__delay_d_0;
+output            input_map_assume___p0__;
+output            noreset__p1__;
+output            post_value_holder__p10__;
+output            post_value_holder__p11__;
+output            post_value_holder__p12__;
+output            post_value_holder__p13__;
+output            post_value_holder__p14__;
+output            post_value_holder__p15__;
+output            post_value_holder__p16__;
+output            post_value_holder__p17__;
+output            post_value_holder__p18__;
+output            post_value_holder__p19__;
+output            post_value_holder__p20__;
+output            post_value_holder__p21__;
+output            post_value_holder__p22__;
+output            post_value_holder__p23__;
+output            post_value_holder__p24__;
+output            post_value_holder__p25__;
+output            post_value_holder__p26__;
+output            post_value_holder__p27__;
+output            post_value_holder__p28__;
+output            post_value_holder__p29__;
+output            post_value_holder__p2__;
+output            post_value_holder__p30__;
+output            post_value_holder__p31__;
+output            post_value_holder__p32__;
+output            post_value_holder__p33__;
+output            post_value_holder__p34__;
+output            post_value_holder__p35__;
+output            post_value_holder__p36__;
+output            post_value_holder__p37__;
+output            post_value_holder__p38__;
+output            post_value_holder__p39__;
+output            post_value_holder__p3__;
+output            post_value_holder__p40__;
+output            post_value_holder__p41__;
+output            post_value_holder__p42__;
+output            post_value_holder__p43__;
+output            post_value_holder__p44__;
+output            post_value_holder__p45__;
+output            post_value_holder__p46__;
+output            post_value_holder__p47__;
+output            post_value_holder__p48__;
+output            post_value_holder__p49__;
+output            post_value_holder__p4__;
+output            post_value_holder__p50__;
+output            post_value_holder__p51__;
+output            post_value_holder__p52__;
+output            post_value_holder__p53__;
+output            post_value_holder__p54__;
+output            post_value_holder__p55__;
+output            post_value_holder__p56__;
+output            post_value_holder__p57__;
+output            post_value_holder__p58__;
+output            post_value_holder__p59__;
+output            post_value_holder__p5__;
+output            post_value_holder__p60__;
+output            post_value_holder__p61__;
+output            post_value_holder__p62__;
+output            post_value_holder__p63__;
+output            post_value_holder__p64__;
+output            post_value_holder__p65__;
+output            post_value_holder__p66__;
+output            post_value_holder__p67__;
+output            post_value_holder__p68__;
+output            post_value_holder__p6__;
+output            post_value_holder__p7__;
+output            post_value_holder__p8__;
 output            post_value_holder__p9__;
-output            post_value_holder_overly_constrained__p82__;
-output            post_value_holder_triggered__p83__;
-output            start_condition__p10__;
-output            start_condition__p11__;
-output            start_condition__p12__;
-output            start_condition__p13__;
-output            start_condition__p14__;
-output            start_condition__p15__;
-output            variable_map_assert__p49__;
-output            variable_map_assert__p50__;
-output            variable_map_assert__p51__;
-output            variable_map_assert__p52__;
-output            variable_map_assert__p53__;
-output            variable_map_assert__p54__;
-output            variable_map_assert__p55__;
-output            variable_map_assert__p56__;
-output            variable_map_assert__p57__;
-output            variable_map_assert__p58__;
-output            variable_map_assert__p59__;
-output            variable_map_assert__p60__;
-output            variable_map_assert__p61__;
-output            variable_map_assert__p62__;
-output            variable_map_assert__p63__;
-output            variable_map_assert__p64__;
-output            variable_map_assert__p65__;
-output            variable_map_assert__p66__;
-output            variable_map_assert__p67__;
-output            variable_map_assert__p68__;
-output            variable_map_assert__p69__;
-output            variable_map_assert__p70__;
-output            variable_map_assert__p71__;
-output            variable_map_assert__p72__;
-output            variable_map_assert__p73__;
-output            variable_map_assert__p74__;
-output            variable_map_assert__p75__;
-output            variable_map_assert__p76__;
-output            variable_map_assert__p77__;
-output            variable_map_assert__p78__;
-output            variable_map_assert__p79__;
-output            variable_map_assert__p80__;
-output            variable_map_assert__p81__;
-output            variable_map_assume___p16__;
-output            variable_map_assume___p17__;
-output            variable_map_assume___p18__;
-output            variable_map_assume___p19__;
-output            variable_map_assume___p20__;
-output            variable_map_assume___p21__;
-output            variable_map_assume___p22__;
-output            variable_map_assume___p23__;
-output            variable_map_assume___p24__;
-output            variable_map_assume___p25__;
-output            variable_map_assume___p26__;
-output            variable_map_assume___p27__;
-output            variable_map_assume___p28__;
-output            variable_map_assume___p29__;
-output            variable_map_assume___p30__;
-output            variable_map_assume___p31__;
-output            variable_map_assume___p32__;
-output            variable_map_assume___p33__;
-output            variable_map_assume___p34__;
-output            variable_map_assume___p35__;
-output            variable_map_assume___p36__;
-output            variable_map_assume___p37__;
-output            variable_map_assume___p38__;
-output            variable_map_assume___p39__;
-output            variable_map_assume___p40__;
-output            variable_map_assume___p41__;
-output            variable_map_assume___p42__;
-output            variable_map_assume___p43__;
-output            variable_map_assume___p44__;
-output            variable_map_assume___p45__;
-output            variable_map_assume___p46__;
-output            variable_map_assume___p47__;
-output            variable_map_assume___p48__;
+output            start_condition__p69__;
+output            start_condition__p70__;
+output            start_condition__p71__;
+output            variable_map_assert__p105__;
+output            variable_map_assert__p106__;
+output            variable_map_assert__p107__;
+output            variable_map_assert__p108__;
+output            variable_map_assert__p109__;
+output            variable_map_assert__p110__;
+output            variable_map_assert__p111__;
+output            variable_map_assert__p112__;
+output            variable_map_assert__p113__;
+output            variable_map_assert__p114__;
+output            variable_map_assert__p115__;
+output            variable_map_assert__p116__;
+output            variable_map_assert__p117__;
+output            variable_map_assert__p118__;
+output            variable_map_assert__p119__;
+output            variable_map_assert__p120__;
+output            variable_map_assert__p121__;
+output            variable_map_assert__p122__;
+output            variable_map_assert__p123__;
+output            variable_map_assert__p124__;
+output            variable_map_assert__p125__;
+output            variable_map_assert__p126__;
+output            variable_map_assert__p127__;
+output            variable_map_assert__p128__;
+output            variable_map_assert__p129__;
+output            variable_map_assert__p130__;
+output            variable_map_assert__p131__;
+output            variable_map_assert__p132__;
+output            variable_map_assert__p133__;
+output            variable_map_assert__p134__;
+output            variable_map_assert__p135__;
+output            variable_map_assert__p136__;
+output            variable_map_assert__p137__;
+output            variable_map_assume___p100__;
+output            variable_map_assume___p101__;
+output            variable_map_assume___p102__;
+output            variable_map_assume___p103__;
+output            variable_map_assume___p104__;
+output            variable_map_assume___p72__;
+output            variable_map_assume___p73__;
+output            variable_map_assume___p74__;
+output            variable_map_assume___p75__;
+output            variable_map_assume___p76__;
+output            variable_map_assume___p77__;
+output            variable_map_assume___p78__;
+output            variable_map_assume___p79__;
+output            variable_map_assume___p80__;
+output            variable_map_assume___p81__;
+output            variable_map_assume___p82__;
+output            variable_map_assume___p83__;
+output            variable_map_assume___p84__;
+output            variable_map_assume___p85__;
+output            variable_map_assume___p86__;
+output            variable_map_assume___p87__;
+output            variable_map_assume___p88__;
+output            variable_map_assume___p89__;
+output            variable_map_assume___p90__;
+output            variable_map_assume___p91__;
+output            variable_map_assume___p92__;
+output            variable_map_assume___p93__;
+output            variable_map_assume___p94__;
+output            variable_map_assume___p95__;
+output            variable_map_assume___p96__;
+output            variable_map_assume___p97__;
+output            variable_map_assume___p98__;
+output            variable_map_assume___p99__;
 output reg      [7:0] __CYCLE_CNT__;
 output reg            __START__;
 output reg            __STARTED__;
 output reg            __ENDED__;
 output reg            __2ndENDED__;
 output reg            __RESETED__;
-output reg     [31:0] __auxvar0__recorder;
-output reg     [31:0] __auxvar0__recorder_sn_vhold;
-output reg            __auxvar0__recorder_sn_condmet;
-(* keep *) wire      [7:0] RTL__DOT__cpu_state;
+output reg     [31:0] __auxvar32__recorder;
+output reg     [31:0] __auxvar32__recorder_sn_vhold;
+output reg            __auxvar32__recorder_sn_condmet;
+output reg     [31:0] __auxvar33__recorder;
+output reg     [31:0] __auxvar33__recorder_sn_vhold;
+output reg            __auxvar33__recorder_sn_condmet;
+output reg     [31:0] __auxvar34__recorder;
+output reg     [31:0] __auxvar34__recorder_sn_vhold;
+output reg            __auxvar34__recorder_sn_condmet;
+output reg     [31:0] __auxvar35__recorder;
+output reg     [31:0] __auxvar35__recorder_sn_vhold;
+output reg            __auxvar35__recorder_sn_condmet;
+output reg     [31:0] __auxvar36__recorder;
+output reg     [31:0] __auxvar36__recorder_sn_vhold;
+output reg            __auxvar36__recorder_sn_condmet;
+output reg     [31:0] __auxvar37__recorder;
+output reg     [31:0] __auxvar37__recorder_sn_vhold;
+output reg            __auxvar37__recorder_sn_condmet;
+output reg     [31:0] __auxvar38__recorder;
+output reg     [31:0] __auxvar38__recorder_sn_vhold;
+output reg            __auxvar38__recorder_sn_condmet;
+output reg     [31:0] __auxvar39__recorder;
+output reg     [31:0] __auxvar39__recorder_sn_vhold;
+output reg            __auxvar39__recorder_sn_condmet;
+output reg     [31:0] __auxvar40__recorder;
+output reg     [31:0] __auxvar40__recorder_sn_vhold;
+output reg            __auxvar40__recorder_sn_condmet;
+output reg     [31:0] __auxvar41__recorder;
+output reg     [31:0] __auxvar41__recorder_sn_vhold;
+output reg            __auxvar41__recorder_sn_condmet;
+output reg     [31:0] __auxvar42__recorder;
+output reg     [31:0] __auxvar42__recorder_sn_vhold;
+output reg            __auxvar42__recorder_sn_condmet;
+output reg     [31:0] __auxvar43__recorder;
+output reg     [31:0] __auxvar43__recorder_sn_vhold;
+output reg            __auxvar43__recorder_sn_condmet;
+output reg     [31:0] __auxvar44__recorder;
+output reg     [31:0] __auxvar44__recorder_sn_vhold;
+output reg            __auxvar44__recorder_sn_condmet;
+output reg     [31:0] __auxvar45__recorder;
+output reg     [31:0] __auxvar45__recorder_sn_vhold;
+output reg            __auxvar45__recorder_sn_condmet;
+output reg     [31:0] __auxvar46__recorder;
+output reg     [31:0] __auxvar46__recorder_sn_vhold;
+output reg            __auxvar46__recorder_sn_condmet;
+output reg     [31:0] __auxvar47__recorder;
+output reg     [31:0] __auxvar47__recorder_sn_vhold;
+output reg            __auxvar47__recorder_sn_condmet;
+output reg     [31:0] __auxvar48__recorder;
+output reg     [31:0] __auxvar48__recorder_sn_vhold;
+output reg            __auxvar48__recorder_sn_condmet;
+output reg     [31:0] __auxvar49__recorder;
+output reg     [31:0] __auxvar49__recorder_sn_vhold;
+output reg            __auxvar49__recorder_sn_condmet;
+output reg     [31:0] __auxvar50__recorder;
+output reg     [31:0] __auxvar50__recorder_sn_vhold;
+output reg            __auxvar50__recorder_sn_condmet;
+output reg     [31:0] __auxvar51__recorder;
+output reg     [31:0] __auxvar51__recorder_sn_vhold;
+output reg            __auxvar51__recorder_sn_condmet;
+output reg     [31:0] __auxvar52__recorder;
+output reg     [31:0] __auxvar52__recorder_sn_vhold;
+output reg            __auxvar52__recorder_sn_condmet;
+output reg     [31:0] __auxvar53__recorder;
+output reg     [31:0] __auxvar53__recorder_sn_vhold;
+output reg            __auxvar53__recorder_sn_condmet;
+output reg     [31:0] __auxvar54__recorder;
+output reg     [31:0] __auxvar54__recorder_sn_vhold;
+output reg            __auxvar54__recorder_sn_condmet;
+output reg     [31:0] __auxvar55__recorder;
+output reg     [31:0] __auxvar55__recorder_sn_vhold;
+output reg            __auxvar55__recorder_sn_condmet;
+output reg     [31:0] __auxvar56__recorder;
+output reg     [31:0] __auxvar56__recorder_sn_vhold;
+output reg            __auxvar56__recorder_sn_condmet;
+output reg     [31:0] __auxvar57__recorder;
+output reg     [31:0] __auxvar57__recorder_sn_vhold;
+output reg            __auxvar57__recorder_sn_condmet;
+output reg     [31:0] __auxvar58__recorder;
+output reg     [31:0] __auxvar58__recorder_sn_vhold;
+output reg            __auxvar58__recorder_sn_condmet;
+output reg     [31:0] __auxvar59__recorder;
+output reg     [31:0] __auxvar59__recorder_sn_vhold;
+output reg            __auxvar59__recorder_sn_condmet;
+output reg     [31:0] __auxvar60__recorder;
+output reg     [31:0] __auxvar60__recorder_sn_vhold;
+output reg            __auxvar60__recorder_sn_condmet;
+output reg     [31:0] __auxvar61__recorder;
+output reg     [31:0] __auxvar61__recorder_sn_vhold;
+output reg            __auxvar61__recorder_sn_condmet;
+output reg     [31:0] __auxvar62__recorder;
+output reg     [31:0] __auxvar62__recorder_sn_vhold;
+output reg            __auxvar62__recorder_sn_condmet;
+output reg     [31:0] __auxvar63__recorder;
+output reg     [31:0] __auxvar63__recorder_sn_vhold;
+output reg            __auxvar63__recorder_sn_condmet;
+output reg     [31:0] __auxvar64__recorder;
+output reg     [31:0] __auxvar64__recorder_sn_vhold;
+output reg            __auxvar64__recorder_sn_condmet;
+output reg     [31:0] __auxvar65__recorder;
+output reg     [31:0] __auxvar65__recorder_sn_vhold;
+output reg            __auxvar65__recorder_sn_condmet;
+output reg     [31:0] __auxvar66__recorder;
+output reg     [31:0] __auxvar66__recorder_sn_vhold;
+output reg            __auxvar66__recorder_sn_condmet;
+output reg     [31:0] __auxvar67__recorder;
+output reg     [31:0] __auxvar67__recorder_sn_vhold;
+output reg            __auxvar67__recorder_sn_condmet;
+output reg     [31:0] __auxvar68__recorder;
+output reg     [31:0] __auxvar68__recorder_sn_vhold;
+output reg            __auxvar68__recorder_sn_condmet;
+output reg     [31:0] __auxvar69__recorder;
+output reg     [31:0] __auxvar69__recorder_sn_vhold;
+output reg            __auxvar69__recorder_sn_condmet;
+output reg     [31:0] __auxvar70__recorder;
+output reg     [31:0] __auxvar70__recorder_sn_vhold;
+output reg            __auxvar70__recorder_sn_condmet;
+output reg     [31:0] __auxvar71__recorder;
+output reg     [31:0] __auxvar71__recorder_sn_vhold;
+output reg            __auxvar71__recorder_sn_condmet;
+output reg     [31:0] __auxvar72__recorder;
+output reg     [31:0] __auxvar72__recorder_sn_vhold;
+output reg            __auxvar72__recorder_sn_condmet;
+output reg     [31:0] __auxvar73__recorder;
+output reg     [31:0] __auxvar73__recorder_sn_vhold;
+output reg            __auxvar73__recorder_sn_condmet;
+output reg     [31:0] __auxvar74__recorder;
+output reg     [31:0] __auxvar74__recorder_sn_vhold;
+output reg            __auxvar74__recorder_sn_condmet;
+output reg     [31:0] __auxvar75__recorder;
+output reg     [31:0] __auxvar75__recorder_sn_vhold;
+output reg            __auxvar75__recorder_sn_condmet;
+output reg     [31:0] __auxvar76__recorder;
+output reg     [31:0] __auxvar76__recorder_sn_vhold;
+output reg            __auxvar76__recorder_sn_condmet;
+output reg     [31:0] __auxvar77__recorder;
+output reg     [31:0] __auxvar77__recorder_sn_vhold;
+output reg            __auxvar77__recorder_sn_condmet;
+output reg     [31:0] __auxvar78__recorder;
+output reg     [31:0] __auxvar78__recorder_sn_vhold;
+output reg            __auxvar78__recorder_sn_condmet;
+output reg     [31:0] __auxvar79__recorder;
+output reg     [31:0] __auxvar79__recorder_sn_vhold;
+output reg            __auxvar79__recorder_sn_condmet;
+output reg     [31:0] __auxvar80__recorder;
+output reg     [31:0] __auxvar80__recorder_sn_vhold;
+output reg            __auxvar80__recorder_sn_condmet;
+output reg     [31:0] __auxvar81__recorder;
+output reg     [31:0] __auxvar81__recorder_sn_vhold;
+output reg            __auxvar81__recorder_sn_condmet;
+output reg     [31:0] __auxvar82__recorder;
+output reg     [31:0] __auxvar82__recorder_sn_vhold;
+output reg            __auxvar82__recorder_sn_condmet;
+output reg     [31:0] __auxvar83__recorder;
+output reg     [31:0] __auxvar83__recorder_sn_vhold;
+output reg            __auxvar83__recorder_sn_condmet;
+output reg     [31:0] __auxvar84__recorder;
+output reg     [31:0] __auxvar84__recorder_sn_vhold;
+output reg            __auxvar84__recorder_sn_condmet;
+output reg     [31:0] __auxvar85__recorder;
+output reg     [31:0] __auxvar85__recorder_sn_vhold;
+output reg            __auxvar85__recorder_sn_condmet;
+output reg     [31:0] __auxvar86__recorder;
+output reg     [31:0] __auxvar86__recorder_sn_vhold;
+output reg            __auxvar86__recorder_sn_condmet;
+output reg     [31:0] __auxvar87__recorder;
+output reg     [31:0] __auxvar87__recorder_sn_vhold;
+output reg            __auxvar87__recorder_sn_condmet;
+output reg     [31:0] __auxvar88__recorder;
+output reg     [31:0] __auxvar88__recorder_sn_vhold;
+output reg            __auxvar88__recorder_sn_condmet;
+output reg     [31:0] __auxvar89__recorder;
+output reg     [31:0] __auxvar89__recorder_sn_vhold;
+output reg            __auxvar89__recorder_sn_condmet;
+output reg     [31:0] __auxvar90__recorder;
+output reg     [31:0] __auxvar90__recorder_sn_vhold;
+output reg            __auxvar90__recorder_sn_condmet;
+output reg     [31:0] __auxvar91__recorder;
+output reg     [31:0] __auxvar91__recorder_sn_vhold;
+output reg            __auxvar91__recorder_sn_condmet;
+output reg     [31:0] __auxvar92__recorder;
+output reg     [31:0] __auxvar92__recorder_sn_vhold;
+output reg            __auxvar92__recorder_sn_condmet;
+output reg     [31:0] __auxvar93__recorder;
+output reg     [31:0] __auxvar93__recorder_sn_vhold;
+output reg            __auxvar93__recorder_sn_condmet;
+output reg     [31:0] __auxvar94__recorder;
+output reg     [31:0] __auxvar94__recorder_sn_vhold;
+output reg            __auxvar94__recorder_sn_condmet;
+output reg     [31:0] __auxvar95__recorder;
+output reg     [31:0] __auxvar95__recorder_sn_vhold;
+output reg            __auxvar95__recorder_sn_condmet;
+output reg     [31:0] __auxvar96__recorder;
+output reg     [31:0] __auxvar96__recorder_sn_vhold;
+output reg            __auxvar96__recorder_sn_condmet;
+output reg     [31:0] __auxvar97__recorder;
+output reg     [31:0] __auxvar97__recorder_sn_vhold;
+output reg            __auxvar97__recorder_sn_condmet;
+output reg     [31:0] __auxvar98__recorder;
+output reg     [31:0] __auxvar98__recorder_sn_vhold;
+output reg            __auxvar98__recorder_sn_condmet;
+output reg            __auxvar0__delay_d_1;
+output reg            __auxvar10__delay_d_1;
+output reg            __auxvar11__delay_d_1;
+output reg            __auxvar12__delay_d_1;
+output reg            __auxvar13__delay_d_1;
+output reg            __auxvar14__delay_d_1;
+output reg            __auxvar15__delay_d_1;
+output reg            __auxvar16__delay_d_1;
+output reg            __auxvar17__delay_d_1;
+output reg            __auxvar18__delay_d_1;
+output reg            __auxvar19__delay_d_1;
+output reg            __auxvar1__delay_d_1;
+output reg            __auxvar20__delay_d_1;
+output reg            __auxvar21__delay_d_1;
+output reg            __auxvar22__delay_d_1;
+output reg            __auxvar23__delay_d_1;
+output reg            __auxvar24__delay_d_1;
+output reg            __auxvar25__delay_d_1;
+output reg            __auxvar26__delay_d_1;
+output reg            __auxvar27__delay_d_1;
+output reg            __auxvar28__delay_d_1;
+output reg            __auxvar29__delay_d_1;
+output reg            __auxvar2__delay_d_1;
+output reg            __auxvar30__delay_d_1;
+output reg            __auxvar31__delay_d_1;
+output reg            __auxvar3__delay_d_1;
+output reg            __auxvar4__delay_d_1;
+output reg            __auxvar5__delay_d_1;
+output reg            __auxvar6__delay_d_1;
+output reg            __auxvar7__delay_d_1;
+output reg            __auxvar8__delay_d_1;
+output reg            __auxvar9__delay_d_1;
 (* keep *) wire            RTL__DOT__cpuregs_write;
-(* keep *) wire     [31:0] RTL__DOT__dbg_insn_opcode;
 (* keep *) wire     [31:0] RTL__DOT__dbg_reg_x0;
 (* keep *) wire     [31:0] RTL__DOT__dbg_reg_x1;
 (* keep *) wire     [31:0] RTL__DOT__dbg_reg_x10;
@@ -474,24 +1240,10 @@ output reg            __auxvar0__recorder_sn_condmet;
 (* keep *) wire     [31:0] RTL__DOT__dbg_reg_x7;
 (* keep *) wire     [31:0] RTL__DOT__dbg_reg_x8;
 (* keep *) wire     [31:0] RTL__DOT__dbg_reg_x9;
-(* keep *) wire            RTL__DOT__irq_active;
-(* keep *) wire     [31:0] RTL__DOT__irq_pending;
-(* keep *) wire            RTL__DOT__latched_branch;
-(* keep *) wire            RTL__DOT__latched_is_lb;
-(* keep *) wire            RTL__DOT__latched_is_lh;
-(* keep *) wire            RTL__DOT__latched_is_lu;
-(* keep *) wire      [4:0] RTL__DOT__latched_rd;
-(* keep *) wire            RTL__DOT__latched_stalu;
-(* keep *) wire            RTL__DOT__latched_store;
-(* keep *) wire            RTL__DOT__mem_do_rinst;
-(* keep *) wire            RTL__DOT__mem_instr;
-(* keep *) wire            RTL__DOT__mem_la_secondword;
-(* keep *) wire            RTL__DOT__mem_ready;
-(* keep *) wire            RTL__DOT__mem_valid;
-(* keep *) wire      [3:0] RTL__DOT__mem_wstrb;
-(* keep *) wire     [31:0] RTL__DOT__reg_next_pc;
-(* keep *) wire     [31:0] RTL__DOT__reg_pc;
-(* keep *) wire     [35:0] RTL__DOT__trace_data;
+(* keep *) wire     [31:0] RTL__DOT__rvfi_insn;
+(* keep *) wire     [31:0] RTL__DOT__rvfi_pc_rdata;
+(* keep *) wire     [31:0] RTL__DOT__rvfi_pc_wdata;
+(* keep *) wire            RTL__DOT__rvfi_valid;
 wire            __2ndIEND__;
 (* keep *) wire            __EDCOND__;
 (* keep *) wire            __IEND__;
@@ -554,108 +1306,443 @@ wire            __2ndIEND__;
 (* keep *) wire     [31:0] __VLG_O_pcpi_rs1;
 (* keep *) wire     [31:0] __VLG_O_pcpi_rs2;
 (* keep *) wire            __VLG_O_pcpi_valid;
+(* keep *) wire            __VLG_O_rvfi_halt;
+(* keep *) wire     [31:0] __VLG_O_rvfi_insn;
+(* keep *) wire            __VLG_O_rvfi_intr;
+(* keep *) wire     [31:0] __VLG_O_rvfi_mem_addr;
+(* keep *) wire     [31:0] __VLG_O_rvfi_mem_rdata;
+(* keep *) wire      [3:0] __VLG_O_rvfi_mem_rmask;
+(* keep *) wire     [31:0] __VLG_O_rvfi_mem_wdata;
+(* keep *) wire      [3:0] __VLG_O_rvfi_mem_wmask;
+(* keep *) wire      [1:0] __VLG_O_rvfi_mode;
+(* keep *) wire     [63:0] __VLG_O_rvfi_order;
+(* keep *) wire     [31:0] __VLG_O_rvfi_pc_rdata;
+(* keep *) wire     [31:0] __VLG_O_rvfi_pc_wdata;
+(* keep *) wire      [4:0] __VLG_O_rvfi_rd_addr;
+(* keep *) wire     [31:0] __VLG_O_rvfi_rd_wdata;
+(* keep *) wire      [4:0] __VLG_O_rvfi_rs1_addr;
+(* keep *) wire     [31:0] __VLG_O_rvfi_rs1_rdata;
+(* keep *) wire      [4:0] __VLG_O_rvfi_rs2_addr;
+(* keep *) wire     [31:0] __VLG_O_rvfi_rs2_rdata;
+(* keep *) wire            __VLG_O_rvfi_trap;
+(* keep *) wire            __VLG_O_rvfi_valid;
 (* keep *) wire     [35:0] __VLG_O_trace_data;
 (* keep *) wire            __VLG_O_trace_valid;
 (* keep *) wire            __VLG_O_trap;
-wire     [31:0] ____auxvar0__recorder_init__;
+wire     [31:0] ____auxvar32__recorder_init__;
+wire     [31:0] ____auxvar33__recorder_init__;
+wire     [31:0] ____auxvar34__recorder_init__;
+wire     [31:0] ____auxvar35__recorder_init__;
+wire     [31:0] ____auxvar36__recorder_init__;
+wire     [31:0] ____auxvar37__recorder_init__;
+wire     [31:0] ____auxvar38__recorder_init__;
+wire     [31:0] ____auxvar39__recorder_init__;
+wire     [31:0] ____auxvar40__recorder_init__;
+wire     [31:0] ____auxvar41__recorder_init__;
+wire     [31:0] ____auxvar42__recorder_init__;
+wire     [31:0] ____auxvar43__recorder_init__;
+wire     [31:0] ____auxvar44__recorder_init__;
+wire     [31:0] ____auxvar45__recorder_init__;
+wire     [31:0] ____auxvar46__recorder_init__;
+wire     [31:0] ____auxvar47__recorder_init__;
+wire     [31:0] ____auxvar48__recorder_init__;
+wire     [31:0] ____auxvar49__recorder_init__;
+wire     [31:0] ____auxvar50__recorder_init__;
+wire     [31:0] ____auxvar51__recorder_init__;
+wire     [31:0] ____auxvar52__recorder_init__;
+wire     [31:0] ____auxvar53__recorder_init__;
+wire     [31:0] ____auxvar54__recorder_init__;
+wire     [31:0] ____auxvar55__recorder_init__;
+wire     [31:0] ____auxvar56__recorder_init__;
+wire     [31:0] ____auxvar57__recorder_init__;
+wire     [31:0] ____auxvar58__recorder_init__;
+wire     [31:0] ____auxvar59__recorder_init__;
+wire     [31:0] ____auxvar60__recorder_init__;
+wire     [31:0] ____auxvar61__recorder_init__;
+wire     [31:0] ____auxvar62__recorder_init__;
+wire     [31:0] ____auxvar63__recorder_init__;
+wire     [31:0] ____auxvar64__recorder_init__;
+wire     [31:0] ____auxvar65__recorder_init__;
+wire     [31:0] ____auxvar66__recorder_init__;
+wire     [31:0] ____auxvar67__recorder_init__;
+wire     [31:0] ____auxvar68__recorder_init__;
+wire     [31:0] ____auxvar69__recorder_init__;
+wire     [31:0] ____auxvar70__recorder_init__;
+wire     [31:0] ____auxvar71__recorder_init__;
+wire     [31:0] ____auxvar72__recorder_init__;
+wire     [31:0] ____auxvar73__recorder_init__;
+wire     [31:0] ____auxvar74__recorder_init__;
+wire     [31:0] ____auxvar75__recorder_init__;
+wire     [31:0] ____auxvar76__recorder_init__;
+wire     [31:0] ____auxvar77__recorder_init__;
+wire     [31:0] ____auxvar78__recorder_init__;
+wire     [31:0] ____auxvar79__recorder_init__;
+wire     [31:0] ____auxvar80__recorder_init__;
+wire     [31:0] ____auxvar81__recorder_init__;
+wire     [31:0] ____auxvar82__recorder_init__;
+wire     [31:0] ____auxvar83__recorder_init__;
+wire     [31:0] ____auxvar84__recorder_init__;
+wire     [31:0] ____auxvar85__recorder_init__;
+wire     [31:0] ____auxvar86__recorder_init__;
+wire     [31:0] ____auxvar87__recorder_init__;
+wire     [31:0] ____auxvar88__recorder_init__;
+wire     [31:0] ____auxvar89__recorder_init__;
+wire     [31:0] ____auxvar90__recorder_init__;
+wire     [31:0] ____auxvar91__recorder_init__;
+wire     [31:0] ____auxvar92__recorder_init__;
+wire     [31:0] ____auxvar93__recorder_init__;
+wire     [31:0] ____auxvar94__recorder_init__;
+wire     [31:0] ____auxvar95__recorder_init__;
+wire     [31:0] ____auxvar96__recorder_init__;
+wire     [31:0] ____auxvar97__recorder_init__;
+wire     [31:0] ____auxvar98__recorder_init__;
 (* keep *) wire            __all_assert_wire__;
 (* keep *) wire            __all_assume_wire__;
-wire            __auxvar0__recorder_sn_cond;
-wire     [31:0] __auxvar0__recorder_sn_value;
-(* keep *) wire            __sanitycheck_wire__;
-wire            additional_mapping_control_assume__p0__;
+wire            __auxvar0__delay;
+(* keep *) wire            __auxvar0__delay_d_0;
+wire            __auxvar10__delay;
+(* keep *) wire            __auxvar10__delay_d_0;
+wire            __auxvar11__delay;
+(* keep *) wire            __auxvar11__delay_d_0;
+wire            __auxvar12__delay;
+(* keep *) wire            __auxvar12__delay_d_0;
+wire            __auxvar13__delay;
+(* keep *) wire            __auxvar13__delay_d_0;
+wire            __auxvar14__delay;
+(* keep *) wire            __auxvar14__delay_d_0;
+wire            __auxvar15__delay;
+(* keep *) wire            __auxvar15__delay_d_0;
+wire            __auxvar16__delay;
+(* keep *) wire            __auxvar16__delay_d_0;
+wire            __auxvar17__delay;
+(* keep *) wire            __auxvar17__delay_d_0;
+wire            __auxvar18__delay;
+(* keep *) wire            __auxvar18__delay_d_0;
+wire            __auxvar19__delay;
+(* keep *) wire            __auxvar19__delay_d_0;
+wire            __auxvar1__delay;
+(* keep *) wire            __auxvar1__delay_d_0;
+wire            __auxvar20__delay;
+(* keep *) wire            __auxvar20__delay_d_0;
+wire            __auxvar21__delay;
+(* keep *) wire            __auxvar21__delay_d_0;
+wire            __auxvar22__delay;
+(* keep *) wire            __auxvar22__delay_d_0;
+wire            __auxvar23__delay;
+(* keep *) wire            __auxvar23__delay_d_0;
+wire            __auxvar24__delay;
+(* keep *) wire            __auxvar24__delay_d_0;
+wire            __auxvar25__delay;
+(* keep *) wire            __auxvar25__delay_d_0;
+wire            __auxvar26__delay;
+(* keep *) wire            __auxvar26__delay_d_0;
+wire            __auxvar27__delay;
+(* keep *) wire            __auxvar27__delay_d_0;
+wire            __auxvar28__delay;
+(* keep *) wire            __auxvar28__delay_d_0;
+wire            __auxvar29__delay;
+(* keep *) wire            __auxvar29__delay_d_0;
+wire            __auxvar2__delay;
+(* keep *) wire            __auxvar2__delay_d_0;
+wire            __auxvar30__delay;
+(* keep *) wire            __auxvar30__delay_d_0;
+wire            __auxvar31__delay;
+(* keep *) wire            __auxvar31__delay_d_0;
+wire            __auxvar32__recorder_sn_cond;
+wire     [31:0] __auxvar32__recorder_sn_value;
+wire            __auxvar33__recorder_sn_cond;
+wire     [31:0] __auxvar33__recorder_sn_value;
+wire            __auxvar34__recorder_sn_cond;
+wire     [31:0] __auxvar34__recorder_sn_value;
+wire            __auxvar35__recorder_sn_cond;
+wire     [31:0] __auxvar35__recorder_sn_value;
+wire            __auxvar36__recorder_sn_cond;
+wire     [31:0] __auxvar36__recorder_sn_value;
+wire            __auxvar37__recorder_sn_cond;
+wire     [31:0] __auxvar37__recorder_sn_value;
+wire            __auxvar38__recorder_sn_cond;
+wire     [31:0] __auxvar38__recorder_sn_value;
+wire            __auxvar39__recorder_sn_cond;
+wire     [31:0] __auxvar39__recorder_sn_value;
+wire            __auxvar3__delay;
+(* keep *) wire            __auxvar3__delay_d_0;
+wire            __auxvar40__recorder_sn_cond;
+wire     [31:0] __auxvar40__recorder_sn_value;
+wire            __auxvar41__recorder_sn_cond;
+wire     [31:0] __auxvar41__recorder_sn_value;
+wire            __auxvar42__recorder_sn_cond;
+wire     [31:0] __auxvar42__recorder_sn_value;
+wire            __auxvar43__recorder_sn_cond;
+wire     [31:0] __auxvar43__recorder_sn_value;
+wire            __auxvar44__recorder_sn_cond;
+wire     [31:0] __auxvar44__recorder_sn_value;
+wire            __auxvar45__recorder_sn_cond;
+wire     [31:0] __auxvar45__recorder_sn_value;
+wire            __auxvar46__recorder_sn_cond;
+wire     [31:0] __auxvar46__recorder_sn_value;
+wire            __auxvar47__recorder_sn_cond;
+wire     [31:0] __auxvar47__recorder_sn_value;
+wire            __auxvar48__recorder_sn_cond;
+wire     [31:0] __auxvar48__recorder_sn_value;
+wire            __auxvar49__recorder_sn_cond;
+wire     [31:0] __auxvar49__recorder_sn_value;
+wire            __auxvar4__delay;
+(* keep *) wire            __auxvar4__delay_d_0;
+wire            __auxvar50__recorder_sn_cond;
+wire     [31:0] __auxvar50__recorder_sn_value;
+wire            __auxvar51__recorder_sn_cond;
+wire     [31:0] __auxvar51__recorder_sn_value;
+wire            __auxvar52__recorder_sn_cond;
+wire     [31:0] __auxvar52__recorder_sn_value;
+wire            __auxvar53__recorder_sn_cond;
+wire     [31:0] __auxvar53__recorder_sn_value;
+wire            __auxvar54__recorder_sn_cond;
+wire     [31:0] __auxvar54__recorder_sn_value;
+wire            __auxvar55__recorder_sn_cond;
+wire     [31:0] __auxvar55__recorder_sn_value;
+wire            __auxvar56__recorder_sn_cond;
+wire     [31:0] __auxvar56__recorder_sn_value;
+wire            __auxvar57__recorder_sn_cond;
+wire     [31:0] __auxvar57__recorder_sn_value;
+wire            __auxvar58__recorder_sn_cond;
+wire     [31:0] __auxvar58__recorder_sn_value;
+wire            __auxvar59__recorder_sn_cond;
+wire     [31:0] __auxvar59__recorder_sn_value;
+wire            __auxvar5__delay;
+(* keep *) wire            __auxvar5__delay_d_0;
+wire            __auxvar60__recorder_sn_cond;
+wire     [31:0] __auxvar60__recorder_sn_value;
+wire            __auxvar61__recorder_sn_cond;
+wire     [31:0] __auxvar61__recorder_sn_value;
+wire            __auxvar62__recorder_sn_cond;
+wire     [31:0] __auxvar62__recorder_sn_value;
+wire            __auxvar63__recorder_sn_cond;
+wire     [31:0] __auxvar63__recorder_sn_value;
+wire            __auxvar64__recorder_sn_cond;
+wire     [31:0] __auxvar64__recorder_sn_value;
+wire            __auxvar65__recorder_sn_cond;
+wire     [31:0] __auxvar65__recorder_sn_value;
+wire            __auxvar66__recorder_sn_cond;
+wire     [31:0] __auxvar66__recorder_sn_value;
+wire            __auxvar67__recorder_sn_cond;
+wire     [31:0] __auxvar67__recorder_sn_value;
+wire            __auxvar68__recorder_sn_cond;
+wire     [31:0] __auxvar68__recorder_sn_value;
+wire            __auxvar69__recorder_sn_cond;
+wire     [31:0] __auxvar69__recorder_sn_value;
+wire            __auxvar6__delay;
+(* keep *) wire            __auxvar6__delay_d_0;
+wire            __auxvar70__recorder_sn_cond;
+wire     [31:0] __auxvar70__recorder_sn_value;
+wire            __auxvar71__recorder_sn_cond;
+wire     [31:0] __auxvar71__recorder_sn_value;
+wire            __auxvar72__recorder_sn_cond;
+wire     [31:0] __auxvar72__recorder_sn_value;
+wire            __auxvar73__recorder_sn_cond;
+wire     [31:0] __auxvar73__recorder_sn_value;
+wire            __auxvar74__recorder_sn_cond;
+wire     [31:0] __auxvar74__recorder_sn_value;
+wire            __auxvar75__recorder_sn_cond;
+wire     [31:0] __auxvar75__recorder_sn_value;
+wire            __auxvar76__recorder_sn_cond;
+wire     [31:0] __auxvar76__recorder_sn_value;
+wire            __auxvar77__recorder_sn_cond;
+wire     [31:0] __auxvar77__recorder_sn_value;
+wire            __auxvar78__recorder_sn_cond;
+wire     [31:0] __auxvar78__recorder_sn_value;
+wire            __auxvar79__recorder_sn_cond;
+wire     [31:0] __auxvar79__recorder_sn_value;
+wire            __auxvar7__delay;
+(* keep *) wire            __auxvar7__delay_d_0;
+wire            __auxvar80__recorder_sn_cond;
+wire     [31:0] __auxvar80__recorder_sn_value;
+wire            __auxvar81__recorder_sn_cond;
+wire     [31:0] __auxvar81__recorder_sn_value;
+wire            __auxvar82__recorder_sn_cond;
+wire     [31:0] __auxvar82__recorder_sn_value;
+wire            __auxvar83__recorder_sn_cond;
+wire     [31:0] __auxvar83__recorder_sn_value;
+wire            __auxvar84__recorder_sn_cond;
+wire     [31:0] __auxvar84__recorder_sn_value;
+wire            __auxvar85__recorder_sn_cond;
+wire     [31:0] __auxvar85__recorder_sn_value;
+wire            __auxvar86__recorder_sn_cond;
+wire     [31:0] __auxvar86__recorder_sn_value;
+wire            __auxvar87__recorder_sn_cond;
+wire     [31:0] __auxvar87__recorder_sn_value;
+wire            __auxvar88__recorder_sn_cond;
+wire     [31:0] __auxvar88__recorder_sn_value;
+wire            __auxvar89__recorder_sn_cond;
+wire     [31:0] __auxvar89__recorder_sn_value;
+wire            __auxvar8__delay;
+(* keep *) wire            __auxvar8__delay_d_0;
+wire            __auxvar90__recorder_sn_cond;
+wire     [31:0] __auxvar90__recorder_sn_value;
+wire            __auxvar91__recorder_sn_cond;
+wire     [31:0] __auxvar91__recorder_sn_value;
+wire            __auxvar92__recorder_sn_cond;
+wire     [31:0] __auxvar92__recorder_sn_value;
+wire            __auxvar93__recorder_sn_cond;
+wire     [31:0] __auxvar93__recorder_sn_value;
+wire            __auxvar94__recorder_sn_cond;
+wire     [31:0] __auxvar94__recorder_sn_value;
+wire            __auxvar95__recorder_sn_cond;
+wire     [31:0] __auxvar95__recorder_sn_value;
+wire            __auxvar96__recorder_sn_cond;
+wire     [31:0] __auxvar96__recorder_sn_value;
+wire            __auxvar97__recorder_sn_cond;
+wire     [31:0] __auxvar97__recorder_sn_value;
+wire            __auxvar98__recorder_sn_cond;
+wire     [31:0] __auxvar98__recorder_sn_value;
+wire            __auxvar9__delay;
+(* keep *) wire            __auxvar9__delay_d_0;
 wire            clk;
 (* keep *) wire            dummy_reset;
-wire            input_map_assume___p1__;
-wire            invariant_assume__p2__;
-wire            invariant_assume__p3__;
-wire            invariant_assume__p4__;
-wire            invariant_assume__p5__;
-wire            invariant_assume__p6__;
-wire            invariant_assume__p7__;
-wire            noreset__p8__;
+wire            input_map_assume___p0__;
+wire            noreset__p1__;
+wire            post_value_holder__p10__;
+wire            post_value_holder__p11__;
+wire            post_value_holder__p12__;
+wire            post_value_holder__p13__;
+wire            post_value_holder__p14__;
+wire            post_value_holder__p15__;
+wire            post_value_holder__p16__;
+wire            post_value_holder__p17__;
+wire            post_value_holder__p18__;
+wire            post_value_holder__p19__;
+wire            post_value_holder__p20__;
+wire            post_value_holder__p21__;
+wire            post_value_holder__p22__;
+wire            post_value_holder__p23__;
+wire            post_value_holder__p24__;
+wire            post_value_holder__p25__;
+wire            post_value_holder__p26__;
+wire            post_value_holder__p27__;
+wire            post_value_holder__p28__;
+wire            post_value_holder__p29__;
+wire            post_value_holder__p2__;
+wire            post_value_holder__p30__;
+wire            post_value_holder__p31__;
+wire            post_value_holder__p32__;
+wire            post_value_holder__p33__;
+wire            post_value_holder__p34__;
+wire            post_value_holder__p35__;
+wire            post_value_holder__p36__;
+wire            post_value_holder__p37__;
+wire            post_value_holder__p38__;
+wire            post_value_holder__p39__;
+wire            post_value_holder__p3__;
+wire            post_value_holder__p40__;
+wire            post_value_holder__p41__;
+wire            post_value_holder__p42__;
+wire            post_value_holder__p43__;
+wire            post_value_holder__p44__;
+wire            post_value_holder__p45__;
+wire            post_value_holder__p46__;
+wire            post_value_holder__p47__;
+wire            post_value_holder__p48__;
+wire            post_value_holder__p49__;
+wire            post_value_holder__p4__;
+wire            post_value_holder__p50__;
+wire            post_value_holder__p51__;
+wire            post_value_holder__p52__;
+wire            post_value_holder__p53__;
+wire            post_value_holder__p54__;
+wire            post_value_holder__p55__;
+wire            post_value_holder__p56__;
+wire            post_value_holder__p57__;
+wire            post_value_holder__p58__;
+wire            post_value_holder__p59__;
+wire            post_value_holder__p5__;
+wire            post_value_holder__p60__;
+wire            post_value_holder__p61__;
+wire            post_value_holder__p62__;
+wire            post_value_holder__p63__;
+wire            post_value_holder__p64__;
+wire            post_value_holder__p65__;
+wire            post_value_holder__p66__;
+wire            post_value_holder__p67__;
+wire            post_value_holder__p68__;
+wire            post_value_holder__p6__;
+wire            post_value_holder__p7__;
+wire            post_value_holder__p8__;
 wire            post_value_holder__p9__;
-wire            post_value_holder_overly_constrained__p82__;
-wire            post_value_holder_triggered__p83__;
 wire            rst;
-wire            start_condition__p10__;
-wire            start_condition__p11__;
-wire            start_condition__p12__;
-wire            start_condition__p13__;
-wire            start_condition__p14__;
-wire            start_condition__p15__;
-wire            variable_map_assert__p49__;
-wire            variable_map_assert__p50__;
-wire            variable_map_assert__p51__;
-wire            variable_map_assert__p52__;
-wire            variable_map_assert__p53__;
-wire            variable_map_assert__p54__;
-wire            variable_map_assert__p55__;
-wire            variable_map_assert__p56__;
-wire            variable_map_assert__p57__;
-wire            variable_map_assert__p58__;
-wire            variable_map_assert__p59__;
-wire            variable_map_assert__p60__;
-wire            variable_map_assert__p61__;
-wire            variable_map_assert__p62__;
-wire            variable_map_assert__p63__;
-wire            variable_map_assert__p64__;
-wire            variable_map_assert__p65__;
-wire            variable_map_assert__p66__;
-wire            variable_map_assert__p67__;
-wire            variable_map_assert__p68__;
-wire            variable_map_assert__p69__;
-wire            variable_map_assert__p70__;
-wire            variable_map_assert__p71__;
-wire            variable_map_assert__p72__;
-wire            variable_map_assert__p73__;
-wire            variable_map_assert__p74__;
-wire            variable_map_assert__p75__;
-wire            variable_map_assert__p76__;
-wire            variable_map_assert__p77__;
-wire            variable_map_assert__p78__;
-wire            variable_map_assert__p79__;
-wire            variable_map_assert__p80__;
-wire            variable_map_assert__p81__;
-wire            variable_map_assume___p16__;
-wire            variable_map_assume___p17__;
-wire            variable_map_assume___p18__;
-wire            variable_map_assume___p19__;
-wire            variable_map_assume___p20__;
-wire            variable_map_assume___p21__;
-wire            variable_map_assume___p22__;
-wire            variable_map_assume___p23__;
-wire            variable_map_assume___p24__;
-wire            variable_map_assume___p25__;
-wire            variable_map_assume___p26__;
-wire            variable_map_assume___p27__;
-wire            variable_map_assume___p28__;
-wire            variable_map_assume___p29__;
-wire            variable_map_assume___p30__;
-wire            variable_map_assume___p31__;
-wire            variable_map_assume___p32__;
-wire            variable_map_assume___p33__;
-wire            variable_map_assume___p34__;
-wire            variable_map_assume___p35__;
-wire            variable_map_assume___p36__;
-wire            variable_map_assume___p37__;
-wire            variable_map_assume___p38__;
-wire            variable_map_assume___p39__;
-wire            variable_map_assume___p40__;
-wire            variable_map_assume___p41__;
-wire            variable_map_assume___p42__;
-wire            variable_map_assume___p43__;
-wire            variable_map_assume___p44__;
-wire            variable_map_assume___p45__;
-wire            variable_map_assume___p46__;
-wire            variable_map_assume___p47__;
-wire            variable_map_assume___p48__;
+wire            start_condition__p69__;
+wire            start_condition__p70__;
+wire            start_condition__p71__;
+wire            variable_map_assert__p105__;
+wire            variable_map_assert__p106__;
+wire            variable_map_assert__p107__;
+wire            variable_map_assert__p108__;
+wire            variable_map_assert__p109__;
+wire            variable_map_assert__p110__;
+wire            variable_map_assert__p111__;
+wire            variable_map_assert__p112__;
+wire            variable_map_assert__p113__;
+wire            variable_map_assert__p114__;
+wire            variable_map_assert__p115__;
+wire            variable_map_assert__p116__;
+wire            variable_map_assert__p117__;
+wire            variable_map_assert__p118__;
+wire            variable_map_assert__p119__;
+wire            variable_map_assert__p120__;
+wire            variable_map_assert__p121__;
+wire            variable_map_assert__p122__;
+wire            variable_map_assert__p123__;
+wire            variable_map_assert__p124__;
+wire            variable_map_assert__p125__;
+wire            variable_map_assert__p126__;
+wire            variable_map_assert__p127__;
+wire            variable_map_assert__p128__;
+wire            variable_map_assert__p129__;
+wire            variable_map_assert__p130__;
+wire            variable_map_assert__p131__;
+wire            variable_map_assert__p132__;
+wire            variable_map_assert__p133__;
+wire            variable_map_assert__p134__;
+wire            variable_map_assert__p135__;
+wire            variable_map_assert__p136__;
+wire            variable_map_assert__p137__;
+wire            variable_map_assume___p100__;
+wire            variable_map_assume___p101__;
+wire            variable_map_assume___p102__;
+wire            variable_map_assume___p103__;
+wire            variable_map_assume___p104__;
+wire            variable_map_assume___p72__;
+wire            variable_map_assume___p73__;
+wire            variable_map_assume___p74__;
+wire            variable_map_assume___p75__;
+wire            variable_map_assume___p76__;
+wire            variable_map_assume___p77__;
+wire            variable_map_assume___p78__;
+wire            variable_map_assume___p79__;
+wire            variable_map_assume___p80__;
+wire            variable_map_assume___p81__;
+wire            variable_map_assume___p82__;
+wire            variable_map_assume___p83__;
+wire            variable_map_assume___p84__;
+wire            variable_map_assume___p85__;
+wire            variable_map_assume___p86__;
+wire            variable_map_assume___p87__;
+wire            variable_map_assume___p88__;
+wire            variable_map_assume___p89__;
+wire            variable_map_assume___p90__;
+wire            variable_map_assume___p91__;
+wire            variable_map_assume___p92__;
+wire            variable_map_assume___p93__;
+wire            variable_map_assume___p94__;
+wire            variable_map_assume___p95__;
+wire            variable_map_assume___p96__;
+wire            variable_map_assume___p97__;
+wire            variable_map_assume___p98__;
+wire            variable_map_assume___p99__;
 always @(posedge clk) begin
 if (rst) __CYCLE_CNT__ <= 0;
 else if ( ( __START__ || __STARTED__ ) &&  __CYCLE_CNT__ < 137) __CYCLE_CNT__ <= __CYCLE_CNT__ + 1;
 end
 always @(posedge clk) begin
-if (__ISSUE__ && !__START__ && !__STARTED__) __START__ <= 1;
+if (rst) __START__ <= 1;
 else if (__START__ || __STARTED__) __START__ <= 0;
 end
 always @(posedge clk) begin
@@ -673,6 +1760,39 @@ assign __2ndIEND__ = __ENDED__ && __EDCOND__ && ~__2ndENDED__ ;
 always @(posedge clk) begin
 if (rst) __RESETED__ <= 1;
 end
+assign __ISSUE__ = 1 ;
+assign __auxvar0__delay = __auxvar0__delay_d_1 ;
+assign __auxvar10__delay = __auxvar10__delay_d_1 ;
+assign __auxvar11__delay = __auxvar11__delay_d_1 ;
+assign __auxvar12__delay = __auxvar12__delay_d_1 ;
+assign __auxvar13__delay = __auxvar13__delay_d_1 ;
+assign __auxvar14__delay = __auxvar14__delay_d_1 ;
+assign __auxvar15__delay = __auxvar15__delay_d_1 ;
+assign __auxvar16__delay = __auxvar16__delay_d_1 ;
+assign __auxvar17__delay = __auxvar17__delay_d_1 ;
+assign __auxvar18__delay = __auxvar18__delay_d_1 ;
+assign __auxvar19__delay = __auxvar19__delay_d_1 ;
+assign __auxvar1__delay = __auxvar1__delay_d_1 ;
+assign __auxvar20__delay = __auxvar20__delay_d_1 ;
+assign __auxvar21__delay = __auxvar21__delay_d_1 ;
+assign __auxvar22__delay = __auxvar22__delay_d_1 ;
+assign __auxvar23__delay = __auxvar23__delay_d_1 ;
+assign __auxvar24__delay = __auxvar24__delay_d_1 ;
+assign __auxvar25__delay = __auxvar25__delay_d_1 ;
+assign __auxvar26__delay = __auxvar26__delay_d_1 ;
+assign __auxvar27__delay = __auxvar27__delay_d_1 ;
+assign __auxvar28__delay = __auxvar28__delay_d_1 ;
+assign __auxvar29__delay = __auxvar29__delay_d_1 ;
+assign __auxvar2__delay = __auxvar2__delay_d_1 ;
+assign __auxvar30__delay = __auxvar30__delay_d_1 ;
+assign __auxvar31__delay = __auxvar31__delay_d_1 ;
+assign __auxvar3__delay = __auxvar3__delay_d_1 ;
+assign __auxvar4__delay = __auxvar4__delay_d_1 ;
+assign __auxvar5__delay = __auxvar5__delay_d_1 ;
+assign __auxvar6__delay = __auxvar6__delay_d_1 ;
+assign __auxvar7__delay = __auxvar7__delay_d_1 ;
+assign __auxvar8__delay = __auxvar8__delay_d_1 ;
+assign __auxvar9__delay = __auxvar9__delay_d_1 ;
 riscv__DOT__ADD ILA (
    .__START__(__START__),
    .clk(clk),
@@ -715,98 +1835,314 @@ riscv__DOT__ADD ILA (
    .x31(__ILA_SO_x31),
    .__COUNTER_start__n11()
 );
-assign __EDCOND__ = (((RTL__DOT__cpu_state)==(8'b01000000))&&((RTL__DOT__reg_pc)!=(__auxvar0__recorder)))&&(__STARTED__) ;
-assign __IEND__ = ((((((RTL__DOT__cpu_state)==(8'b01000000))&&((RTL__DOT__reg_pc)!=(__auxvar0__recorder)))&&(__STARTED__))&&(__RESETED__))&&(!(__ENDED__)))&&(1'b1) ;
-assign __auxvar0__recorder_sn_cond = (((__CYCLE_CNT__)==(0))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
-assign __auxvar0__recorder_sn_value = RTL__DOT__reg_pc ;
-assign additional_mapping_control_assume__p0__ = ((__START__)||(__STARTED__))||((RTL__DOT__mem_ready)==(0)) ;
-assign input_map_assume___p1__ = (!(__START__))||((__ILA_I_inst)==(RTL__DOT__dbg_insn_opcode)) ;
-assign invariant_assume__p2__ = (RTL__DOT__irq_pending)==(0) ;
-assign invariant_assume__p3__ = (RTL__DOT__mem_la_secondword)==(0) ;
-assign invariant_assume__p4__ = (RTL__DOT__trace_data)==(0) ;
-assign invariant_assume__p5__ = (RTL__DOT__irq_active)==(0) ;
-assign invariant_assume__p6__ = (((RTL__DOT__reg_pc)==(RTL__DOT__reg_next_pc))||(((RTL__DOT__reg_pc)+(4))==(RTL__DOT__reg_next_pc)))||((RTL__DOT__mem_do_rinst)&&(RTL__DOT__latched_branch)) ;
-assign invariant_assume__p7__ = (RTL__DOT__cpu_state)!=(8'h10) ;
-assign noreset__p8__ = (!(__RESETED__))||(!(dummy_reset)) ;
-assign post_value_holder__p9__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar0__recorder_sn_condmet)))&&((__CYCLE_CNT__)==(0))))||((__auxvar0__recorder)==(RTL__DOT__reg_pc)) ;
-assign start_condition__p10__ = (!(__START__))||(__ILA_riscv_decode_of_ADD__) ;
-assign start_condition__p11__ = (!(__START__))||(__ILA_riscv_valid__) ;
-assign start_condition__p12__ = (!(__START__))||((((((RTL__DOT__cpu_state)==(8'b01000000))&&((RTL__DOT__mem_wstrb)==(0)))&&((RTL__DOT__mem_valid)==(1)))&&((RTL__DOT__mem_instr)==(1)))&&((RTL__DOT__mem_ready)==(1))) ;
-assign start_condition__p13__ = (!(__START__))||(((RTL__DOT__latched_rd)==(0))||((RTL__DOT__cpuregs_write)==(0))) ;
-assign start_condition__p14__ = (!(__START__))||(((!(RTL__DOT__latched_is_lu))&&(!(RTL__DOT__latched_is_lh)))&&(!(RTL__DOT__latched_is_lb))) ;
-assign start_condition__p15__ = (!(__START__))||((((RTL__DOT__latched_store)==(0))&&((RTL__DOT__latched_stalu)==(0)))&&((RTL__DOT__latched_branch)==(0))) ;
-assign variable_map_assume___p16__ = (!(__START__))||((__ILA_SO_pc)==(RTL__DOT__reg_pc)) ;
-assign variable_map_assume___p17__ = (!(__START__))||((__ILA_SO_x0)==(RTL__DOT__dbg_reg_x0)) ;
-assign variable_map_assume___p18__ = (!(__START__))||((__ILA_SO_x1)==(RTL__DOT__dbg_reg_x1)) ;
-assign variable_map_assume___p19__ = (!(__START__))||((__ILA_SO_x10)==(RTL__DOT__dbg_reg_x10)) ;
-assign variable_map_assume___p20__ = (!(__START__))||((__ILA_SO_x11)==(RTL__DOT__dbg_reg_x11)) ;
-assign variable_map_assume___p21__ = (!(__START__))||((__ILA_SO_x12)==(RTL__DOT__dbg_reg_x12)) ;
-assign variable_map_assume___p22__ = (!(__START__))||((__ILA_SO_x13)==(RTL__DOT__dbg_reg_x13)) ;
-assign variable_map_assume___p23__ = (!(__START__))||((__ILA_SO_x14)==(RTL__DOT__dbg_reg_x14)) ;
-assign variable_map_assume___p24__ = (!(__START__))||((__ILA_SO_x15)==(RTL__DOT__dbg_reg_x15)) ;
-assign variable_map_assume___p25__ = (!(__START__))||((__ILA_SO_x16)==(RTL__DOT__dbg_reg_x16)) ;
-assign variable_map_assume___p26__ = (!(__START__))||((__ILA_SO_x17)==(RTL__DOT__dbg_reg_x17)) ;
-assign variable_map_assume___p27__ = (!(__START__))||((__ILA_SO_x18)==(RTL__DOT__dbg_reg_x18)) ;
-assign variable_map_assume___p28__ = (!(__START__))||((__ILA_SO_x19)==(RTL__DOT__dbg_reg_x19)) ;
-assign variable_map_assume___p29__ = (!(__START__))||((__ILA_SO_x2)==(RTL__DOT__dbg_reg_x2)) ;
-assign variable_map_assume___p30__ = (!(__START__))||((__ILA_SO_x20)==(RTL__DOT__dbg_reg_x20)) ;
-assign variable_map_assume___p31__ = (!(__START__))||((__ILA_SO_x21)==(RTL__DOT__dbg_reg_x21)) ;
-assign variable_map_assume___p32__ = (!(__START__))||((__ILA_SO_x22)==(RTL__DOT__dbg_reg_x22)) ;
-assign variable_map_assume___p33__ = (!(__START__))||((__ILA_SO_x23)==(RTL__DOT__dbg_reg_x23)) ;
-assign variable_map_assume___p34__ = (!(__START__))||((__ILA_SO_x24)==(RTL__DOT__dbg_reg_x24)) ;
-assign variable_map_assume___p35__ = (!(__START__))||((__ILA_SO_x25)==(RTL__DOT__dbg_reg_x25)) ;
-assign variable_map_assume___p36__ = (!(__START__))||((__ILA_SO_x26)==(RTL__DOT__dbg_reg_x26)) ;
-assign variable_map_assume___p37__ = (!(__START__))||((__ILA_SO_x27)==(RTL__DOT__dbg_reg_x27)) ;
-assign variable_map_assume___p38__ = (!(__START__))||((__ILA_SO_x28)==(RTL__DOT__dbg_reg_x28)) ;
-assign variable_map_assume___p39__ = (!(__START__))||((__ILA_SO_x29)==(RTL__DOT__dbg_reg_x29)) ;
-assign variable_map_assume___p40__ = (!(__START__))||((__ILA_SO_x3)==(RTL__DOT__dbg_reg_x3)) ;
-assign variable_map_assume___p41__ = (!(__START__))||((__ILA_SO_x30)==(RTL__DOT__dbg_reg_x30)) ;
-assign variable_map_assume___p42__ = (!(__START__))||((__ILA_SO_x31)==(RTL__DOT__dbg_reg_x31)) ;
-assign variable_map_assume___p43__ = (!(__START__))||((__ILA_SO_x4)==(RTL__DOT__dbg_reg_x4)) ;
-assign variable_map_assume___p44__ = (!(__START__))||((__ILA_SO_x5)==(RTL__DOT__dbg_reg_x5)) ;
-assign variable_map_assume___p45__ = (!(__START__))||((__ILA_SO_x6)==(RTL__DOT__dbg_reg_x6)) ;
-assign variable_map_assume___p46__ = (!(__START__))||((__ILA_SO_x7)==(RTL__DOT__dbg_reg_x7)) ;
-assign variable_map_assume___p47__ = (!(__START__))||((__ILA_SO_x8)==(RTL__DOT__dbg_reg_x8)) ;
-assign variable_map_assume___p48__ = (!(__START__))||((__ILA_SO_x9)==(RTL__DOT__dbg_reg_x9)) ;
-assign variable_map_assert__p49__ = (!(__IEND__))||((__ILA_SO_pc)==(RTL__DOT__reg_pc)) ;
-assign variable_map_assert__p50__ = (!(__IEND__))||((__ILA_SO_x0)==(RTL__DOT__dbg_reg_x0)) ;
-assign variable_map_assert__p51__ = (!(__IEND__))||((__ILA_SO_x1)==(RTL__DOT__dbg_reg_x1)) ;
-assign variable_map_assert__p52__ = (!(__IEND__))||((__ILA_SO_x10)==(RTL__DOT__dbg_reg_x10)) ;
-assign variable_map_assert__p53__ = (!(__IEND__))||((__ILA_SO_x11)==(RTL__DOT__dbg_reg_x11)) ;
-assign variable_map_assert__p54__ = (!(__IEND__))||((__ILA_SO_x12)==(RTL__DOT__dbg_reg_x12)) ;
-assign variable_map_assert__p55__ = (!(__IEND__))||((__ILA_SO_x13)==(RTL__DOT__dbg_reg_x13)) ;
-assign variable_map_assert__p56__ = (!(__IEND__))||((__ILA_SO_x14)==(RTL__DOT__dbg_reg_x14)) ;
-assign variable_map_assert__p57__ = (!(__IEND__))||((__ILA_SO_x15)==(RTL__DOT__dbg_reg_x15)) ;
-assign variable_map_assert__p58__ = (!(__IEND__))||((__ILA_SO_x16)==(RTL__DOT__dbg_reg_x16)) ;
-assign variable_map_assert__p59__ = (!(__IEND__))||((__ILA_SO_x17)==(RTL__DOT__dbg_reg_x17)) ;
-assign variable_map_assert__p60__ = (!(__IEND__))||((__ILA_SO_x18)==(RTL__DOT__dbg_reg_x18)) ;
-assign variable_map_assert__p61__ = (!(__IEND__))||((__ILA_SO_x19)==(RTL__DOT__dbg_reg_x19)) ;
-assign variable_map_assert__p62__ = (!(__IEND__))||((__ILA_SO_x2)==(RTL__DOT__dbg_reg_x2)) ;
-assign variable_map_assert__p63__ = (!(__IEND__))||((__ILA_SO_x20)==(RTL__DOT__dbg_reg_x20)) ;
-assign variable_map_assert__p64__ = (!(__IEND__))||((__ILA_SO_x21)==(RTL__DOT__dbg_reg_x21)) ;
-assign variable_map_assert__p65__ = (!(__IEND__))||((__ILA_SO_x22)==(RTL__DOT__dbg_reg_x22)) ;
-assign variable_map_assert__p66__ = (!(__IEND__))||((__ILA_SO_x23)==(RTL__DOT__dbg_reg_x23)) ;
-assign variable_map_assert__p67__ = (!(__IEND__))||((__ILA_SO_x24)==(RTL__DOT__dbg_reg_x24)) ;
-assign variable_map_assert__p68__ = (!(__IEND__))||((__ILA_SO_x25)==(RTL__DOT__dbg_reg_x25)) ;
-assign variable_map_assert__p69__ = (!(__IEND__))||((__ILA_SO_x26)==(RTL__DOT__dbg_reg_x26)) ;
-assign variable_map_assert__p70__ = (!(__IEND__))||((__ILA_SO_x27)==(RTL__DOT__dbg_reg_x27)) ;
-assign variable_map_assert__p71__ = (!(__IEND__))||((__ILA_SO_x28)==(RTL__DOT__dbg_reg_x28)) ;
-assign variable_map_assert__p72__ = (!(__IEND__))||((__ILA_SO_x29)==(RTL__DOT__dbg_reg_x29)) ;
-assign variable_map_assert__p73__ = (!(__IEND__))||((__ILA_SO_x3)==(RTL__DOT__dbg_reg_x3)) ;
-assign variable_map_assert__p74__ = (!(__IEND__))||((__ILA_SO_x30)==(RTL__DOT__dbg_reg_x30)) ;
-assign variable_map_assert__p75__ = (!(__IEND__))||((__ILA_SO_x31)==(RTL__DOT__dbg_reg_x31)) ;
-assign variable_map_assert__p76__ = (!(__IEND__))||((__ILA_SO_x4)==(RTL__DOT__dbg_reg_x4)) ;
-assign variable_map_assert__p77__ = (!(__IEND__))||((__ILA_SO_x5)==(RTL__DOT__dbg_reg_x5)) ;
-assign variable_map_assert__p78__ = (!(__IEND__))||((__ILA_SO_x6)==(RTL__DOT__dbg_reg_x6)) ;
-assign variable_map_assert__p79__ = (!(__IEND__))||((__ILA_SO_x7)==(RTL__DOT__dbg_reg_x7)) ;
-assign variable_map_assert__p80__ = (!(__IEND__))||((__ILA_SO_x8)==(RTL__DOT__dbg_reg_x8)) ;
-assign variable_map_assert__p81__ = (!(__IEND__))||((__ILA_SO_x9)==(RTL__DOT__dbg_reg_x9)) ;
-assign post_value_holder_overly_constrained__p82__ = (!((__auxvar0__recorder_sn_condmet)&&(__auxvar0__recorder_sn_cond)))||((__auxvar0__recorder_sn_value)==(__auxvar0__recorder_sn_vhold)) ;
-assign post_value_holder_triggered__p83__ = (!(__IEND__))||((__auxvar0__recorder_sn_condmet)||(__auxvar0__recorder_sn_cond)) ;
+assign __EDCOND__ = ((RTL__DOT__rvfi_valid)&&(__STARTED__))&&(__STARTED__) ;
+assign __IEND__ = (((((RTL__DOT__rvfi_valid)&&(__STARTED__))&&(__STARTED__))&&(__RESETED__))&&(!(__ENDED__)))&&(1'b1) ;
+assign __auxvar32__recorder_sn_cond = (((RTL__DOT__rvfi_valid)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar32__recorder_sn_value = RTL__DOT__rvfi_pc_rdata ;
+assign __auxvar33__recorder_sn_cond = (((RTL__DOT__rvfi_valid)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar33__recorder_sn_value = RTL__DOT__rvfi_pc_wdata ;
+assign __auxvar34__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar34__recorder_sn_value = RTL__DOT__dbg_reg_x0 ;
+assign __auxvar35__recorder_sn_cond = (((__auxvar0__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar35__recorder_sn_value = RTL__DOT__dbg_reg_x0 ;
+assign __auxvar36__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar36__recorder_sn_value = RTL__DOT__dbg_reg_x1 ;
+assign __auxvar37__recorder_sn_cond = (((__auxvar1__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar37__recorder_sn_value = RTL__DOT__dbg_reg_x1 ;
+assign __auxvar38__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar38__recorder_sn_value = RTL__DOT__dbg_reg_x10 ;
+assign __auxvar39__recorder_sn_cond = (((__auxvar2__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar39__recorder_sn_value = RTL__DOT__dbg_reg_x10 ;
+assign __auxvar40__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar40__recorder_sn_value = RTL__DOT__dbg_reg_x11 ;
+assign __auxvar41__recorder_sn_cond = (((__auxvar3__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar41__recorder_sn_value = RTL__DOT__dbg_reg_x11 ;
+assign __auxvar42__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar42__recorder_sn_value = RTL__DOT__dbg_reg_x12 ;
+assign __auxvar43__recorder_sn_cond = (((__auxvar4__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar43__recorder_sn_value = RTL__DOT__dbg_reg_x12 ;
+assign __auxvar44__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar44__recorder_sn_value = RTL__DOT__dbg_reg_x13 ;
+assign __auxvar45__recorder_sn_cond = (((__auxvar5__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar45__recorder_sn_value = RTL__DOT__dbg_reg_x13 ;
+assign __auxvar46__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar46__recorder_sn_value = RTL__DOT__dbg_reg_x14 ;
+assign __auxvar47__recorder_sn_cond = (((__auxvar6__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar47__recorder_sn_value = RTL__DOT__dbg_reg_x14 ;
+assign __auxvar48__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar48__recorder_sn_value = RTL__DOT__dbg_reg_x15 ;
+assign __auxvar49__recorder_sn_cond = (((__auxvar7__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar49__recorder_sn_value = RTL__DOT__dbg_reg_x15 ;
+assign __auxvar50__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar50__recorder_sn_value = RTL__DOT__dbg_reg_x16 ;
+assign __auxvar51__recorder_sn_cond = (((__auxvar8__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar51__recorder_sn_value = RTL__DOT__dbg_reg_x16 ;
+assign __auxvar52__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar52__recorder_sn_value = RTL__DOT__dbg_reg_x17 ;
+assign __auxvar53__recorder_sn_cond = (((__auxvar9__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar53__recorder_sn_value = RTL__DOT__dbg_reg_x17 ;
+assign __auxvar54__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar54__recorder_sn_value = RTL__DOT__dbg_reg_x18 ;
+assign __auxvar55__recorder_sn_cond = (((__auxvar10__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar55__recorder_sn_value = RTL__DOT__dbg_reg_x18 ;
+assign __auxvar56__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar56__recorder_sn_value = RTL__DOT__dbg_reg_x19 ;
+assign __auxvar57__recorder_sn_cond = (((__auxvar11__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar57__recorder_sn_value = RTL__DOT__dbg_reg_x19 ;
+assign __auxvar58__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar58__recorder_sn_value = RTL__DOT__dbg_reg_x2 ;
+assign __auxvar59__recorder_sn_cond = (((__auxvar12__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar59__recorder_sn_value = RTL__DOT__dbg_reg_x2 ;
+assign __auxvar60__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar60__recorder_sn_value = RTL__DOT__dbg_reg_x20 ;
+assign __auxvar61__recorder_sn_cond = (((__auxvar13__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar61__recorder_sn_value = RTL__DOT__dbg_reg_x20 ;
+assign __auxvar62__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar62__recorder_sn_value = RTL__DOT__dbg_reg_x21 ;
+assign __auxvar63__recorder_sn_cond = (((__auxvar14__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar63__recorder_sn_value = RTL__DOT__dbg_reg_x21 ;
+assign __auxvar64__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar64__recorder_sn_value = RTL__DOT__dbg_reg_x22 ;
+assign __auxvar65__recorder_sn_cond = (((__auxvar15__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar65__recorder_sn_value = RTL__DOT__dbg_reg_x22 ;
+assign __auxvar66__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar66__recorder_sn_value = RTL__DOT__dbg_reg_x23 ;
+assign __auxvar67__recorder_sn_cond = (((__auxvar16__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar67__recorder_sn_value = RTL__DOT__dbg_reg_x23 ;
+assign __auxvar68__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar68__recorder_sn_value = RTL__DOT__dbg_reg_x24 ;
+assign __auxvar69__recorder_sn_cond = (((__auxvar17__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar69__recorder_sn_value = RTL__DOT__dbg_reg_x24 ;
+assign __auxvar70__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar70__recorder_sn_value = RTL__DOT__dbg_reg_x25 ;
+assign __auxvar71__recorder_sn_cond = (((__auxvar18__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar71__recorder_sn_value = RTL__DOT__dbg_reg_x25 ;
+assign __auxvar72__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar72__recorder_sn_value = RTL__DOT__dbg_reg_x26 ;
+assign __auxvar73__recorder_sn_cond = (((__auxvar19__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar73__recorder_sn_value = RTL__DOT__dbg_reg_x26 ;
+assign __auxvar74__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar74__recorder_sn_value = RTL__DOT__dbg_reg_x27 ;
+assign __auxvar75__recorder_sn_cond = (((__auxvar20__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar75__recorder_sn_value = RTL__DOT__dbg_reg_x27 ;
+assign __auxvar76__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar76__recorder_sn_value = RTL__DOT__dbg_reg_x28 ;
+assign __auxvar77__recorder_sn_cond = (((__auxvar21__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar77__recorder_sn_value = RTL__DOT__dbg_reg_x28 ;
+assign __auxvar78__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar78__recorder_sn_value = RTL__DOT__dbg_reg_x29 ;
+assign __auxvar79__recorder_sn_cond = (((__auxvar22__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar79__recorder_sn_value = RTL__DOT__dbg_reg_x29 ;
+assign __auxvar80__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar80__recorder_sn_value = RTL__DOT__dbg_reg_x3 ;
+assign __auxvar81__recorder_sn_cond = (((__auxvar23__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar81__recorder_sn_value = RTL__DOT__dbg_reg_x3 ;
+assign __auxvar82__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar82__recorder_sn_value = RTL__DOT__dbg_reg_x30 ;
+assign __auxvar83__recorder_sn_cond = (((__auxvar24__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar83__recorder_sn_value = RTL__DOT__dbg_reg_x30 ;
+assign __auxvar84__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar84__recorder_sn_value = RTL__DOT__dbg_reg_x31 ;
+assign __auxvar85__recorder_sn_cond = (((__auxvar25__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar85__recorder_sn_value = RTL__DOT__dbg_reg_x31 ;
+assign __auxvar86__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar86__recorder_sn_value = RTL__DOT__dbg_reg_x4 ;
+assign __auxvar87__recorder_sn_cond = (((__auxvar26__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar87__recorder_sn_value = RTL__DOT__dbg_reg_x4 ;
+assign __auxvar88__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar88__recorder_sn_value = RTL__DOT__dbg_reg_x5 ;
+assign __auxvar89__recorder_sn_cond = (((__auxvar27__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar89__recorder_sn_value = RTL__DOT__dbg_reg_x5 ;
+assign __auxvar90__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar90__recorder_sn_value = RTL__DOT__dbg_reg_x6 ;
+assign __auxvar91__recorder_sn_cond = (((__auxvar28__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar91__recorder_sn_value = RTL__DOT__dbg_reg_x6 ;
+assign __auxvar92__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar92__recorder_sn_value = RTL__DOT__dbg_reg_x7 ;
+assign __auxvar93__recorder_sn_cond = (((__auxvar29__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar93__recorder_sn_value = RTL__DOT__dbg_reg_x7 ;
+assign __auxvar94__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar94__recorder_sn_value = RTL__DOT__dbg_reg_x8 ;
+assign __auxvar95__recorder_sn_cond = (((__auxvar30__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar95__recorder_sn_value = RTL__DOT__dbg_reg_x8 ;
+assign __auxvar96__recorder_sn_cond = ((((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar96__recorder_sn_value = RTL__DOT__dbg_reg_x9 ;
+assign __auxvar97__recorder_sn_cond = (((__auxvar31__delay)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar97__recorder_sn_value = RTL__DOT__dbg_reg_x9 ;
+assign __auxvar98__recorder_sn_cond = (((RTL__DOT__rvfi_valid)&(__STARTED__))&&((__START__)||(__STARTED__)))&&(!(__ENDED__)) ;
+assign __auxvar98__recorder_sn_value = RTL__DOT__rvfi_insn ;
+assign __auxvar0__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar10__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar11__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar12__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar13__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar14__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar15__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar16__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar17__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar18__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar19__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar1__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar20__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar21__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar22__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar23__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar24__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar25__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar26__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar27__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar28__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar29__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar2__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar30__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar31__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar3__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar4__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar5__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar6__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar7__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar8__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign __auxvar9__delay_d_0 = RTL__DOT__cpuregs_write ;
+assign input_map_assume___p0__ = (!(__START__))||((__ILA_I_inst)==(__auxvar98__recorder)) ;
+assign noreset__p1__ = (!(__RESETED__))||(!(dummy_reset)) ;
+assign post_value_holder__p2__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar32__recorder_sn_condmet)))&&((RTL__DOT__rvfi_valid)&(__STARTED__))))||((__auxvar32__recorder)==(RTL__DOT__rvfi_pc_rdata)) ;
+assign post_value_holder__p3__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar33__recorder_sn_condmet)))&&((RTL__DOT__rvfi_valid)&(__STARTED__))))||((__auxvar33__recorder)==(RTL__DOT__rvfi_pc_wdata)) ;
+assign post_value_holder__p4__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar34__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar34__recorder)==(RTL__DOT__dbg_reg_x0)) ;
+assign post_value_holder__p5__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar35__recorder_sn_condmet)))&&((__auxvar0__delay)&(__STARTED__))))||((__auxvar35__recorder)==(RTL__DOT__dbg_reg_x0)) ;
+assign post_value_holder__p6__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar36__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar36__recorder)==(RTL__DOT__dbg_reg_x1)) ;
+assign post_value_holder__p7__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar37__recorder_sn_condmet)))&&((__auxvar1__delay)&(__STARTED__))))||((__auxvar37__recorder)==(RTL__DOT__dbg_reg_x1)) ;
+assign post_value_holder__p8__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar38__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar38__recorder)==(RTL__DOT__dbg_reg_x10)) ;
+assign post_value_holder__p9__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar39__recorder_sn_condmet)))&&((__auxvar2__delay)&(__STARTED__))))||((__auxvar39__recorder)==(RTL__DOT__dbg_reg_x10)) ;
+assign post_value_holder__p10__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar40__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar40__recorder)==(RTL__DOT__dbg_reg_x11)) ;
+assign post_value_holder__p11__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar41__recorder_sn_condmet)))&&((__auxvar3__delay)&(__STARTED__))))||((__auxvar41__recorder)==(RTL__DOT__dbg_reg_x11)) ;
+assign post_value_holder__p12__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar42__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar42__recorder)==(RTL__DOT__dbg_reg_x12)) ;
+assign post_value_holder__p13__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar43__recorder_sn_condmet)))&&((__auxvar4__delay)&(__STARTED__))))||((__auxvar43__recorder)==(RTL__DOT__dbg_reg_x12)) ;
+assign post_value_holder__p14__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar44__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar44__recorder)==(RTL__DOT__dbg_reg_x13)) ;
+assign post_value_holder__p15__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar45__recorder_sn_condmet)))&&((__auxvar5__delay)&(__STARTED__))))||((__auxvar45__recorder)==(RTL__DOT__dbg_reg_x13)) ;
+assign post_value_holder__p16__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar46__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar46__recorder)==(RTL__DOT__dbg_reg_x14)) ;
+assign post_value_holder__p17__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar47__recorder_sn_condmet)))&&((__auxvar6__delay)&(__STARTED__))))||((__auxvar47__recorder)==(RTL__DOT__dbg_reg_x14)) ;
+assign post_value_holder__p18__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar48__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar48__recorder)==(RTL__DOT__dbg_reg_x15)) ;
+assign post_value_holder__p19__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar49__recorder_sn_condmet)))&&((__auxvar7__delay)&(__STARTED__))))||((__auxvar49__recorder)==(RTL__DOT__dbg_reg_x15)) ;
+assign post_value_holder__p20__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar50__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar50__recorder)==(RTL__DOT__dbg_reg_x16)) ;
+assign post_value_holder__p21__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar51__recorder_sn_condmet)))&&((__auxvar8__delay)&(__STARTED__))))||((__auxvar51__recorder)==(RTL__DOT__dbg_reg_x16)) ;
+assign post_value_holder__p22__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar52__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar52__recorder)==(RTL__DOT__dbg_reg_x17)) ;
+assign post_value_holder__p23__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar53__recorder_sn_condmet)))&&((__auxvar9__delay)&(__STARTED__))))||((__auxvar53__recorder)==(RTL__DOT__dbg_reg_x17)) ;
+assign post_value_holder__p24__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar54__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar54__recorder)==(RTL__DOT__dbg_reg_x18)) ;
+assign post_value_holder__p25__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar55__recorder_sn_condmet)))&&((__auxvar10__delay)&(__STARTED__))))||((__auxvar55__recorder)==(RTL__DOT__dbg_reg_x18)) ;
+assign post_value_holder__p26__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar56__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar56__recorder)==(RTL__DOT__dbg_reg_x19)) ;
+assign post_value_holder__p27__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar57__recorder_sn_condmet)))&&((__auxvar11__delay)&(__STARTED__))))||((__auxvar57__recorder)==(RTL__DOT__dbg_reg_x19)) ;
+assign post_value_holder__p28__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar58__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar58__recorder)==(RTL__DOT__dbg_reg_x2)) ;
+assign post_value_holder__p29__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar59__recorder_sn_condmet)))&&((__auxvar12__delay)&(__STARTED__))))||((__auxvar59__recorder)==(RTL__DOT__dbg_reg_x2)) ;
+assign post_value_holder__p30__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar60__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar60__recorder)==(RTL__DOT__dbg_reg_x20)) ;
+assign post_value_holder__p31__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar61__recorder_sn_condmet)))&&((__auxvar13__delay)&(__STARTED__))))||((__auxvar61__recorder)==(RTL__DOT__dbg_reg_x20)) ;
+assign post_value_holder__p32__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar62__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar62__recorder)==(RTL__DOT__dbg_reg_x21)) ;
+assign post_value_holder__p33__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar63__recorder_sn_condmet)))&&((__auxvar14__delay)&(__STARTED__))))||((__auxvar63__recorder)==(RTL__DOT__dbg_reg_x21)) ;
+assign post_value_holder__p34__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar64__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar64__recorder)==(RTL__DOT__dbg_reg_x22)) ;
+assign post_value_holder__p35__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar65__recorder_sn_condmet)))&&((__auxvar15__delay)&(__STARTED__))))||((__auxvar65__recorder)==(RTL__DOT__dbg_reg_x22)) ;
+assign post_value_holder__p36__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar66__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar66__recorder)==(RTL__DOT__dbg_reg_x23)) ;
+assign post_value_holder__p37__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar67__recorder_sn_condmet)))&&((__auxvar16__delay)&(__STARTED__))))||((__auxvar67__recorder)==(RTL__DOT__dbg_reg_x23)) ;
+assign post_value_holder__p38__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar68__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar68__recorder)==(RTL__DOT__dbg_reg_x24)) ;
+assign post_value_holder__p39__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar69__recorder_sn_condmet)))&&((__auxvar17__delay)&(__STARTED__))))||((__auxvar69__recorder)==(RTL__DOT__dbg_reg_x24)) ;
+assign post_value_holder__p40__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar70__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar70__recorder)==(RTL__DOT__dbg_reg_x25)) ;
+assign post_value_holder__p41__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar71__recorder_sn_condmet)))&&((__auxvar18__delay)&(__STARTED__))))||((__auxvar71__recorder)==(RTL__DOT__dbg_reg_x25)) ;
+assign post_value_holder__p42__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar72__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar72__recorder)==(RTL__DOT__dbg_reg_x26)) ;
+assign post_value_holder__p43__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar73__recorder_sn_condmet)))&&((__auxvar19__delay)&(__STARTED__))))||((__auxvar73__recorder)==(RTL__DOT__dbg_reg_x26)) ;
+assign post_value_holder__p44__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar74__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar74__recorder)==(RTL__DOT__dbg_reg_x27)) ;
+assign post_value_holder__p45__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar75__recorder_sn_condmet)))&&((__auxvar20__delay)&(__STARTED__))))||((__auxvar75__recorder)==(RTL__DOT__dbg_reg_x27)) ;
+assign post_value_holder__p46__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar76__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar76__recorder)==(RTL__DOT__dbg_reg_x28)) ;
+assign post_value_holder__p47__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar77__recorder_sn_condmet)))&&((__auxvar21__delay)&(__STARTED__))))||((__auxvar77__recorder)==(RTL__DOT__dbg_reg_x28)) ;
+assign post_value_holder__p48__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar78__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar78__recorder)==(RTL__DOT__dbg_reg_x29)) ;
+assign post_value_holder__p49__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar79__recorder_sn_condmet)))&&((__auxvar22__delay)&(__STARTED__))))||((__auxvar79__recorder)==(RTL__DOT__dbg_reg_x29)) ;
+assign post_value_holder__p50__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar80__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar80__recorder)==(RTL__DOT__dbg_reg_x3)) ;
+assign post_value_holder__p51__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar81__recorder_sn_condmet)))&&((__auxvar23__delay)&(__STARTED__))))||((__auxvar81__recorder)==(RTL__DOT__dbg_reg_x3)) ;
+assign post_value_holder__p52__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar82__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar82__recorder)==(RTL__DOT__dbg_reg_x30)) ;
+assign post_value_holder__p53__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar83__recorder_sn_condmet)))&&((__auxvar24__delay)&(__STARTED__))))||((__auxvar83__recorder)==(RTL__DOT__dbg_reg_x30)) ;
+assign post_value_holder__p54__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar84__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar84__recorder)==(RTL__DOT__dbg_reg_x31)) ;
+assign post_value_holder__p55__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar85__recorder_sn_condmet)))&&((__auxvar25__delay)&(__STARTED__))))||((__auxvar85__recorder)==(RTL__DOT__dbg_reg_x31)) ;
+assign post_value_holder__p56__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar86__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar86__recorder)==(RTL__DOT__dbg_reg_x4)) ;
+assign post_value_holder__p57__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar87__recorder_sn_condmet)))&&((__auxvar26__delay)&(__STARTED__))))||((__auxvar87__recorder)==(RTL__DOT__dbg_reg_x4)) ;
+assign post_value_holder__p58__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar88__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar88__recorder)==(RTL__DOT__dbg_reg_x5)) ;
+assign post_value_holder__p59__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar89__recorder_sn_condmet)))&&((__auxvar27__delay)&(__STARTED__))))||((__auxvar89__recorder)==(RTL__DOT__dbg_reg_x5)) ;
+assign post_value_holder__p60__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar90__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar90__recorder)==(RTL__DOT__dbg_reg_x6)) ;
+assign post_value_holder__p61__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar91__recorder_sn_condmet)))&&((__auxvar28__delay)&(__STARTED__))))||((__auxvar91__recorder)==(RTL__DOT__dbg_reg_x6)) ;
+assign post_value_holder__p62__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar92__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar92__recorder)==(RTL__DOT__dbg_reg_x7)) ;
+assign post_value_holder__p63__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar93__recorder_sn_condmet)))&&((__auxvar29__delay)&(__STARTED__))))||((__auxvar93__recorder)==(RTL__DOT__dbg_reg_x7)) ;
+assign post_value_holder__p64__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar94__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar94__recorder)==(RTL__DOT__dbg_reg_x8)) ;
+assign post_value_holder__p65__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar95__recorder_sn_condmet)))&&((__auxvar30__delay)&(__STARTED__))))||((__auxvar95__recorder)==(RTL__DOT__dbg_reg_x8)) ;
+assign post_value_holder__p66__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar96__recorder_sn_condmet)))&&(((__START__)|(__STARTED__))&(RTL__DOT__cpuregs_write))))||((__auxvar96__recorder)==(RTL__DOT__dbg_reg_x9)) ;
+assign post_value_holder__p67__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar97__recorder_sn_condmet)))&&((__auxvar31__delay)&(__STARTED__))))||((__auxvar97__recorder)==(RTL__DOT__dbg_reg_x9)) ;
+assign post_value_holder__p68__ = (!((((__START__)||(__STARTED__))&&(!(__auxvar98__recorder_sn_condmet)))&&((RTL__DOT__rvfi_valid)&(__STARTED__))))||((__auxvar98__recorder)==(RTL__DOT__rvfi_insn)) ;
+assign start_condition__p69__ = (!(__START__))||(__ILA_riscv_decode_of_ADD__) ;
+assign start_condition__p70__ = (!(__START__))||(__ILA_riscv_valid__) ;
+assign start_condition__p71__ = (!(__START__))||(RTL__DOT__rvfi_valid) ;
+assign variable_map_assume___p72__ = (!(__START__))||(((!(__START__))||((__ILA_SO_pc)==(__auxvar32__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_pc)==(__auxvar33__recorder)))) ;
+assign variable_map_assume___p73__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x0)==(__auxvar34__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x0)==(__auxvar35__recorder)))) ;
+assign variable_map_assume___p74__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x1)==(__auxvar36__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x1)==(__auxvar37__recorder)))) ;
+assign variable_map_assume___p75__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x10)==(__auxvar38__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x10)==(__auxvar39__recorder)))) ;
+assign variable_map_assume___p76__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x11)==(__auxvar40__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x11)==(__auxvar41__recorder)))) ;
+assign variable_map_assume___p77__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x12)==(__auxvar42__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x12)==(__auxvar43__recorder)))) ;
+assign variable_map_assume___p78__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x13)==(__auxvar44__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x13)==(__auxvar45__recorder)))) ;
+assign variable_map_assume___p79__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x14)==(__auxvar46__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x14)==(__auxvar47__recorder)))) ;
+assign variable_map_assume___p80__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x15)==(__auxvar48__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x15)==(__auxvar49__recorder)))) ;
+assign variable_map_assume___p81__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x16)==(__auxvar50__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x16)==(__auxvar51__recorder)))) ;
+assign variable_map_assume___p82__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x17)==(__auxvar52__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x17)==(__auxvar53__recorder)))) ;
+assign variable_map_assume___p83__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x18)==(__auxvar54__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x18)==(__auxvar55__recorder)))) ;
+assign variable_map_assume___p84__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x19)==(__auxvar56__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x19)==(__auxvar57__recorder)))) ;
+assign variable_map_assume___p85__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x2)==(__auxvar58__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x2)==(__auxvar59__recorder)))) ;
+assign variable_map_assume___p86__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x20)==(__auxvar60__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x20)==(__auxvar61__recorder)))) ;
+assign variable_map_assume___p87__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x21)==(__auxvar62__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x21)==(__auxvar63__recorder)))) ;
+assign variable_map_assume___p88__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x22)==(__auxvar64__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x22)==(__auxvar65__recorder)))) ;
+assign variable_map_assume___p89__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x23)==(__auxvar66__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x23)==(__auxvar67__recorder)))) ;
+assign variable_map_assume___p90__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x24)==(__auxvar68__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x24)==(__auxvar69__recorder)))) ;
+assign variable_map_assume___p91__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x25)==(__auxvar70__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x25)==(__auxvar71__recorder)))) ;
+assign variable_map_assume___p92__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x26)==(__auxvar72__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x26)==(__auxvar73__recorder)))) ;
+assign variable_map_assume___p93__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x27)==(__auxvar74__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x27)==(__auxvar75__recorder)))) ;
+assign variable_map_assume___p94__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x28)==(__auxvar76__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x28)==(__auxvar77__recorder)))) ;
+assign variable_map_assume___p95__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x29)==(__auxvar78__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x29)==(__auxvar79__recorder)))) ;
+assign variable_map_assume___p96__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x3)==(__auxvar80__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x3)==(__auxvar81__recorder)))) ;
+assign variable_map_assume___p97__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x30)==(__auxvar82__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x30)==(__auxvar83__recorder)))) ;
+assign variable_map_assume___p98__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x31)==(__auxvar84__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x31)==(__auxvar85__recorder)))) ;
+assign variable_map_assume___p99__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x4)==(__auxvar86__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x4)==(__auxvar87__recorder)))) ;
+assign variable_map_assume___p100__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x5)==(__auxvar88__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x5)==(__auxvar89__recorder)))) ;
+assign variable_map_assume___p101__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x6)==(__auxvar90__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x6)==(__auxvar91__recorder)))) ;
+assign variable_map_assume___p102__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x7)==(__auxvar92__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x7)==(__auxvar93__recorder)))) ;
+assign variable_map_assume___p103__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x8)==(__auxvar94__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x8)==(__auxvar95__recorder)))) ;
+assign variable_map_assume___p104__ = (!(__START__))||(((!(__START__))||((__ILA_SO_x9)==(__auxvar96__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x9)==(__auxvar97__recorder)))) ;
+assign variable_map_assert__p105__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_pc)==(__auxvar32__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_pc)==(__auxvar33__recorder)))) ;
+assign variable_map_assert__p106__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x0)==(__auxvar34__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x0)==(__auxvar35__recorder)))) ;
+assign variable_map_assert__p107__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x1)==(__auxvar36__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x1)==(__auxvar37__recorder)))) ;
+assign variable_map_assert__p108__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x10)==(__auxvar38__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x10)==(__auxvar39__recorder)))) ;
+assign variable_map_assert__p109__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x11)==(__auxvar40__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x11)==(__auxvar41__recorder)))) ;
+assign variable_map_assert__p110__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x12)==(__auxvar42__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x12)==(__auxvar43__recorder)))) ;
+assign variable_map_assert__p111__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x13)==(__auxvar44__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x13)==(__auxvar45__recorder)))) ;
+assign variable_map_assert__p112__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x14)==(__auxvar46__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x14)==(__auxvar47__recorder)))) ;
+assign variable_map_assert__p113__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x15)==(__auxvar48__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x15)==(__auxvar49__recorder)))) ;
+assign variable_map_assert__p114__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x16)==(__auxvar50__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x16)==(__auxvar51__recorder)))) ;
+assign variable_map_assert__p115__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x17)==(__auxvar52__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x17)==(__auxvar53__recorder)))) ;
+assign variable_map_assert__p116__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x18)==(__auxvar54__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x18)==(__auxvar55__recorder)))) ;
+assign variable_map_assert__p117__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x19)==(__auxvar56__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x19)==(__auxvar57__recorder)))) ;
+assign variable_map_assert__p118__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x2)==(__auxvar58__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x2)==(__auxvar59__recorder)))) ;
+assign variable_map_assert__p119__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x20)==(__auxvar60__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x20)==(__auxvar61__recorder)))) ;
+assign variable_map_assert__p120__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x21)==(__auxvar62__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x21)==(__auxvar63__recorder)))) ;
+assign variable_map_assert__p121__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x22)==(__auxvar64__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x22)==(__auxvar65__recorder)))) ;
+assign variable_map_assert__p122__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x23)==(__auxvar66__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x23)==(__auxvar67__recorder)))) ;
+assign variable_map_assert__p123__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x24)==(__auxvar68__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x24)==(__auxvar69__recorder)))) ;
+assign variable_map_assert__p124__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x25)==(__auxvar70__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x25)==(__auxvar71__recorder)))) ;
+assign variable_map_assert__p125__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x26)==(__auxvar72__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x26)==(__auxvar73__recorder)))) ;
+assign variable_map_assert__p126__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x27)==(__auxvar74__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x27)==(__auxvar75__recorder)))) ;
+assign variable_map_assert__p127__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x28)==(__auxvar76__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x28)==(__auxvar77__recorder)))) ;
+assign variable_map_assert__p128__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x29)==(__auxvar78__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x29)==(__auxvar79__recorder)))) ;
+assign variable_map_assert__p129__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x3)==(__auxvar80__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x3)==(__auxvar81__recorder)))) ;
+assign variable_map_assert__p130__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x30)==(__auxvar82__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x30)==(__auxvar83__recorder)))) ;
+assign variable_map_assert__p131__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x31)==(__auxvar84__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x31)==(__auxvar85__recorder)))) ;
+assign variable_map_assert__p132__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x4)==(__auxvar86__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x4)==(__auxvar87__recorder)))) ;
+assign variable_map_assert__p133__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x5)==(__auxvar88__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x5)==(__auxvar89__recorder)))) ;
+assign variable_map_assert__p134__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x6)==(__auxvar90__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x6)==(__auxvar91__recorder)))) ;
+assign variable_map_assert__p135__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x7)==(__auxvar92__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x7)==(__auxvar93__recorder)))) ;
+assign variable_map_assert__p136__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x8)==(__auxvar94__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x8)==(__auxvar95__recorder)))) ;
+assign variable_map_assert__p137__ = (!(__IEND__))||(((!(__START__))||((__ILA_SO_x9)==(__auxvar96__recorder)))&&((!((!(__START__))&&(__IEND__)))||((__ILA_SO_x9)==(__auxvar97__recorder)))) ;
 picorv32 RTL(
-    .RTL__DOT__cpu_state(RTL__DOT__cpu_state),
     .RTL__DOT__cpuregs_write(RTL__DOT__cpuregs_write),
-    .RTL__DOT__dbg_insn_opcode(RTL__DOT__dbg_insn_opcode),
     .RTL__DOT__dbg_reg_x0(RTL__DOT__dbg_reg_x0),
     .RTL__DOT__dbg_reg_x1(RTL__DOT__dbg_reg_x1),
     .RTL__DOT__dbg_reg_x10(RTL__DOT__dbg_reg_x10),
@@ -839,24 +2175,10 @@ picorv32 RTL(
     .RTL__DOT__dbg_reg_x7(RTL__DOT__dbg_reg_x7),
     .RTL__DOT__dbg_reg_x8(RTL__DOT__dbg_reg_x8),
     .RTL__DOT__dbg_reg_x9(RTL__DOT__dbg_reg_x9),
-    .RTL__DOT__irq_active(RTL__DOT__irq_active),
-    .RTL__DOT__irq_pending(RTL__DOT__irq_pending),
-    .RTL__DOT__latched_branch(RTL__DOT__latched_branch),
-    .RTL__DOT__latched_is_lb(RTL__DOT__latched_is_lb),
-    .RTL__DOT__latched_is_lh(RTL__DOT__latched_is_lh),
-    .RTL__DOT__latched_is_lu(RTL__DOT__latched_is_lu),
-    .RTL__DOT__latched_rd(RTL__DOT__latched_rd),
-    .RTL__DOT__latched_stalu(RTL__DOT__latched_stalu),
-    .RTL__DOT__latched_store(RTL__DOT__latched_store),
-    .RTL__DOT__mem_do_rinst(RTL__DOT__mem_do_rinst),
-    .RTL__DOT__mem_instr(RTL__DOT__mem_instr),
-    .RTL__DOT__mem_la_secondword(RTL__DOT__mem_la_secondword),
-    .RTL__DOT__mem_ready(RTL__DOT__mem_ready),
-    .RTL__DOT__mem_valid(RTL__DOT__mem_valid),
-    .RTL__DOT__mem_wstrb(RTL__DOT__mem_wstrb),
-    .RTL__DOT__reg_next_pc(RTL__DOT__reg_next_pc),
-    .RTL__DOT__reg_pc(RTL__DOT__reg_pc),
-    .RTL__DOT__trace_data(RTL__DOT__trace_data),
+    .RTL__DOT__rvfi_insn(RTL__DOT__rvfi_insn),
+    .RTL__DOT__rvfi_pc_rdata(RTL__DOT__rvfi_pc_rdata),
+    .RTL__DOT__rvfi_pc_wdata(RTL__DOT__rvfi_pc_wdata),
+    .RTL__DOT__rvfi_valid(RTL__DOT__rvfi_valid),
     .clk(clk),
     .eoi(__VLG_O_eoi),
     .irq(__VLG_I_irq),
@@ -880,28 +2202,373 @@ picorv32 RTL(
     .pcpi_valid(__VLG_O_pcpi_valid),
     .pcpi_wait(__VLG_I_pcpi_wait),
     .pcpi_wr(__VLG_I_pcpi_wr),
-    .resetn(~rst),
+    .resetn(~dummy_reset),
+    .rvfi_halt(__VLG_O_rvfi_halt),
+    .rvfi_insn(__VLG_O_rvfi_insn),
+    .rvfi_intr(__VLG_O_rvfi_intr),
+    .rvfi_mem_addr(__VLG_O_rvfi_mem_addr),
+    .rvfi_mem_rdata(__VLG_O_rvfi_mem_rdata),
+    .rvfi_mem_rmask(__VLG_O_rvfi_mem_rmask),
+    .rvfi_mem_wdata(__VLG_O_rvfi_mem_wdata),
+    .rvfi_mem_wmask(__VLG_O_rvfi_mem_wmask),
+    .rvfi_mode(__VLG_O_rvfi_mode),
+    .rvfi_order(__VLG_O_rvfi_order),
+    .rvfi_pc_rdata(__VLG_O_rvfi_pc_rdata),
+    .rvfi_pc_wdata(__VLG_O_rvfi_pc_wdata),
+    .rvfi_rd_addr(__VLG_O_rvfi_rd_addr),
+    .rvfi_rd_wdata(__VLG_O_rvfi_rd_wdata),
+    .rvfi_rs1_addr(__VLG_O_rvfi_rs1_addr),
+    .rvfi_rs1_rdata(__VLG_O_rvfi_rs1_rdata),
+    .rvfi_rs2_addr(__VLG_O_rvfi_rs2_addr),
+    .rvfi_rs2_rdata(__VLG_O_rvfi_rs2_rdata),
+    .rvfi_trap(__VLG_O_rvfi_trap),
+    .rvfi_valid(__VLG_O_rvfi_valid),
     .trace_data(__VLG_O_trace_data),
     .trace_valid(__VLG_O_trace_valid),
     .trap(__VLG_O_trap)
 );
-assign __all_assert_wire__ = (variable_map_assert__p49__) && (variable_map_assert__p50__) && (variable_map_assert__p51__) && (variable_map_assert__p52__) && (variable_map_assert__p53__) && (variable_map_assert__p54__) && (variable_map_assert__p55__) && (variable_map_assert__p56__) && (variable_map_assert__p57__) && (variable_map_assert__p58__) && (variable_map_assert__p59__) && (variable_map_assert__p60__) && (variable_map_assert__p61__) && (variable_map_assert__p62__) && (variable_map_assert__p63__) && (variable_map_assert__p64__) && (variable_map_assert__p65__) && (variable_map_assert__p66__) && (variable_map_assert__p67__) && (variable_map_assert__p68__) && (variable_map_assert__p69__) && (variable_map_assert__p70__) && (variable_map_assert__p71__) && (variable_map_assert__p72__) && (variable_map_assert__p73__) && (variable_map_assert__p74__) && (variable_map_assert__p75__) && (variable_map_assert__p76__) && (variable_map_assert__p77__) && (variable_map_assert__p78__) && (variable_map_assert__p79__) && (variable_map_assert__p80__) && (variable_map_assert__p81__) ;
+assign __all_assert_wire__ = (variable_map_assert__p105__) && (variable_map_assert__p106__) && (variable_map_assert__p107__) && (variable_map_assert__p108__) && (variable_map_assert__p109__) && (variable_map_assert__p110__) && (variable_map_assert__p111__) && (variable_map_assert__p112__) && (variable_map_assert__p113__) && (variable_map_assert__p114__) && (variable_map_assert__p115__) && (variable_map_assert__p116__) && (variable_map_assert__p117__) && (variable_map_assert__p118__) && (variable_map_assert__p119__) && (variable_map_assert__p120__) && (variable_map_assert__p121__) && (variable_map_assert__p122__) && (variable_map_assert__p123__) && (variable_map_assert__p124__) && (variable_map_assert__p125__) && (variable_map_assert__p126__) && (variable_map_assert__p127__) && (variable_map_assert__p128__) && (variable_map_assert__p129__) && (variable_map_assert__p130__) && (variable_map_assert__p131__) && (variable_map_assert__p132__) && (variable_map_assert__p133__) && (variable_map_assert__p134__) && (variable_map_assert__p135__) && (variable_map_assert__p136__) && (variable_map_assert__p137__) ;
 normalassert: assert property ( __all_assert_wire__ ); // the only assertion 
 
-assign __all_assume_wire__ = (additional_mapping_control_assume__p0__)&& (input_map_assume___p1__)&& (invariant_assume__p2__)&& (invariant_assume__p3__)&& (invariant_assume__p4__)&& (invariant_assume__p5__)&& (invariant_assume__p6__)&& (invariant_assume__p7__)&& (noreset__p8__)&& (post_value_holder__p9__)&& (start_condition__p10__)&& (start_condition__p11__)&& (start_condition__p12__)&& (start_condition__p13__)&& (start_condition__p14__)&& (start_condition__p15__)&& (variable_map_assume___p16__)&& (variable_map_assume___p17__)&& (variable_map_assume___p18__)&& (variable_map_assume___p19__)&& (variable_map_assume___p20__)&& (variable_map_assume___p21__)&& (variable_map_assume___p22__)&& (variable_map_assume___p23__)&& (variable_map_assume___p24__)&& (variable_map_assume___p25__)&& (variable_map_assume___p26__)&& (variable_map_assume___p27__)&& (variable_map_assume___p28__)&& (variable_map_assume___p29__)&& (variable_map_assume___p30__)&& (variable_map_assume___p31__)&& (variable_map_assume___p32__)&& (variable_map_assume___p33__)&& (variable_map_assume___p34__)&& (variable_map_assume___p35__)&& (variable_map_assume___p36__)&& (variable_map_assume___p37__)&& (variable_map_assume___p38__)&& (variable_map_assume___p39__)&& (variable_map_assume___p40__)&& (variable_map_assume___p41__)&& (variable_map_assume___p42__)&& (variable_map_assume___p43__)&& (variable_map_assume___p44__)&& (variable_map_assume___p45__)&& (variable_map_assume___p46__)&& (variable_map_assume___p47__)&& (variable_map_assume___p48__) ;
+assign __all_assume_wire__ = (input_map_assume___p0__)&& (noreset__p1__)&& (post_value_holder__p2__)&& (post_value_holder__p3__)&& (post_value_holder__p4__)&& (post_value_holder__p5__)&& (post_value_holder__p6__)&& (post_value_holder__p7__)&& (post_value_holder__p8__)&& (post_value_holder__p9__)&& (post_value_holder__p10__)&& (post_value_holder__p11__)&& (post_value_holder__p12__)&& (post_value_holder__p13__)&& (post_value_holder__p14__)&& (post_value_holder__p15__)&& (post_value_holder__p16__)&& (post_value_holder__p17__)&& (post_value_holder__p18__)&& (post_value_holder__p19__)&& (post_value_holder__p20__)&& (post_value_holder__p21__)&& (post_value_holder__p22__)&& (post_value_holder__p23__)&& (post_value_holder__p24__)&& (post_value_holder__p25__)&& (post_value_holder__p26__)&& (post_value_holder__p27__)&& (post_value_holder__p28__)&& (post_value_holder__p29__)&& (post_value_holder__p30__)&& (post_value_holder__p31__)&& (post_value_holder__p32__)&& (post_value_holder__p33__)&& (post_value_holder__p34__)&& (post_value_holder__p35__)&& (post_value_holder__p36__)&& (post_value_holder__p37__)&& (post_value_holder__p38__)&& (post_value_holder__p39__)&& (post_value_holder__p40__)&& (post_value_holder__p41__)&& (post_value_holder__p42__)&& (post_value_holder__p43__)&& (post_value_holder__p44__)&& (post_value_holder__p45__)&& (post_value_holder__p46__)&& (post_value_holder__p47__)&& (post_value_holder__p48__)&& (post_value_holder__p49__)&& (post_value_holder__p50__)&& (post_value_holder__p51__)&& (post_value_holder__p52__)&& (post_value_holder__p53__)&& (post_value_holder__p54__)&& (post_value_holder__p55__)&& (post_value_holder__p56__)&& (post_value_holder__p57__)&& (post_value_holder__p58__)&& (post_value_holder__p59__)&& (post_value_holder__p60__)&& (post_value_holder__p61__)&& (post_value_holder__p62__)&& (post_value_holder__p63__)&& (post_value_holder__p64__)&& (post_value_holder__p65__)&& (post_value_holder__p66__)&& (post_value_holder__p67__)&& (post_value_holder__p68__)&& (start_condition__p69__)&& (start_condition__p70__)&& (start_condition__p71__)&& (variable_map_assume___p72__)&& (variable_map_assume___p73__)&& (variable_map_assume___p74__)&& (variable_map_assume___p75__)&& (variable_map_assume___p76__)&& (variable_map_assume___p77__)&& (variable_map_assume___p78__)&& (variable_map_assume___p79__)&& (variable_map_assume___p80__)&& (variable_map_assume___p81__)&& (variable_map_assume___p82__)&& (variable_map_assume___p83__)&& (variable_map_assume___p84__)&& (variable_map_assume___p85__)&& (variable_map_assume___p86__)&& (variable_map_assume___p87__)&& (variable_map_assume___p88__)&& (variable_map_assume___p89__)&& (variable_map_assume___p90__)&& (variable_map_assume___p91__)&& (variable_map_assume___p92__)&& (variable_map_assume___p93__)&& (variable_map_assume___p94__)&& (variable_map_assume___p95__)&& (variable_map_assume___p96__)&& (variable_map_assume___p97__)&& (variable_map_assume___p98__)&& (variable_map_assume___p99__)&& (variable_map_assume___p100__)&& (variable_map_assume___p101__)&& (variable_map_assume___p102__)&& (variable_map_assume___p103__)&& (variable_map_assume___p104__) ;
 all_assume: assume property ( __all_assume_wire__ ); // the only sanity assertion 
-
-assign __sanitycheck_wire__ = (post_value_holder_overly_constrained__p82__) && (post_value_holder_triggered__p83__) ;
-sanitycheck: assert property ( __sanitycheck_wire__ ); // the only assumption 
 
 always @(posedge clk) begin
    if(rst) begin
-       __auxvar0__recorder <= ____auxvar0__recorder_init__;
-       __auxvar0__recorder_sn_condmet <= 1'b0;
+       __auxvar32__recorder <= ____auxvar32__recorder_init__;
+       __auxvar32__recorder_sn_condmet <= 1'b0;
+       __auxvar33__recorder <= ____auxvar33__recorder_init__;
+       __auxvar33__recorder_sn_condmet <= 1'b0;
+       __auxvar34__recorder <= ____auxvar34__recorder_init__;
+       __auxvar34__recorder_sn_condmet <= 1'b0;
+       __auxvar35__recorder <= ____auxvar35__recorder_init__;
+       __auxvar35__recorder_sn_condmet <= 1'b0;
+       __auxvar36__recorder <= ____auxvar36__recorder_init__;
+       __auxvar36__recorder_sn_condmet <= 1'b0;
+       __auxvar37__recorder <= ____auxvar37__recorder_init__;
+       __auxvar37__recorder_sn_condmet <= 1'b0;
+       __auxvar38__recorder <= ____auxvar38__recorder_init__;
+       __auxvar38__recorder_sn_condmet <= 1'b0;
+       __auxvar39__recorder <= ____auxvar39__recorder_init__;
+       __auxvar39__recorder_sn_condmet <= 1'b0;
+       __auxvar40__recorder <= ____auxvar40__recorder_init__;
+       __auxvar40__recorder_sn_condmet <= 1'b0;
+       __auxvar41__recorder <= ____auxvar41__recorder_init__;
+       __auxvar41__recorder_sn_condmet <= 1'b0;
+       __auxvar42__recorder <= ____auxvar42__recorder_init__;
+       __auxvar42__recorder_sn_condmet <= 1'b0;
+       __auxvar43__recorder <= ____auxvar43__recorder_init__;
+       __auxvar43__recorder_sn_condmet <= 1'b0;
+       __auxvar44__recorder <= ____auxvar44__recorder_init__;
+       __auxvar44__recorder_sn_condmet <= 1'b0;
+       __auxvar45__recorder <= ____auxvar45__recorder_init__;
+       __auxvar45__recorder_sn_condmet <= 1'b0;
+       __auxvar46__recorder <= ____auxvar46__recorder_init__;
+       __auxvar46__recorder_sn_condmet <= 1'b0;
+       __auxvar47__recorder <= ____auxvar47__recorder_init__;
+       __auxvar47__recorder_sn_condmet <= 1'b0;
+       __auxvar48__recorder <= ____auxvar48__recorder_init__;
+       __auxvar48__recorder_sn_condmet <= 1'b0;
+       __auxvar49__recorder <= ____auxvar49__recorder_init__;
+       __auxvar49__recorder_sn_condmet <= 1'b0;
+       __auxvar50__recorder <= ____auxvar50__recorder_init__;
+       __auxvar50__recorder_sn_condmet <= 1'b0;
+       __auxvar51__recorder <= ____auxvar51__recorder_init__;
+       __auxvar51__recorder_sn_condmet <= 1'b0;
+       __auxvar52__recorder <= ____auxvar52__recorder_init__;
+       __auxvar52__recorder_sn_condmet <= 1'b0;
+       __auxvar53__recorder <= ____auxvar53__recorder_init__;
+       __auxvar53__recorder_sn_condmet <= 1'b0;
+       __auxvar54__recorder <= ____auxvar54__recorder_init__;
+       __auxvar54__recorder_sn_condmet <= 1'b0;
+       __auxvar55__recorder <= ____auxvar55__recorder_init__;
+       __auxvar55__recorder_sn_condmet <= 1'b0;
+       __auxvar56__recorder <= ____auxvar56__recorder_init__;
+       __auxvar56__recorder_sn_condmet <= 1'b0;
+       __auxvar57__recorder <= ____auxvar57__recorder_init__;
+       __auxvar57__recorder_sn_condmet <= 1'b0;
+       __auxvar58__recorder <= ____auxvar58__recorder_init__;
+       __auxvar58__recorder_sn_condmet <= 1'b0;
+       __auxvar59__recorder <= ____auxvar59__recorder_init__;
+       __auxvar59__recorder_sn_condmet <= 1'b0;
+       __auxvar60__recorder <= ____auxvar60__recorder_init__;
+       __auxvar60__recorder_sn_condmet <= 1'b0;
+       __auxvar61__recorder <= ____auxvar61__recorder_init__;
+       __auxvar61__recorder_sn_condmet <= 1'b0;
+       __auxvar62__recorder <= ____auxvar62__recorder_init__;
+       __auxvar62__recorder_sn_condmet <= 1'b0;
+       __auxvar63__recorder <= ____auxvar63__recorder_init__;
+       __auxvar63__recorder_sn_condmet <= 1'b0;
+       __auxvar64__recorder <= ____auxvar64__recorder_init__;
+       __auxvar64__recorder_sn_condmet <= 1'b0;
+       __auxvar65__recorder <= ____auxvar65__recorder_init__;
+       __auxvar65__recorder_sn_condmet <= 1'b0;
+       __auxvar66__recorder <= ____auxvar66__recorder_init__;
+       __auxvar66__recorder_sn_condmet <= 1'b0;
+       __auxvar67__recorder <= ____auxvar67__recorder_init__;
+       __auxvar67__recorder_sn_condmet <= 1'b0;
+       __auxvar68__recorder <= ____auxvar68__recorder_init__;
+       __auxvar68__recorder_sn_condmet <= 1'b0;
+       __auxvar69__recorder <= ____auxvar69__recorder_init__;
+       __auxvar69__recorder_sn_condmet <= 1'b0;
+       __auxvar70__recorder <= ____auxvar70__recorder_init__;
+       __auxvar70__recorder_sn_condmet <= 1'b0;
+       __auxvar71__recorder <= ____auxvar71__recorder_init__;
+       __auxvar71__recorder_sn_condmet <= 1'b0;
+       __auxvar72__recorder <= ____auxvar72__recorder_init__;
+       __auxvar72__recorder_sn_condmet <= 1'b0;
+       __auxvar73__recorder <= ____auxvar73__recorder_init__;
+       __auxvar73__recorder_sn_condmet <= 1'b0;
+       __auxvar74__recorder <= ____auxvar74__recorder_init__;
+       __auxvar74__recorder_sn_condmet <= 1'b0;
+       __auxvar75__recorder <= ____auxvar75__recorder_init__;
+       __auxvar75__recorder_sn_condmet <= 1'b0;
+       __auxvar76__recorder <= ____auxvar76__recorder_init__;
+       __auxvar76__recorder_sn_condmet <= 1'b0;
+       __auxvar77__recorder <= ____auxvar77__recorder_init__;
+       __auxvar77__recorder_sn_condmet <= 1'b0;
+       __auxvar78__recorder <= ____auxvar78__recorder_init__;
+       __auxvar78__recorder_sn_condmet <= 1'b0;
+       __auxvar79__recorder <= ____auxvar79__recorder_init__;
+       __auxvar79__recorder_sn_condmet <= 1'b0;
+       __auxvar80__recorder <= ____auxvar80__recorder_init__;
+       __auxvar80__recorder_sn_condmet <= 1'b0;
+       __auxvar81__recorder <= ____auxvar81__recorder_init__;
+       __auxvar81__recorder_sn_condmet <= 1'b0;
+       __auxvar82__recorder <= ____auxvar82__recorder_init__;
+       __auxvar82__recorder_sn_condmet <= 1'b0;
+       __auxvar83__recorder <= ____auxvar83__recorder_init__;
+       __auxvar83__recorder_sn_condmet <= 1'b0;
+       __auxvar84__recorder <= ____auxvar84__recorder_init__;
+       __auxvar84__recorder_sn_condmet <= 1'b0;
+       __auxvar85__recorder <= ____auxvar85__recorder_init__;
+       __auxvar85__recorder_sn_condmet <= 1'b0;
+       __auxvar86__recorder <= ____auxvar86__recorder_init__;
+       __auxvar86__recorder_sn_condmet <= 1'b0;
+       __auxvar87__recorder <= ____auxvar87__recorder_init__;
+       __auxvar87__recorder_sn_condmet <= 1'b0;
+       __auxvar88__recorder <= ____auxvar88__recorder_init__;
+       __auxvar88__recorder_sn_condmet <= 1'b0;
+       __auxvar89__recorder <= ____auxvar89__recorder_init__;
+       __auxvar89__recorder_sn_condmet <= 1'b0;
+       __auxvar90__recorder <= ____auxvar90__recorder_init__;
+       __auxvar90__recorder_sn_condmet <= 1'b0;
+       __auxvar91__recorder <= ____auxvar91__recorder_init__;
+       __auxvar91__recorder_sn_condmet <= 1'b0;
+       __auxvar92__recorder <= ____auxvar92__recorder_init__;
+       __auxvar92__recorder_sn_condmet <= 1'b0;
+       __auxvar93__recorder <= ____auxvar93__recorder_init__;
+       __auxvar93__recorder_sn_condmet <= 1'b0;
+       __auxvar94__recorder <= ____auxvar94__recorder_init__;
+       __auxvar94__recorder_sn_condmet <= 1'b0;
+       __auxvar95__recorder <= ____auxvar95__recorder_init__;
+       __auxvar95__recorder_sn_condmet <= 1'b0;
+       __auxvar96__recorder <= ____auxvar96__recorder_init__;
+       __auxvar96__recorder_sn_condmet <= 1'b0;
+       __auxvar97__recorder <= ____auxvar97__recorder_init__;
+       __auxvar97__recorder_sn_condmet <= 1'b0;
+       __auxvar98__recorder <= ____auxvar98__recorder_init__;
+       __auxvar98__recorder_sn_condmet <= 1'b0;
+       __auxvar0__delay_d_1<= 0;
+       __auxvar10__delay_d_1<= 0;
+       __auxvar11__delay_d_1<= 0;
+       __auxvar12__delay_d_1<= 0;
+       __auxvar13__delay_d_1<= 0;
+       __auxvar14__delay_d_1<= 0;
+       __auxvar15__delay_d_1<= 0;
+       __auxvar16__delay_d_1<= 0;
+       __auxvar17__delay_d_1<= 0;
+       __auxvar18__delay_d_1<= 0;
+       __auxvar19__delay_d_1<= 0;
+       __auxvar1__delay_d_1<= 0;
+       __auxvar20__delay_d_1<= 0;
+       __auxvar21__delay_d_1<= 0;
+       __auxvar22__delay_d_1<= 0;
+       __auxvar23__delay_d_1<= 0;
+       __auxvar24__delay_d_1<= 0;
+       __auxvar25__delay_d_1<= 0;
+       __auxvar26__delay_d_1<= 0;
+       __auxvar27__delay_d_1<= 0;
+       __auxvar28__delay_d_1<= 0;
+       __auxvar29__delay_d_1<= 0;
+       __auxvar2__delay_d_1<= 0;
+       __auxvar30__delay_d_1<= 0;
+       __auxvar31__delay_d_1<= 0;
+       __auxvar3__delay_d_1<= 0;
+       __auxvar4__delay_d_1<= 0;
+       __auxvar5__delay_d_1<= 0;
+       __auxvar6__delay_d_1<= 0;
+       __auxvar7__delay_d_1<= 0;
+       __auxvar8__delay_d_1<= 0;
+       __auxvar9__delay_d_1<= 0;
    end
    else if(1) begin
-       __auxvar0__recorder <= __auxvar0__recorder;
-       if (__auxvar0__recorder_sn_cond ) begin __auxvar0__recorder_sn_condmet <= 1'b1; __auxvar0__recorder_sn_vhold <= __auxvar0__recorder_sn_value; end
+       __auxvar32__recorder <= __auxvar32__recorder;
+       if (__auxvar32__recorder_sn_cond ) begin __auxvar32__recorder_sn_condmet <= 1'b1; __auxvar32__recorder_sn_vhold <= __auxvar32__recorder_sn_value; end
+       __auxvar33__recorder <= __auxvar33__recorder;
+       if (__auxvar33__recorder_sn_cond ) begin __auxvar33__recorder_sn_condmet <= 1'b1; __auxvar33__recorder_sn_vhold <= __auxvar33__recorder_sn_value; end
+       __auxvar34__recorder <= __auxvar34__recorder;
+       if (__auxvar34__recorder_sn_cond ) begin __auxvar34__recorder_sn_condmet <= 1'b1; __auxvar34__recorder_sn_vhold <= __auxvar34__recorder_sn_value; end
+       __auxvar35__recorder <= __auxvar35__recorder;
+       if (__auxvar35__recorder_sn_cond ) begin __auxvar35__recorder_sn_condmet <= 1'b1; __auxvar35__recorder_sn_vhold <= __auxvar35__recorder_sn_value; end
+       __auxvar36__recorder <= __auxvar36__recorder;
+       if (__auxvar36__recorder_sn_cond ) begin __auxvar36__recorder_sn_condmet <= 1'b1; __auxvar36__recorder_sn_vhold <= __auxvar36__recorder_sn_value; end
+       __auxvar37__recorder <= __auxvar37__recorder;
+       if (__auxvar37__recorder_sn_cond ) begin __auxvar37__recorder_sn_condmet <= 1'b1; __auxvar37__recorder_sn_vhold <= __auxvar37__recorder_sn_value; end
+       __auxvar38__recorder <= __auxvar38__recorder;
+       if (__auxvar38__recorder_sn_cond ) begin __auxvar38__recorder_sn_condmet <= 1'b1; __auxvar38__recorder_sn_vhold <= __auxvar38__recorder_sn_value; end
+       __auxvar39__recorder <= __auxvar39__recorder;
+       if (__auxvar39__recorder_sn_cond ) begin __auxvar39__recorder_sn_condmet <= 1'b1; __auxvar39__recorder_sn_vhold <= __auxvar39__recorder_sn_value; end
+       __auxvar40__recorder <= __auxvar40__recorder;
+       if (__auxvar40__recorder_sn_cond ) begin __auxvar40__recorder_sn_condmet <= 1'b1; __auxvar40__recorder_sn_vhold <= __auxvar40__recorder_sn_value; end
+       __auxvar41__recorder <= __auxvar41__recorder;
+       if (__auxvar41__recorder_sn_cond ) begin __auxvar41__recorder_sn_condmet <= 1'b1; __auxvar41__recorder_sn_vhold <= __auxvar41__recorder_sn_value; end
+       __auxvar42__recorder <= __auxvar42__recorder;
+       if (__auxvar42__recorder_sn_cond ) begin __auxvar42__recorder_sn_condmet <= 1'b1; __auxvar42__recorder_sn_vhold <= __auxvar42__recorder_sn_value; end
+       __auxvar43__recorder <= __auxvar43__recorder;
+       if (__auxvar43__recorder_sn_cond ) begin __auxvar43__recorder_sn_condmet <= 1'b1; __auxvar43__recorder_sn_vhold <= __auxvar43__recorder_sn_value; end
+       __auxvar44__recorder <= __auxvar44__recorder;
+       if (__auxvar44__recorder_sn_cond ) begin __auxvar44__recorder_sn_condmet <= 1'b1; __auxvar44__recorder_sn_vhold <= __auxvar44__recorder_sn_value; end
+       __auxvar45__recorder <= __auxvar45__recorder;
+       if (__auxvar45__recorder_sn_cond ) begin __auxvar45__recorder_sn_condmet <= 1'b1; __auxvar45__recorder_sn_vhold <= __auxvar45__recorder_sn_value; end
+       __auxvar46__recorder <= __auxvar46__recorder;
+       if (__auxvar46__recorder_sn_cond ) begin __auxvar46__recorder_sn_condmet <= 1'b1; __auxvar46__recorder_sn_vhold <= __auxvar46__recorder_sn_value; end
+       __auxvar47__recorder <= __auxvar47__recorder;
+       if (__auxvar47__recorder_sn_cond ) begin __auxvar47__recorder_sn_condmet <= 1'b1; __auxvar47__recorder_sn_vhold <= __auxvar47__recorder_sn_value; end
+       __auxvar48__recorder <= __auxvar48__recorder;
+       if (__auxvar48__recorder_sn_cond ) begin __auxvar48__recorder_sn_condmet <= 1'b1; __auxvar48__recorder_sn_vhold <= __auxvar48__recorder_sn_value; end
+       __auxvar49__recorder <= __auxvar49__recorder;
+       if (__auxvar49__recorder_sn_cond ) begin __auxvar49__recorder_sn_condmet <= 1'b1; __auxvar49__recorder_sn_vhold <= __auxvar49__recorder_sn_value; end
+       __auxvar50__recorder <= __auxvar50__recorder;
+       if (__auxvar50__recorder_sn_cond ) begin __auxvar50__recorder_sn_condmet <= 1'b1; __auxvar50__recorder_sn_vhold <= __auxvar50__recorder_sn_value; end
+       __auxvar51__recorder <= __auxvar51__recorder;
+       if (__auxvar51__recorder_sn_cond ) begin __auxvar51__recorder_sn_condmet <= 1'b1; __auxvar51__recorder_sn_vhold <= __auxvar51__recorder_sn_value; end
+       __auxvar52__recorder <= __auxvar52__recorder;
+       if (__auxvar52__recorder_sn_cond ) begin __auxvar52__recorder_sn_condmet <= 1'b1; __auxvar52__recorder_sn_vhold <= __auxvar52__recorder_sn_value; end
+       __auxvar53__recorder <= __auxvar53__recorder;
+       if (__auxvar53__recorder_sn_cond ) begin __auxvar53__recorder_sn_condmet <= 1'b1; __auxvar53__recorder_sn_vhold <= __auxvar53__recorder_sn_value; end
+       __auxvar54__recorder <= __auxvar54__recorder;
+       if (__auxvar54__recorder_sn_cond ) begin __auxvar54__recorder_sn_condmet <= 1'b1; __auxvar54__recorder_sn_vhold <= __auxvar54__recorder_sn_value; end
+       __auxvar55__recorder <= __auxvar55__recorder;
+       if (__auxvar55__recorder_sn_cond ) begin __auxvar55__recorder_sn_condmet <= 1'b1; __auxvar55__recorder_sn_vhold <= __auxvar55__recorder_sn_value; end
+       __auxvar56__recorder <= __auxvar56__recorder;
+       if (__auxvar56__recorder_sn_cond ) begin __auxvar56__recorder_sn_condmet <= 1'b1; __auxvar56__recorder_sn_vhold <= __auxvar56__recorder_sn_value; end
+       __auxvar57__recorder <= __auxvar57__recorder;
+       if (__auxvar57__recorder_sn_cond ) begin __auxvar57__recorder_sn_condmet <= 1'b1; __auxvar57__recorder_sn_vhold <= __auxvar57__recorder_sn_value; end
+       __auxvar58__recorder <= __auxvar58__recorder;
+       if (__auxvar58__recorder_sn_cond ) begin __auxvar58__recorder_sn_condmet <= 1'b1; __auxvar58__recorder_sn_vhold <= __auxvar58__recorder_sn_value; end
+       __auxvar59__recorder <= __auxvar59__recorder;
+       if (__auxvar59__recorder_sn_cond ) begin __auxvar59__recorder_sn_condmet <= 1'b1; __auxvar59__recorder_sn_vhold <= __auxvar59__recorder_sn_value; end
+       __auxvar60__recorder <= __auxvar60__recorder;
+       if (__auxvar60__recorder_sn_cond ) begin __auxvar60__recorder_sn_condmet <= 1'b1; __auxvar60__recorder_sn_vhold <= __auxvar60__recorder_sn_value; end
+       __auxvar61__recorder <= __auxvar61__recorder;
+       if (__auxvar61__recorder_sn_cond ) begin __auxvar61__recorder_sn_condmet <= 1'b1; __auxvar61__recorder_sn_vhold <= __auxvar61__recorder_sn_value; end
+       __auxvar62__recorder <= __auxvar62__recorder;
+       if (__auxvar62__recorder_sn_cond ) begin __auxvar62__recorder_sn_condmet <= 1'b1; __auxvar62__recorder_sn_vhold <= __auxvar62__recorder_sn_value; end
+       __auxvar63__recorder <= __auxvar63__recorder;
+       if (__auxvar63__recorder_sn_cond ) begin __auxvar63__recorder_sn_condmet <= 1'b1; __auxvar63__recorder_sn_vhold <= __auxvar63__recorder_sn_value; end
+       __auxvar64__recorder <= __auxvar64__recorder;
+       if (__auxvar64__recorder_sn_cond ) begin __auxvar64__recorder_sn_condmet <= 1'b1; __auxvar64__recorder_sn_vhold <= __auxvar64__recorder_sn_value; end
+       __auxvar65__recorder <= __auxvar65__recorder;
+       if (__auxvar65__recorder_sn_cond ) begin __auxvar65__recorder_sn_condmet <= 1'b1; __auxvar65__recorder_sn_vhold <= __auxvar65__recorder_sn_value; end
+       __auxvar66__recorder <= __auxvar66__recorder;
+       if (__auxvar66__recorder_sn_cond ) begin __auxvar66__recorder_sn_condmet <= 1'b1; __auxvar66__recorder_sn_vhold <= __auxvar66__recorder_sn_value; end
+       __auxvar67__recorder <= __auxvar67__recorder;
+       if (__auxvar67__recorder_sn_cond ) begin __auxvar67__recorder_sn_condmet <= 1'b1; __auxvar67__recorder_sn_vhold <= __auxvar67__recorder_sn_value; end
+       __auxvar68__recorder <= __auxvar68__recorder;
+       if (__auxvar68__recorder_sn_cond ) begin __auxvar68__recorder_sn_condmet <= 1'b1; __auxvar68__recorder_sn_vhold <= __auxvar68__recorder_sn_value; end
+       __auxvar69__recorder <= __auxvar69__recorder;
+       if (__auxvar69__recorder_sn_cond ) begin __auxvar69__recorder_sn_condmet <= 1'b1; __auxvar69__recorder_sn_vhold <= __auxvar69__recorder_sn_value; end
+       __auxvar70__recorder <= __auxvar70__recorder;
+       if (__auxvar70__recorder_sn_cond ) begin __auxvar70__recorder_sn_condmet <= 1'b1; __auxvar70__recorder_sn_vhold <= __auxvar70__recorder_sn_value; end
+       __auxvar71__recorder <= __auxvar71__recorder;
+       if (__auxvar71__recorder_sn_cond ) begin __auxvar71__recorder_sn_condmet <= 1'b1; __auxvar71__recorder_sn_vhold <= __auxvar71__recorder_sn_value; end
+       __auxvar72__recorder <= __auxvar72__recorder;
+       if (__auxvar72__recorder_sn_cond ) begin __auxvar72__recorder_sn_condmet <= 1'b1; __auxvar72__recorder_sn_vhold <= __auxvar72__recorder_sn_value; end
+       __auxvar73__recorder <= __auxvar73__recorder;
+       if (__auxvar73__recorder_sn_cond ) begin __auxvar73__recorder_sn_condmet <= 1'b1; __auxvar73__recorder_sn_vhold <= __auxvar73__recorder_sn_value; end
+       __auxvar74__recorder <= __auxvar74__recorder;
+       if (__auxvar74__recorder_sn_cond ) begin __auxvar74__recorder_sn_condmet <= 1'b1; __auxvar74__recorder_sn_vhold <= __auxvar74__recorder_sn_value; end
+       __auxvar75__recorder <= __auxvar75__recorder;
+       if (__auxvar75__recorder_sn_cond ) begin __auxvar75__recorder_sn_condmet <= 1'b1; __auxvar75__recorder_sn_vhold <= __auxvar75__recorder_sn_value; end
+       __auxvar76__recorder <= __auxvar76__recorder;
+       if (__auxvar76__recorder_sn_cond ) begin __auxvar76__recorder_sn_condmet <= 1'b1; __auxvar76__recorder_sn_vhold <= __auxvar76__recorder_sn_value; end
+       __auxvar77__recorder <= __auxvar77__recorder;
+       if (__auxvar77__recorder_sn_cond ) begin __auxvar77__recorder_sn_condmet <= 1'b1; __auxvar77__recorder_sn_vhold <= __auxvar77__recorder_sn_value; end
+       __auxvar78__recorder <= __auxvar78__recorder;
+       if (__auxvar78__recorder_sn_cond ) begin __auxvar78__recorder_sn_condmet <= 1'b1; __auxvar78__recorder_sn_vhold <= __auxvar78__recorder_sn_value; end
+       __auxvar79__recorder <= __auxvar79__recorder;
+       if (__auxvar79__recorder_sn_cond ) begin __auxvar79__recorder_sn_condmet <= 1'b1; __auxvar79__recorder_sn_vhold <= __auxvar79__recorder_sn_value; end
+       __auxvar80__recorder <= __auxvar80__recorder;
+       if (__auxvar80__recorder_sn_cond ) begin __auxvar80__recorder_sn_condmet <= 1'b1; __auxvar80__recorder_sn_vhold <= __auxvar80__recorder_sn_value; end
+       __auxvar81__recorder <= __auxvar81__recorder;
+       if (__auxvar81__recorder_sn_cond ) begin __auxvar81__recorder_sn_condmet <= 1'b1; __auxvar81__recorder_sn_vhold <= __auxvar81__recorder_sn_value; end
+       __auxvar82__recorder <= __auxvar82__recorder;
+       if (__auxvar82__recorder_sn_cond ) begin __auxvar82__recorder_sn_condmet <= 1'b1; __auxvar82__recorder_sn_vhold <= __auxvar82__recorder_sn_value; end
+       __auxvar83__recorder <= __auxvar83__recorder;
+       if (__auxvar83__recorder_sn_cond ) begin __auxvar83__recorder_sn_condmet <= 1'b1; __auxvar83__recorder_sn_vhold <= __auxvar83__recorder_sn_value; end
+       __auxvar84__recorder <= __auxvar84__recorder;
+       if (__auxvar84__recorder_sn_cond ) begin __auxvar84__recorder_sn_condmet <= 1'b1; __auxvar84__recorder_sn_vhold <= __auxvar84__recorder_sn_value; end
+       __auxvar85__recorder <= __auxvar85__recorder;
+       if (__auxvar85__recorder_sn_cond ) begin __auxvar85__recorder_sn_condmet <= 1'b1; __auxvar85__recorder_sn_vhold <= __auxvar85__recorder_sn_value; end
+       __auxvar86__recorder <= __auxvar86__recorder;
+       if (__auxvar86__recorder_sn_cond ) begin __auxvar86__recorder_sn_condmet <= 1'b1; __auxvar86__recorder_sn_vhold <= __auxvar86__recorder_sn_value; end
+       __auxvar87__recorder <= __auxvar87__recorder;
+       if (__auxvar87__recorder_sn_cond ) begin __auxvar87__recorder_sn_condmet <= 1'b1; __auxvar87__recorder_sn_vhold <= __auxvar87__recorder_sn_value; end
+       __auxvar88__recorder <= __auxvar88__recorder;
+       if (__auxvar88__recorder_sn_cond ) begin __auxvar88__recorder_sn_condmet <= 1'b1; __auxvar88__recorder_sn_vhold <= __auxvar88__recorder_sn_value; end
+       __auxvar89__recorder <= __auxvar89__recorder;
+       if (__auxvar89__recorder_sn_cond ) begin __auxvar89__recorder_sn_condmet <= 1'b1; __auxvar89__recorder_sn_vhold <= __auxvar89__recorder_sn_value; end
+       __auxvar90__recorder <= __auxvar90__recorder;
+       if (__auxvar90__recorder_sn_cond ) begin __auxvar90__recorder_sn_condmet <= 1'b1; __auxvar90__recorder_sn_vhold <= __auxvar90__recorder_sn_value; end
+       __auxvar91__recorder <= __auxvar91__recorder;
+       if (__auxvar91__recorder_sn_cond ) begin __auxvar91__recorder_sn_condmet <= 1'b1; __auxvar91__recorder_sn_vhold <= __auxvar91__recorder_sn_value; end
+       __auxvar92__recorder <= __auxvar92__recorder;
+       if (__auxvar92__recorder_sn_cond ) begin __auxvar92__recorder_sn_condmet <= 1'b1; __auxvar92__recorder_sn_vhold <= __auxvar92__recorder_sn_value; end
+       __auxvar93__recorder <= __auxvar93__recorder;
+       if (__auxvar93__recorder_sn_cond ) begin __auxvar93__recorder_sn_condmet <= 1'b1; __auxvar93__recorder_sn_vhold <= __auxvar93__recorder_sn_value; end
+       __auxvar94__recorder <= __auxvar94__recorder;
+       if (__auxvar94__recorder_sn_cond ) begin __auxvar94__recorder_sn_condmet <= 1'b1; __auxvar94__recorder_sn_vhold <= __auxvar94__recorder_sn_value; end
+       __auxvar95__recorder <= __auxvar95__recorder;
+       if (__auxvar95__recorder_sn_cond ) begin __auxvar95__recorder_sn_condmet <= 1'b1; __auxvar95__recorder_sn_vhold <= __auxvar95__recorder_sn_value; end
+       __auxvar96__recorder <= __auxvar96__recorder;
+       if (__auxvar96__recorder_sn_cond ) begin __auxvar96__recorder_sn_condmet <= 1'b1; __auxvar96__recorder_sn_vhold <= __auxvar96__recorder_sn_value; end
+       __auxvar97__recorder <= __auxvar97__recorder;
+       if (__auxvar97__recorder_sn_cond ) begin __auxvar97__recorder_sn_condmet <= 1'b1; __auxvar97__recorder_sn_vhold <= __auxvar97__recorder_sn_value; end
+       __auxvar98__recorder <= __auxvar98__recorder;
+       if (__auxvar98__recorder_sn_cond ) begin __auxvar98__recorder_sn_condmet <= 1'b1; __auxvar98__recorder_sn_vhold <= __auxvar98__recorder_sn_value; end
+       __auxvar0__delay_d_1 <= __auxvar0__delay_d_0 ;
+       __auxvar10__delay_d_1 <= __auxvar10__delay_d_0 ;
+       __auxvar11__delay_d_1 <= __auxvar11__delay_d_0 ;
+       __auxvar12__delay_d_1 <= __auxvar12__delay_d_0 ;
+       __auxvar13__delay_d_1 <= __auxvar13__delay_d_0 ;
+       __auxvar14__delay_d_1 <= __auxvar14__delay_d_0 ;
+       __auxvar15__delay_d_1 <= __auxvar15__delay_d_0 ;
+       __auxvar16__delay_d_1 <= __auxvar16__delay_d_0 ;
+       __auxvar17__delay_d_1 <= __auxvar17__delay_d_0 ;
+       __auxvar18__delay_d_1 <= __auxvar18__delay_d_0 ;
+       __auxvar19__delay_d_1 <= __auxvar19__delay_d_0 ;
+       __auxvar1__delay_d_1 <= __auxvar1__delay_d_0 ;
+       __auxvar20__delay_d_1 <= __auxvar20__delay_d_0 ;
+       __auxvar21__delay_d_1 <= __auxvar21__delay_d_0 ;
+       __auxvar22__delay_d_1 <= __auxvar22__delay_d_0 ;
+       __auxvar23__delay_d_1 <= __auxvar23__delay_d_0 ;
+       __auxvar24__delay_d_1 <= __auxvar24__delay_d_0 ;
+       __auxvar25__delay_d_1 <= __auxvar25__delay_d_0 ;
+       __auxvar26__delay_d_1 <= __auxvar26__delay_d_0 ;
+       __auxvar27__delay_d_1 <= __auxvar27__delay_d_0 ;
+       __auxvar28__delay_d_1 <= __auxvar28__delay_d_0 ;
+       __auxvar29__delay_d_1 <= __auxvar29__delay_d_0 ;
+       __auxvar2__delay_d_1 <= __auxvar2__delay_d_0 ;
+       __auxvar30__delay_d_1 <= __auxvar30__delay_d_0 ;
+       __auxvar31__delay_d_1 <= __auxvar31__delay_d_0 ;
+       __auxvar3__delay_d_1 <= __auxvar3__delay_d_0 ;
+       __auxvar4__delay_d_1 <= __auxvar4__delay_d_0 ;
+       __auxvar5__delay_d_1 <= __auxvar5__delay_d_0 ;
+       __auxvar6__delay_d_1 <= __auxvar6__delay_d_0 ;
+       __auxvar7__delay_d_1 <= __auxvar7__delay_d_0 ;
+       __auxvar8__delay_d_1 <= __auxvar8__delay_d_0 ;
+       __auxvar9__delay_d_1 <= __auxvar9__delay_d_0 ;
    end
 end
 endmodule
@@ -1735,7 +3402,6 @@ module picorv32 (
 	input      [31:0] irq,
 	output reg [31:0] eoi,
 
-`ifdef RISCV_FORMAL
 	output reg        rvfi_valid,
 	output reg [63:0] rvfi_order,
 	output reg [31:0] rvfi_insn,
@@ -1756,12 +3422,11 @@ module picorv32 (
 	output reg [ 3:0] rvfi_mem_wmask,
 	output reg [31:0] rvfi_mem_rdata,
 	output reg [31:0] rvfi_mem_wdata,
-`endif
 
 	// Trace Interface
 	output reg        trace_valid,
 	output reg [35:0] trace_data
-, output wire [31:0] RTL__DOT__dbg_reg_x22, output wire [31:0] RTL__DOT__dbg_reg_x15, output wire [7:0] RTL__DOT__cpu_state, output wire [31:0] RTL__DOT__dbg_reg_x19, output wire [31:0] RTL__DOT__dbg_reg_x25, output wire [4:0] RTL__DOT__latched_rd, output wire  RTL__DOT__latched_is_lb, output wire [31:0] RTL__DOT__dbg_reg_x16, output wire [31:0] RTL__DOT__dbg_reg_x2, output wire [31:0] RTL__DOT__dbg_reg_x1, output wire [31:0] RTL__DOT__dbg_insn_opcode, output wire [31:0] RTL__DOT__dbg_reg_x21, output wire [31:0] RTL__DOT__irq_pending, output wire [31:0] RTL__DOT__dbg_reg_x29, output wire [31:0] RTL__DOT__dbg_reg_x13, output wire [31:0] RTL__DOT__dbg_reg_x23, output wire  RTL__DOT__latched_store, output wire [31:0] RTL__DOT__dbg_reg_x26, output wire [31:0] RTL__DOT__dbg_reg_x3, output wire [31:0] RTL__DOT__dbg_reg_x28, output wire  RTL__DOT__irq_active, output wire [31:0] RTL__DOT__dbg_reg_x14, output wire [31:0] RTL__DOT__dbg_reg_x30, output wire [31:0] RTL__DOT__dbg_reg_x9, output wire [31:0] RTL__DOT__dbg_reg_x31, output wire [31:0] RTL__DOT__dbg_reg_x4, output wire [31:0] RTL__DOT__dbg_reg_x8, output wire [31:0] RTL__DOT__dbg_reg_x10, output wire [31:0] RTL__DOT__reg_pc, output wire [31:0] RTL__DOT__reg_next_pc, output wire [3:0] RTL__DOT__mem_wstrb, output wire  RTL__DOT__mem_valid, output wire  RTL__DOT__mem_ready, output wire  RTL__DOT__mem_la_secondword, output wire  RTL__DOT__latched_is_lu, output wire  RTL__DOT__latched_branch, output wire  RTL__DOT__mem_do_rinst, output wire [31:0] RTL__DOT__dbg_reg_x18, output wire [31:0] RTL__DOT__dbg_reg_x24, output wire [31:0] RTL__DOT__dbg_reg_x17, output wire [35:0] RTL__DOT__trace_data, output wire [31:0] RTL__DOT__dbg_reg_x7, output wire  RTL__DOT__mem_instr, output wire [31:0] RTL__DOT__dbg_reg_x0, output wire  RTL__DOT__latched_stalu, output wire [31:0] RTL__DOT__dbg_reg_x11, output wire  RTL__DOT__latched_is_lh, output wire [31:0] RTL__DOT__dbg_reg_x12, output wire [31:0] RTL__DOT__dbg_reg_x27, output wire [31:0] RTL__DOT__dbg_reg_x5, output wire [31:0] RTL__DOT__dbg_reg_x6, output wire  RTL__DOT__cpuregs_write, output wire [31:0] RTL__DOT__dbg_reg_x20);
+, output wire [31:0] RTL__DOT__dbg_reg_x14, output wire [31:0] RTL__DOT__dbg_reg_x27, output wire [31:0] RTL__DOT__dbg_reg_x5, output wire [31:0] RTL__DOT__dbg_reg_x6, output wire [31:0] RTL__DOT__dbg_reg_x11, output wire [31:0] RTL__DOT__dbg_reg_x22, output wire [31:0] RTL__DOT__dbg_reg_x23, output wire [31:0] RTL__DOT__dbg_reg_x26, output wire [31:0] RTL__DOT__dbg_reg_x28, output wire [31:0] RTL__DOT__dbg_reg_x3, output wire [31:0] RTL__DOT__dbg_reg_x12, output wire [31:0] RTL__DOT__dbg_reg_x30, output wire [31:0] RTL__DOT__dbg_reg_x9, output wire [31:0] RTL__DOT__dbg_reg_x31, output wire [31:0] RTL__DOT__rvfi_pc_rdata, output wire [31:0] RTL__DOT__dbg_reg_x4, output wire [31:0] RTL__DOT__dbg_reg_x8, output wire [31:0] RTL__DOT__rvfi_insn, output wire [31:0] RTL__DOT__rvfi_pc_wdata, output wire [31:0] RTL__DOT__dbg_reg_x17, output wire [31:0] RTL__DOT__dbg_reg_x21, output wire [31:0] RTL__DOT__dbg_reg_x29, output wire [31:0] RTL__DOT__dbg_reg_x20, output wire  RTL__DOT__cpuregs_write, output wire [31:0] RTL__DOT__dbg_reg_x19, output wire [31:0] RTL__DOT__dbg_reg_x25, output wire [31:0] RTL__DOT__dbg_reg_x18, output wire [31:0] RTL__DOT__dbg_reg_x24, output wire  RTL__DOT__rvfi_valid, output wire [31:0] RTL__DOT__dbg_reg_x10, output wire [31:0] RTL__DOT__dbg_reg_x7, output wire [31:0] RTL__DOT__dbg_reg_x15, output wire [31:0] RTL__DOT__dbg_reg_x13, output wire [31:0] RTL__DOT__dbg_reg_x0, output wire [31:0] RTL__DOT__dbg_reg_x16, output wire [31:0] RTL__DOT__dbg_reg_x2, output wire [31:0] RTL__DOT__dbg_reg_x1);
 	parameter ENABLE_COUNTERS = 1;
 	parameter ENABLE_COUNTERS64 = 1;
 	parameter ENABLE_REGS_16_31 = 1;
@@ -3666,59 +5331,43 @@ assign dbg_reg_x31 = cpuregs[31];
 	end
 `endif
 
- assign RTL__DOT__dbg_reg_x20 = dbg_reg_x20;
- assign RTL__DOT__cpuregs_write = cpuregs_write;
- assign RTL__DOT__dbg_reg_x6 = dbg_reg_x6;
- assign RTL__DOT__dbg_reg_x5 = dbg_reg_x5;
- assign RTL__DOT__dbg_reg_x27 = dbg_reg_x27;
- assign RTL__DOT__dbg_reg_x12 = dbg_reg_x12;
- assign RTL__DOT__latched_is_lh = latched_is_lh;
- assign RTL__DOT__dbg_reg_x11 = dbg_reg_x11;
- assign RTL__DOT__latched_stalu = latched_stalu;
- assign RTL__DOT__dbg_reg_x0 = dbg_reg_x0;
- assign RTL__DOT__mem_instr = mem_instr;
- assign RTL__DOT__dbg_reg_x7 = dbg_reg_x7;
- assign RTL__DOT__trace_data = trace_data;
- assign RTL__DOT__dbg_reg_x17 = dbg_reg_x17;
- assign RTL__DOT__dbg_reg_x24 = dbg_reg_x24;
- assign RTL__DOT__dbg_reg_x18 = dbg_reg_x18;
- assign RTL__DOT__mem_do_rinst = mem_do_rinst;
- assign RTL__DOT__latched_branch = latched_branch;
- assign RTL__DOT__latched_is_lu = latched_is_lu;
- assign RTL__DOT__mem_la_secondword = mem_la_secondword;
- assign RTL__DOT__mem_ready = mem_ready;
- assign RTL__DOT__mem_valid = mem_valid;
- assign RTL__DOT__mem_wstrb = mem_wstrb;
- assign RTL__DOT__reg_next_pc = reg_next_pc;
- assign RTL__DOT__reg_pc = reg_pc;
- assign RTL__DOT__dbg_reg_x10 = dbg_reg_x10;
- assign RTL__DOT__dbg_reg_x8 = dbg_reg_x8;
- assign RTL__DOT__dbg_reg_x4 = dbg_reg_x4;
- assign RTL__DOT__dbg_reg_x31 = dbg_reg_x31;
- assign RTL__DOT__dbg_reg_x9 = dbg_reg_x9;
- assign RTL__DOT__dbg_reg_x30 = dbg_reg_x30;
- assign RTL__DOT__dbg_reg_x14 = dbg_reg_x14;
- assign RTL__DOT__irq_active = irq_active;
- assign RTL__DOT__dbg_reg_x28 = dbg_reg_x28;
- assign RTL__DOT__dbg_reg_x3 = dbg_reg_x3;
- assign RTL__DOT__dbg_reg_x26 = dbg_reg_x26;
- assign RTL__DOT__latched_store = latched_store;
- assign RTL__DOT__dbg_reg_x23 = dbg_reg_x23;
- assign RTL__DOT__dbg_reg_x13 = dbg_reg_x13;
- assign RTL__DOT__dbg_reg_x29 = dbg_reg_x29;
- assign RTL__DOT__irq_pending = irq_pending;
- assign RTL__DOT__dbg_reg_x21 = dbg_reg_x21;
- assign RTL__DOT__dbg_insn_opcode = dbg_insn_opcode;
  assign RTL__DOT__dbg_reg_x1 = dbg_reg_x1;
  assign RTL__DOT__dbg_reg_x2 = dbg_reg_x2;
  assign RTL__DOT__dbg_reg_x16 = dbg_reg_x16;
- assign RTL__DOT__latched_is_lb = latched_is_lb;
- assign RTL__DOT__latched_rd = latched_rd;
+ assign RTL__DOT__dbg_reg_x0 = dbg_reg_x0;
+ assign RTL__DOT__dbg_reg_x13 = dbg_reg_x13;
+ assign RTL__DOT__dbg_reg_x15 = dbg_reg_x15;
+ assign RTL__DOT__dbg_reg_x7 = dbg_reg_x7;
+ assign RTL__DOT__dbg_reg_x10 = dbg_reg_x10;
+ assign RTL__DOT__rvfi_valid = rvfi_valid;
+ assign RTL__DOT__dbg_reg_x24 = dbg_reg_x24;
+ assign RTL__DOT__dbg_reg_x18 = dbg_reg_x18;
  assign RTL__DOT__dbg_reg_x25 = dbg_reg_x25;
  assign RTL__DOT__dbg_reg_x19 = dbg_reg_x19;
- assign RTL__DOT__cpu_state = cpu_state;
- assign RTL__DOT__dbg_reg_x15 = dbg_reg_x15;
+ assign RTL__DOT__cpuregs_write = cpuregs_write;
+ assign RTL__DOT__dbg_reg_x20 = dbg_reg_x20;
+ assign RTL__DOT__dbg_reg_x29 = dbg_reg_x29;
+ assign RTL__DOT__dbg_reg_x21 = dbg_reg_x21;
+ assign RTL__DOT__dbg_reg_x17 = dbg_reg_x17;
+ assign RTL__DOT__rvfi_pc_wdata = rvfi_pc_wdata;
+ assign RTL__DOT__rvfi_insn = rvfi_insn;
+ assign RTL__DOT__dbg_reg_x8 = dbg_reg_x8;
+ assign RTL__DOT__dbg_reg_x4 = dbg_reg_x4;
+ assign RTL__DOT__rvfi_pc_rdata = rvfi_pc_rdata;
+ assign RTL__DOT__dbg_reg_x31 = dbg_reg_x31;
+ assign RTL__DOT__dbg_reg_x9 = dbg_reg_x9;
+ assign RTL__DOT__dbg_reg_x30 = dbg_reg_x30;
+ assign RTL__DOT__dbg_reg_x12 = dbg_reg_x12;
+ assign RTL__DOT__dbg_reg_x3 = dbg_reg_x3;
+ assign RTL__DOT__dbg_reg_x28 = dbg_reg_x28;
+ assign RTL__DOT__dbg_reg_x26 = dbg_reg_x26;
+ assign RTL__DOT__dbg_reg_x23 = dbg_reg_x23;
  assign RTL__DOT__dbg_reg_x22 = dbg_reg_x22;
+ assign RTL__DOT__dbg_reg_x11 = dbg_reg_x11;
+ assign RTL__DOT__dbg_reg_x6 = dbg_reg_x6;
+ assign RTL__DOT__dbg_reg_x5 = dbg_reg_x5;
+ assign RTL__DOT__dbg_reg_x27 = dbg_reg_x27;
+ assign RTL__DOT__dbg_reg_x14 = dbg_reg_x14;
 endmodule
 
 

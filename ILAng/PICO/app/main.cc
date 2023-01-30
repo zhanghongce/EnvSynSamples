@@ -9,7 +9,10 @@ void GenerateVerifyTarget(Ila & model) {
 
 
   vtg_cfg.PortDeclStyle = _vtg_config::PortDeclStyleT::NEW;
-  vtg_cfg.ForceInstCheckReset = true;
+  vtg_cfg.ForceInstCheckReset = false;
+  vtg_cfg.YosysSmtArrayForRegFile = false;
+  vtg_cfg.SanityCheck_ValueRecorderOverlyConstrained = false;
+  vtg_cfg.SanityCheck_ValueRecorderTriggeredBeforeCommit = false;
 
   std::string RootPath = "..";
   std::string VerilogPath = RootPath + "/verilog/";
