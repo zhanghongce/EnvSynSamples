@@ -176,7 +176,7 @@ void riscvILA_user::addInstructions() {
       auto decode = (opcode == JALR);
       instr.SetDecode(decode);
 
-      instr.SetUpdate(pc, (rs1_val + immI) & bv(0x00000000FFFFFFFEL));
+      instr.SetUpdate(pc, (rs1_val + immI) & bv(0x000FFFFFFFEUL));
       UPDATE_R(rd, NC);
       RECORD_INST("JALR");
     }
