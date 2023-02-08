@@ -1,0 +1,13 @@
+22 0 aes_reg_opaddr_i.reg_out
+26 1 aes_reg_ctr_i.reg_out
+29 1 aes_reg_key0_i.reg_out
+32 0 aes_reg_oplen_i.reg_out
+37 1 aes_reg_state
+43 0 byte_counter
+52 0 operated_bytes_count
+75 0 aes_time_counter
+245 0 block_counter
+251 1 encrypted_data_buf
+310 1 uaes_ctr
+543 1 aes_128_i.state
+
