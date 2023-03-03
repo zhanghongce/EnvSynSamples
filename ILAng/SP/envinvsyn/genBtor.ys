@@ -5,7 +5,7 @@ hierarchy -check
 proc
 chformal -assume -early;
 
-memory -nomap;
+memory;
 flatten
 setundef -undriven -expose;
 sim -clock clk -reset rst -rstlen 1 -n 1 -w pipeline_v

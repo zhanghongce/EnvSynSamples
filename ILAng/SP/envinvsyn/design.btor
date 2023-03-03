@@ -6,192 +6,196 @@
 5 sort bitvec 8
 6 input 5 inst ; ../verilog/simple_pipe.v:21.68-21.72
 7 input 1 rst ; ../verilog/simple_pipe.v:21.46-21.49
-8 sort array 3 5
-9 state 8 registers
-10 read 5 9 4
-11 const 3 00
-12 read 5 9 11
-13 const 3 01
-14 read 5 9 13
-15 const 3 10
-16 read 5 9 15
-17 const 3 11
-18 read 5 9 17
-19 read 5 9 11
-20 output 10 dummy_rf_data ; ../verilog/simple_pipe.v:21.124-21.137
-21 input 5
-22 state 5 id_ex_rs1_val
-23 state 5 id_ex_rs2_val
-24 and 5 22 23
-25 state 3 id_ex_op
-26 eq 1 25 17
-27 ite 5 26 24 21
-28 sub 5 22 23
-29 eq 1 25 15
-30 ite 5 29 28 27
-31 add 5 22 23
-32 const 1 1
-33 uext 3 32 1
-34 eq 1 25 33
-35 ite 5 34 31 30
-36 uext 5 35 0 ex_alu_result ; ../verilog/simple_pipe.v:37.11-37.24
-37 state 3 ex_wb_rd
-38 const 1 0
-39 state 1 ex_wb_reg_wen
-40 init 1 39 38
-41 state 5 ex_wb_val
-42 state 3 id_ex_rd
-43 state 1 id_ex_reg_wen
-44 init 1 43 38
+8 state 5 registers[0]
+9 state 5 registers[1]
+10 slice 1 4 0 0
+11 ite 5 10 9 8
+12 state 5 registers[2]
+13 state 5 registers[3]
+14 ite 5 10 13 12
+15 slice 1 4 1 1
+16 ite 5 15 14 11
+17 output 16 dummy_rf_data ; ../verilog/simple_pipe.v:21.124-21.137
+18 input 5
+19 state 5 id_ex_rs1_val
+20 state 5 id_ex_rs2_val
+21 and 5 19 20
+22 state 3 id_ex_op
+23 const 3 11
+24 eq 1 22 23
+25 ite 5 24 21 18
+26 sub 5 19 20
+27 const 3 10
+28 eq 1 22 27
+29 ite 5 28 26 25
+30 add 5 19 20
+31 const 1 1
+32 uext 3 31 1
+33 eq 1 22 32
+34 ite 5 33 30 29
+35 uext 5 34 0 ex_alu_result ; ../verilog/simple_pipe.v:37.11-37.24
+36 state 3 ex_wb_rd
+37 const 1 0
+38 state 1 ex_wb_reg_wen
+39 init 1 38 37
+40 state 5 ex_wb_val
+41 state 3 id_ex_rd
+42 state 1 id_ex_reg_wen
+43 init 1 42 37
+44 const 3 00
 45 state 3 reg_3_w_stage
-46 init 3 45 11
+46 init 3 45 44
 47 state 3 reg_2_w_stage
-48 init 3 47 11
+48 init 3 47 44
 49 slice 3 6 5 4
-50 eq 1 49 15
+50 eq 1 49 27
 51 ite 3 50 47 45
 52 state 3 reg_1_w_stage
-53 init 3 52 11
-54 uext 3 32 1
+53 init 3 52 44
+54 uext 3 31 1
 55 eq 1 49 54
 56 ite 3 55 52 51
 57 state 3 reg_0_w_stage
-58 init 3 57 11
+58 init 3 57 44
 59 redor 1 49
 60 not 1 59
 61 ite 3 60 57 56
-62 uext 3 32 1
+62 uext 3 31 1
 63 eq 1 61 62
-64 ite 5 63 41 35
-65 ite 5 50 16 18
-66 ite 5 55 14 65
-67 ite 5 60 19 66
-68 redor 1 61
-69 not 1 68
-70 ite 5 69 67 64
-71 uext 5 70 0 id_rs1_val ; ../verilog/simple_pipe.v:63.12-63.22
-72 slice 3 6 3 2
-73 eq 1 72 15
-74 ite 3 73 47 45
-75 uext 3 32 1
-76 eq 1 72 75
-77 ite 3 76 52 74
-78 redor 1 72
-79 not 1 78
-80 ite 3 79 57 77
-81 uext 3 32 1
-82 eq 1 80 81
-83 ite 5 82 41 35
-84 ite 5 73 16 18
-85 ite 5 76 14 84
-86 ite 5 79 19 85
-87 redor 1 80
-88 not 1 87
-89 ite 5 88 86 83
-90 uext 5 89 0 id_rs2_val ; ../verilog/simple_pipe.v:64.12-64.22
-91 slice 3 6 7 6
-92 uext 3 32 1
-93 eq 1 91 92
-94 eq 1 91 15
-95 or 1 93 94
-96 eq 1 91 17
-97 or 1 95 96
-98 uext 1 97 0 id_wen ; ../verilog/simple_pipe.v:28.6-28.12
-99 uext 3 91 0 op ; ../verilog/simple_pipe.v:24.12-24.14
-100 slice 3 6 1 0
-101 uext 3 100 0 rd ; ../verilog/simple_pipe.v:27.12-27.14
-102 slice 1 57 1 1
-103 uext 1 102 0 reg_0_w_stage_nxt
-104 slice 1 52 1 1
-105 uext 1 104 0 reg_1_w_stage_nxt
-106 slice 1 47 1 1
-107 uext 1 106 0 reg_2_w_stage_nxt
-108 slice 1 45 1 1
-109 uext 1 108 0 reg_3_w_stage_nxt
-110 uext 3 49 0 rs1 ; ../verilog/simple_pipe.v:25.12-25.15
-111 uext 3 61 0 rs1_stage_info ; ../verilog/simple_pipe.v:66.12-66.26
-112 uext 5 67 0 rs1_val ; ../verilog/simple_pipe.v:68.12-68.19
-113 uext 3 72 0 rs2 ; ../verilog/simple_pipe.v:26.12-26.15
-114 uext 3 80 0 rs2_stage_info ; ../verilog/simple_pipe.v:67.12-67.26
-115 uext 5 86 0 rs2_val ; ../verilog/simple_pipe.v:69.12-69.19
-116 ite 5 7 22 70
-117 next 5 22 116
-118 ite 5 7 23 89
-119 next 5 23 118
-120 ite 3 7 25 91
-121 next 3 25 120
-122 ite 3 7 37 42
-123 next 3 37 122
-124 ite 1 7 38 43
-125 next 1 39 124
-126 ite 5 7 41 35
-127 next 5 41 126
-128 ite 3 7 42 100
-129 next 3 42 128
-130 ite 1 7 38 97
-131 next 1 43 130
-132 slice 1 45 1 1
-133 concat 3 38 132
-134 uext 3 108 1
-135 or 3 134 15
-136 eq 1 100 17
-137 and 1 97 136
-138 ite 3 137 135 133
-139 ite 3 7 11 138
-140 next 3 45 139
-141 slice 1 47 1 1
-142 concat 3 38 141
-143 uext 3 106 1
-144 or 3 143 15
-145 eq 1 100 15
-146 and 1 97 145
-147 ite 3 146 144 142
-148 ite 3 7 11 147
-149 next 3 47 148
-150 slice 1 52 1 1
-151 concat 3 38 150
-152 uext 3 104 1
-153 or 3 152 15
-154 uext 3 32 1
-155 eq 1 100 154
-156 and 1 97 155
-157 ite 3 156 153 151
-158 ite 3 7 11 157
-159 next 3 52 158
-160 slice 1 57 1 1
-161 concat 3 38 160
-162 uext 3 102 1
-163 or 3 162 15
-164 redor 1 100
-165 not 1 164
-166 and 1 97 165
-167 ite 3 166 163 161
-168 ite 3 7 11 167
-169 next 3 57 168
-170 input 3
-171 ite 3 39 37 170
-172 input 5
-173 ite 5 39 41 172
-174 ite 1 39 32 38
-175 concat 3 174 174
-176 sort bitvec 3
-177 concat 176 174 175
-178 sort bitvec 4
-179 concat 178 174 177
-180 sort bitvec 5
-181 concat 180 174 179
-182 sort bitvec 6
-183 concat 182 174 181
-184 sort bitvec 7
-185 concat 184 174 183
-186 concat 5 174 185
-187 read 5 9 171
-188 not 5 186
-189 and 5 187 188
-190 and 5 173 186
-191 or 5 190 189
-192 write 8 9 171 191
-193 redor 1 186
-194 ite 8 193 192 9
-195 next 8 9 194 registers ; ../verilog/simple_pipe.v:42.11-42.20
+64 ite 5 63 40 34
+65 ite 5 50 12 13
+66 ite 5 55 9 65
+67 ite 5 37 9 8
+68 ite 5 37 13 12
+69 ite 5 37 68 67
+70 ite 5 60 69 66
+71 redor 1 61
+72 not 1 71
+73 ite 5 72 70 64
+74 uext 5 73 0 id_rs1_val ; ../verilog/simple_pipe.v:63.12-63.22
+75 slice 3 6 3 2
+76 eq 1 75 27
+77 ite 3 76 47 45
+78 uext 3 31 1
+79 eq 1 75 78
+80 ite 3 79 52 77
+81 redor 1 75
+82 not 1 81
+83 ite 3 82 57 80
+84 uext 3 31 1
+85 eq 1 83 84
+86 ite 5 85 40 34
+87 ite 5 76 12 13
+88 ite 5 79 9 87
+89 ite 5 82 69 88
+90 redor 1 83
+91 not 1 90
+92 ite 5 91 89 86
+93 uext 5 92 0 id_rs2_val ; ../verilog/simple_pipe.v:64.12-64.22
+94 slice 3 6 7 6
+95 uext 3 31 1
+96 eq 1 94 95
+97 eq 1 94 27
+98 or 1 96 97
+99 eq 1 94 23
+100 or 1 98 99
+101 uext 1 100 0 id_wen ; ../verilog/simple_pipe.v:28.6-28.12
+102 uext 3 94 0 op ; ../verilog/simple_pipe.v:24.12-24.14
+103 slice 3 6 1 0
+104 uext 3 103 0 rd ; ../verilog/simple_pipe.v:27.12-27.14
+105 slice 1 57 1 1
+106 uext 1 105 0 reg_0_w_stage_nxt
+107 slice 1 52 1 1
+108 uext 1 107 0 reg_1_w_stage_nxt
+109 slice 1 47 1 1
+110 uext 1 109 0 reg_2_w_stage_nxt
+111 slice 1 45 1 1
+112 uext 1 111 0 reg_3_w_stage_nxt
+113 uext 3 49 0 rs1 ; ../verilog/simple_pipe.v:25.12-25.15
+114 uext 3 61 0 rs1_stage_info ; ../verilog/simple_pipe.v:66.12-66.26
+115 uext 5 70 0 rs1_val ; ../verilog/simple_pipe.v:68.12-68.19
+116 uext 3 75 0 rs2 ; ../verilog/simple_pipe.v:26.12-26.15
+117 uext 3 83 0 rs2_stage_info ; ../verilog/simple_pipe.v:67.12-67.26
+118 uext 5 89 0 rs2_val ; ../verilog/simple_pipe.v:69.12-69.19
+119 input 5
+120 ite 5 38 40 119
+121 input 3
+122 ite 3 38 36 121
+123 slice 1 122 0 0
+124 eq 1 123 37
+125 slice 1 122 1 1
+126 eq 1 125 37
+127 and 1 124 126
+128 ite 1 38 31 37
+129 and 1 127 128
+130 ite 5 129 120 8
+131 next 5 8 130
+132 eq 1 123 31
+133 and 1 132 126
+134 and 1 133 128
+135 ite 5 134 120 9
+136 next 5 9 135
+137 eq 1 125 31
+138 and 1 124 137
+139 and 1 138 128
+140 ite 5 139 120 12
+141 next 5 12 140
+142 and 1 132 137
+143 and 1 142 128
+144 ite 5 143 120 13
+145 next 5 13 144
+146 ite 5 7 19 73
+147 next 5 19 146
+148 ite 5 7 20 92
+149 next 5 20 148
+150 ite 3 7 22 94
+151 next 3 22 150
+152 ite 3 7 36 41
+153 next 3 36 152
+154 ite 1 7 37 42
+155 next 1 38 154
+156 ite 5 7 40 34
+157 next 5 40 156
+158 ite 3 7 41 103
+159 next 3 41 158
+160 ite 1 7 37 100
+161 next 1 42 160
+162 slice 1 45 1 1
+163 concat 3 37 162
+164 uext 3 111 1
+165 or 3 164 27
+166 eq 1 103 23
+167 and 1 100 166
+168 ite 3 167 165 163
+169 ite 3 7 44 168
+170 next 3 45 169
+171 slice 1 47 1 1
+172 concat 3 37 171
+173 uext 3 109 1
+174 or 3 173 27
+175 eq 1 103 27
+176 and 1 100 175
+177 ite 3 176 174 172
+178 ite 3 7 44 177
+179 next 3 47 178
+180 slice 1 52 1 1
+181 concat 3 37 180
+182 uext 3 107 1
+183 or 3 182 27
+184 uext 3 31 1
+185 eq 1 103 184
+186 and 1 100 185
+187 ite 3 186 183 181
+188 ite 3 7 44 187
+189 next 3 52 188
+190 slice 1 57 1 1
+191 concat 3 37 190
+192 uext 3 105 1
+193 or 3 192 27
+194 redor 1 103
+195 not 1 194
+196 and 1 100 195
+197 ite 3 196 193 191
+198 ite 3 7 44 197
+199 next 3 57 198
 ; end of yosys output

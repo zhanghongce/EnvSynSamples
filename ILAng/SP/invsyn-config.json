@@ -1,0 +1,17 @@
+{
+	"CexPath" : "cex.vcd",
+	"ModuleNameFilter" : "RTL.",
+	"ModuleNameRemoval" : "RTL.",
+	"AuxVarRemoval": [],
+	"DataPathElements" : [
+		"registers[0]",
+		"registers[1]",
+		"registers[2]",
+		"registers[3]",
+		"id_ex_rs1_val",
+		"id_ex_rs2_val",
+		"ex_wb_val"
+	]
+}
+
+
