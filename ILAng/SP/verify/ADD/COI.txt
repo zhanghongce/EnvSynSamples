@@ -1,0 +1,14 @@
+RTL.registers[3] 1 7 0
+dummy_reset 1 0 0
+RTL.ex_wb_reg_wen 1 0 0
+RTL.ex_wb_val 1 7 0
+__ENDED__ 1 0 0
+__VLG_I_inst 1 1 0
+rst 1 0 0
+__ILA_I_inst 2 7 6 1 0
+ILA.r3 1 7 0
+RTL.ex_wb_rd 1 1 0
+__START__ 1 0 0
+RTL.reg_3_w_stage 1 1 0
+__RESETED__ 1 0 0
+__CYCLE_CNT__ 1 4 0

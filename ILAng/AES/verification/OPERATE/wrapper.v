@@ -742,30 +742,30 @@ module aes_top (
     aes_ctr,
     aes_key0,
     aes_step
-, RTL__DOT__xram_addr, RTL__DOT__uaes_ctr, RTL__DOT__encrypted_data_buf, RTL__DOT__data_out_reg, RTL__DOT__mem_data_buf, RTL__DOT__data_in, RTL__DOT__aes_time_enough, RTL__DOT__wr, RTL__DOT__aes_reg_state, RTL__DOT__aes_128_i__DOT__out, RTL__DOT__byte_counter, RTL__DOT__block_counter, RTL__DOT__xram_wr, RTL__DOT__addr, RTL__DOT__aes_reg_ctr_i__DOT__reg_out, RTL__DOT__aes_curr_key, RTL__DOT__aes_reg_key0_i__DOT__reg_out, RTL__DOT__aes_reg_oplen_i__DOT__reg_out, RTL__DOT__aes_reg_opaddr_i__DOT__reg_out, RTL__DOT__xram_ack, RTL__DOT__xram_data_in, RTL__DOT__xram_data_out, RTL__DOT__xram_stb);
- output [15:0] RTL__DOT__xram_addr;
- output [127:0] RTL__DOT__uaes_ctr;
- output [127:0] RTL__DOT__encrypted_data_buf;
- output [7:0] RTL__DOT__data_out_reg;
- output [127:0] RTL__DOT__mem_data_buf;
+, RTL__DOT__aes_reg_oplen_i__DOT__reg_out, RTL__DOT__data_in, RTL__DOT__addr, RTL__DOT__xram_wr, RTL__DOT__byte_counter, RTL__DOT__block_counter, RTL__DOT__aes_reg_state, RTL__DOT__aes_curr_key, RTL__DOT__aes_reg_opaddr_i__DOT__reg_out, RTL__DOT__aes_reg_key0_i__DOT__reg_out, RTL__DOT__mem_data_buf, RTL__DOT__uaes_ctr, RTL__DOT__xram_data_out, RTL__DOT__data_out_reg, RTL__DOT__wr, RTL__DOT__aes_time_enough, RTL__DOT__aes_128_i__DOT__out, RTL__DOT__aes_reg_ctr_i__DOT__reg_out, RTL__DOT__xram_stb, RTL__DOT__encrypted_data_buf, RTL__DOT__xram_ack, RTL__DOT__xram_addr, RTL__DOT__xram_data_in);
+ output [15:0] RTL__DOT__aes_reg_oplen_i__DOT__reg_out;
  output [7:0] RTL__DOT__data_in;
- output  RTL__DOT__aes_time_enough;
- output  RTL__DOT__wr;
- output [1:0] RTL__DOT__aes_reg_state;
- output [127:0] RTL__DOT__aes_128_i__DOT__out;
+ output [15:0] RTL__DOT__addr;
+ output  RTL__DOT__xram_wr;
  output [3:0] RTL__DOT__byte_counter;
  output [15:0] RTL__DOT__block_counter;
- output  RTL__DOT__xram_wr;
- output [15:0] RTL__DOT__addr;
- output [127:0] RTL__DOT__aes_reg_ctr_i__DOT__reg_out;
+ output [1:0] RTL__DOT__aes_reg_state;
  output [127:0] RTL__DOT__aes_curr_key;
- output [127:0] RTL__DOT__aes_reg_key0_i__DOT__reg_out;
- output [15:0] RTL__DOT__aes_reg_oplen_i__DOT__reg_out;
  output [15:0] RTL__DOT__aes_reg_opaddr_i__DOT__reg_out;
- output  RTL__DOT__xram_ack;
- output [7:0] RTL__DOT__xram_data_in;
+ output [127:0] RTL__DOT__aes_reg_key0_i__DOT__reg_out;
+ output [127:0] RTL__DOT__mem_data_buf;
+ output [127:0] RTL__DOT__uaes_ctr;
  output [7:0] RTL__DOT__xram_data_out;
+ output [7:0] RTL__DOT__data_out_reg;
+ output  RTL__DOT__wr;
+ output  RTL__DOT__aes_time_enough;
+ output [127:0] RTL__DOT__aes_128_i__DOT__out;
+ output [127:0] RTL__DOT__aes_reg_ctr_i__DOT__reg_out;
  output  RTL__DOT__xram_stb;
+ output [127:0] RTL__DOT__encrypted_data_buf;
+ output  RTL__DOT__xram_ack;
+ output [15:0] RTL__DOT__xram_addr;
+ output [7:0] RTL__DOT__xram_data_in;
 
 
 
@@ -1095,24 +1095,24 @@ always @(posedge clk) begin
 end
 
 
- assign RTL__DOT__xram_stb = xram_stb;
- assign RTL__DOT__xram_data_out = xram_data_out;
  assign RTL__DOT__xram_data_in = xram_data_in;
- assign RTL__DOT__xram_ack = xram_ack;
- assign RTL__DOT__aes_curr_key = aes_curr_key;
- assign RTL__DOT__addr = addr;
  assign RTL__DOT__xram_addr = xram_addr;
- assign RTL__DOT__block_counter = block_counter;
- assign RTL__DOT__xram_wr = xram_wr;
- assign RTL__DOT__aes_reg_state = aes_reg_state;
- assign RTL__DOT__wr = wr;
- assign RTL__DOT__aes_time_enough = aes_time_enough;
- assign RTL__DOT__data_in = data_in;
- assign RTL__DOT__mem_data_buf = mem_data_buf;
- assign RTL__DOT__data_out_reg = data_out_reg;
+ assign RTL__DOT__xram_ack = xram_ack;
  assign RTL__DOT__encrypted_data_buf = encrypted_data_buf;
- assign RTL__DOT__uaes_ctr = uaes_ctr;
+ assign RTL__DOT__xram_stb = xram_stb;
+ assign RTL__DOT__aes_time_enough = aes_time_enough;
+ assign RTL__DOT__wr = wr;
+ assign RTL__DOT__data_out_reg = data_out_reg;
+ assign RTL__DOT__xram_data_out = xram_data_out;
+ assign RTL__DOT__mem_data_buf = mem_data_buf;
+ assign RTL__DOT__aes_curr_key = aes_curr_key;
+ assign RTL__DOT__aes_reg_state = aes_reg_state;
+ assign RTL__DOT__block_counter = block_counter;
  assign RTL__DOT__byte_counter = byte_counter;
+ assign RTL__DOT__xram_wr = xram_wr;
+ assign RTL__DOT__addr = addr;
+ assign RTL__DOT__data_in = data_in;
+ assign RTL__DOT__uaes_ctr = uaes_ctr;
 endmodule
 
 
@@ -1122,9 +1122,9 @@ endmodule
 
 // synopsys translate_on
 
-module reg2byte(clk, rst, en, wr, addr, data_in, data_out, reg_out, RTL__DOT__aes_reg_opaddr_i__DOT__reg_out, RTL__DOT__aes_reg_oplen_i__DOT__reg_out);
- output [15:0] RTL__DOT__aes_reg_opaddr_i__DOT__reg_out;
+module reg2byte(clk, rst, en, wr, addr, data_in, data_out, reg_out, RTL__DOT__aes_reg_oplen_i__DOT__reg_out, RTL__DOT__aes_reg_opaddr_i__DOT__reg_out);
  output [15:0] RTL__DOT__aes_reg_oplen_i__DOT__reg_out;
+ output [15:0] RTL__DOT__aes_reg_opaddr_i__DOT__reg_out;
     input           clk;
     input           rst;
     input           en;
@@ -1156,8 +1156,8 @@ module reg2byte(clk, rst, en, wr, addr, data_in, data_out, reg_out, RTL__DOT__ae
             reg_out[15:8]    <= reg1_next;
         end
     end
- assign RTL__DOT__aes_reg_oplen_i__DOT__reg_out = reg_out;
  assign RTL__DOT__aes_reg_opaddr_i__DOT__reg_out = reg_out;
+ assign RTL__DOT__aes_reg_oplen_i__DOT__reg_out = reg_out;
 endmodule
 
 // synopsys translate_off
@@ -1166,9 +1166,9 @@ endmodule
 
 // synopsys translate_on
 
-module reg16byte(clk, rst, en, wr, addr, data_in, data_out, reg_out, RTL__DOT__aes_reg_key0_i__DOT__reg_out, RTL__DOT__aes_reg_ctr_i__DOT__reg_out);
- output [127:0] RTL__DOT__aes_reg_key0_i__DOT__reg_out;
+module reg16byte(clk, rst, en, wr, addr, data_in, data_out, reg_out, RTL__DOT__aes_reg_ctr_i__DOT__reg_out, RTL__DOT__aes_reg_key0_i__DOT__reg_out);
  output [127:0] RTL__DOT__aes_reg_ctr_i__DOT__reg_out;
+ output [127:0] RTL__DOT__aes_reg_key0_i__DOT__reg_out;
     input           clk;
     input           rst;
     input           en;
@@ -1257,8 +1257,8 @@ module reg16byte(clk, rst, en, wr, addr, data_in, data_out, reg_out, RTL__DOT__a
             reg_out[127:120] <= reg15_next;
         end
     end
- assign RTL__DOT__aes_reg_ctr_i__DOT__reg_out = reg_out;
  assign RTL__DOT__aes_reg_key0_i__DOT__reg_out = reg_out;
+ assign RTL__DOT__aes_reg_ctr_i__DOT__reg_out = reg_out;
 endmodule
 // synopsys translate_off
 

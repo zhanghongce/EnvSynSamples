@@ -4,7 +4,7 @@ rm -f *.btor2 *.vcd __yosys*.txt
 echo "* Parsing input..."
 yosys -s gen_btor.ys > __yosys_exec_result.txt
 echo "* Run Pono to check refinement..."
-/opt/moved/woodpecker/generic-sqed-demo/pono/build/pono --vcd cex.vcd -e ind  problem.btor2 
+pono --vcd cex.vcd -e ind  problem.btor2 
 RfResult=$?
 SanityResult=3
 CoverResult=3

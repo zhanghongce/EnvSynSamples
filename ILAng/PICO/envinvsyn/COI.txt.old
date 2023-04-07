@@ -1,0 +1,12 @@
+__STARTED__
+__ENDED__
+dummy_reset
+RTL.dbg_valid_insn
+RTL.cpu_state
+__ILA_I_inst
+__START__
+ILA.x2
+rst
+__RESETED__
+RTL.decoder_trigger
+__auxvar97__recorder

@@ -1,0 +1,391 @@
+2023-03-19 15:33:23.894249 ---> running QED iter #0
+2023-03-19 15:33:25.696947 ---> running cex validation iter #0
+2023-03-19 15:35:23.435312 ---> cexvalidate failed.
+2023-03-19 15:53:17.673629 ---> running QED iter #0
+2023-03-19 15:59:42.904566 ---> running QED iter #0
+2023-03-19 18:33:16.514610 ---> running QED iter #0
+2023-03-19 18:33:17.732312 ---> running cex validation iter #0
+2023-03-19 18:35:22.775044 ---> cexvalidate failed.
+2023-03-19 18:38:02.188961 ---> running QED iter #0
+2023-03-19 18:38:03.398480 ---> running cex validation iter #0
+2023-03-19 18:39:48.786243 ---> cexvalidate failed.
+2023-03-22 17:48:53.731618 ---> running QED iter #3
+2023-03-22 17:48:55.043404 ---> running cex validation iter #3
+2023-03-22 17:48:55.399427 ---> finish iter #3
+2023-03-22 17:49:10.050988 ---> running QED iter #4
+2023-03-22 17:49:11.312349 ---> running cex validation iter #4
+2023-03-22 17:49:12.651020 ---> finish iter #4
+2023-03-22 17:49:19.491404 ---> running QED iter #5
+2023-03-22 17:49:20.766694 ---> running cex validation iter #5
+2023-03-22 17:49:21.110914 ---> finish iter #5
+2023-03-22 17:49:34.674592 ---> running QED iter #6
+2023-03-22 17:49:36.835946 ---> running cex validation iter #6
+2023-03-22 17:50:12.849689 ---> finish iter #6
+2023-03-22 17:50:12.849841 ---> running QED iter #7
+2023-03-22 17:50:16.390581 ---> cexgen failed.
+2023-03-22 17:54:13.915889 ---> running QED iter #7
+2023-03-22 17:54:17.412865 ---> cexgen failed.
+2023-03-22 17:54:33.249886 ---> running QED iter #7
+2023-03-22 17:54:36.673293 ---> cexgen failed.
+2023-03-29 08:33:16.607238 ---> running QED iter #7
+2023-03-29 08:33:20.251387 ---> cexgen failed.
+2023-03-29 08:38:23.147810 ---> running QED iter #7
+2023-03-29 09:55:48.983950 ---> running QED iter #7
+2023-03-29 09:58:39.917118 ---> running QED iter #7
+2023-03-29 10:02:44.260659 ---> running QED iter #7
+2023-03-29 10:04:47.131213 ---> running QED iter #7
+2023-03-29 10:08:29.688152 ---> running QED iter #7
+2023-03-29 10:08:32.551152 ---> running cex validation iter #7
+2023-03-29 10:08:35.882784 ---> finish iter #7
+2023-03-29 10:08:35.882945 ---> running QED iter #8
+2023-03-29 10:08:38.765427 ---> running cex validation iter #8
+2023-03-29 10:08:47.339385 ---> finish iter #8
+2023-03-29 10:08:47.339532 ---> running QED iter #9
+2023-03-29 10:08:50.134784 ---> running cex validation iter #9
+2023-03-29 10:08:51.529485 ---> finish iter #9
+2023-03-29 10:08:51.529616 ---> running QED iter #10
+2023-03-29 10:08:54.349681 ---> running cex validation iter #10
+2023-03-29 10:08:56.904232 ---> finish iter #10
+2023-03-29 10:08:56.904358 ---> running QED iter #11
+2023-03-29 10:08:59.890861 ---> running cex validation iter #11
+2023-03-29 10:09:01.679858 ---> finish iter #11
+2023-03-29 10:09:01.679981 ---> running QED iter #12
+2023-03-29 10:09:04.605257 ---> running cex validation iter #12
+2023-03-29 10:09:06.869383 ---> finish iter #12
+2023-03-29 10:09:06.869513 ---> running QED iter #13
+2023-03-29 10:09:10.018003 ---> running cex validation iter #13
+2023-03-29 10:09:12.199611 ---> finish iter #13
+2023-03-29 10:09:12.199745 ---> running QED iter #14
+2023-03-29 10:09:15.407097 ---> running cex validation iter #14
+2023-03-29 10:09:19.368136 ---> finish iter #14
+2023-03-29 10:09:19.368330 ---> running QED iter #15
+2023-03-29 10:09:22.507031 ---> running cex validation iter #15
+2023-03-29 10:09:26.077942 ---> finish iter #15
+2023-03-29 10:09:26.078081 ---> running QED iter #16
+2023-03-29 10:09:29.325527 ---> running cex validation iter #16
+2023-03-29 10:09:32.130435 ---> finish iter #16
+2023-03-29 10:09:32.130588 ---> running QED iter #17
+2023-03-29 10:09:35.439026 ---> running cex validation iter #17
+2023-03-29 10:10:10.673928 ---> finish iter #17
+2023-03-29 10:10:10.674064 ---> running QED iter #18
+2023-03-29 10:10:13.867834 ---> running cex validation iter #18
+2023-03-29 10:11:25.314172 ---> finish iter #18
+2023-03-29 10:11:25.314364 ---> running QED iter #19
+2023-03-29 10:11:29.525245 ---> running cex validation iter #19
+2023-03-29 10:11:36.556000 ---> finish iter #19
+2023-03-29 10:11:36.556137 ---> running QED iter #20
+2023-03-29 10:11:40.589805 ---> running cex validation iter #20
+2023-03-29 10:11:55.796372 ---> finish iter #20
+2023-03-29 10:11:55.796512 ---> running QED iter #21
+2023-03-29 10:11:59.747388 ---> running cex validation iter #21
+2023-03-29 10:12:41.816230 ---> finish iter #21
+2023-03-29 10:12:41.816633 ---> running QED iter #22
+2023-03-29 10:12:49.439378 ---> running cex validation iter #22
+2023-03-29 10:13:12.554160 ---> finish iter #22
+2023-03-29 10:13:12.554317 ---> running QED iter #23
+2023-03-29 10:13:17.716029 ---> running cex validation iter #23
+2023-03-29 10:13:18.378488 ---> finish iter #23
+2023-03-29 10:13:18.378640 ---> running QED iter #24
+2023-03-29 10:13:23.484235 ---> running cex validation iter #24
+2023-03-29 10:13:41.596397 ---> finish iter #24
+2023-03-29 10:13:41.596562 ---> running QED iter #25
+2023-03-29 10:13:47.262962 ---> running cex validation iter #25
+2023-03-29 10:14:51.157312 ---> finish iter #25
+2023-03-29 10:14:51.157472 ---> running QED iter #26
+2023-03-29 10:14:58.568527 ---> running cex validation iter #26
+2023-03-29 10:15:11.349887 ---> finish iter #26
+2023-03-29 10:15:11.350017 ---> running QED iter #27
+2023-03-29 10:15:18.051020 ---> running cex validation iter #27
+2023-03-29 10:15:20.004371 ---> finish iter #27
+2023-03-29 10:15:20.004523 ---> running QED iter #28
+2023-03-29 10:15:27.177734 ---> running cex validation iter #28
+2023-03-29 10:15:32.369665 ---> finish iter #28
+2023-03-29 10:15:32.369808 ---> running QED iter #29
+2023-03-29 10:15:39.457418 ---> running cex validation iter #29
+2023-03-29 10:16:02.418038 ---> finish iter #29
+2023-03-29 10:16:02.418286 ---> running QED iter #30
+2023-03-29 10:16:09.101889 ---> running cex validation iter #30
+2023-03-29 10:16:10.804053 ---> finish iter #30
+2023-03-29 10:16:10.804230 ---> running QED iter #31
+2023-03-29 10:16:17.680429 ---> running cex validation iter #31
+2023-03-29 10:16:18.278893 ---> finish iter #31
+2023-03-29 10:16:18.279138 ---> running QED iter #32
+2023-03-29 10:16:25.183133 ---> running cex validation iter #32
+2023-03-29 10:16:39.260907 ---> finish iter #32
+2023-03-29 10:16:39.261051 ---> running QED iter #33
+2023-03-29 10:16:46.592298 ---> running cex validation iter #33
+2023-03-29 10:16:51.368986 ---> finish iter #33
+2023-03-29 10:16:51.369118 ---> running QED iter #34
+2023-03-29 10:16:58.635406 ---> running cex validation iter #34
+2023-03-29 10:17:02.834430 ---> finish iter #34
+2023-03-29 10:17:02.834586 ---> running QED iter #35
+2023-03-29 10:17:10.003388 ---> running cex validation iter #35
+2023-03-29 10:17:10.655060 ---> finish iter #35
+2023-03-29 10:17:10.655213 ---> running QED iter #36
+2023-03-29 10:17:18.172158 ---> running cex validation iter #36
+2023-03-29 10:17:18.733685 ---> finish iter #36
+2023-03-29 10:17:18.733823 ---> running QED iter #37
+2023-03-29 10:17:26.154312 ---> running cex validation iter #37
+2023-03-29 10:17:26.661336 ---> finish iter #37
+2023-03-29 10:17:26.661466 ---> running QED iter #38
+2023-03-29 10:17:34.653238 ---> running cex validation iter #38
+2023-03-29 10:17:35.262236 ---> finish iter #38
+2023-03-29 10:17:35.262408 ---> running QED iter #39
+2023-03-29 10:17:43.145944 ---> running cex validation iter #39
+2023-03-29 10:17:44.078318 ---> finish iter #39
+2023-03-29 10:17:44.078445 ---> running QED iter #40
+2023-03-29 10:17:51.401032 ---> running cex validation iter #40
+2023-03-29 10:17:52.008692 ---> finish iter #40
+2023-03-29 10:17:52.008827 ---> running QED iter #41
+2023-03-29 10:17:59.347531 ---> running cex validation iter #41
+2023-03-29 10:18:08.448670 ---> finish iter #41
+2023-03-29 10:18:08.448800 ---> running QED iter #42
+2023-03-29 10:18:16.246869 ---> running cex validation iter #42
+2023-03-29 10:18:18.058424 ---> finish iter #42
+2023-03-29 10:18:18.058557 ---> running QED iter #43
+2023-03-29 10:18:25.983565 ---> running cex validation iter #43
+2023-03-29 10:18:26.432673 ---> finish iter #43
+2023-03-29 10:18:26.432797 ---> running QED iter #44
+2023-03-29 10:18:34.457970 ---> running cex validation iter #44
+2023-03-29 10:18:44.946509 ---> finish iter #44
+2023-03-29 10:18:44.946651 ---> running QED iter #45
+2023-03-29 10:18:53.330277 ---> running cex validation iter #45
+2023-03-29 10:18:54.961959 ---> finish iter #45
+2023-03-29 10:18:54.962098 ---> running QED iter #46
+2023-03-29 10:19:03.623759 ---> running cex validation iter #46
+2023-03-29 10:19:04.987667 ---> finish iter #46
+2023-03-29 10:19:04.987819 ---> running QED iter #47
+2023-03-29 10:19:13.679734 ---> running cex validation iter #47
+2023-03-29 10:19:15.507320 ---> finish iter #47
+2023-03-29 10:19:15.507469 ---> running QED iter #48
+2023-03-29 10:19:24.324698 ---> running cex validation iter #48
+2023-03-29 10:19:24.862066 ---> finish iter #48
+2023-03-29 10:19:24.862202 ---> running QED iter #49
+2023-03-29 10:19:33.719287 ---> running cex validation iter #49
+2023-03-29 10:19:34.240416 ---> finish iter #49
+2023-03-29 10:19:34.240548 ---> running QED iter #50
+2023-03-29 10:19:43.138676 ---> running cex validation iter #50
+2023-03-29 10:19:43.677682 ---> finish iter #50
+2023-03-29 10:19:43.677812 ---> running QED iter #51
+2023-03-29 10:19:52.611337 ---> running cex validation iter #51
+2023-03-29 10:19:53.138057 ---> finish iter #51
+2023-03-29 10:19:53.138202 ---> running QED iter #52
+2023-03-29 10:20:02.473597 ---> running cex validation iter #52
+2023-03-29 10:20:03.108742 ---> finish iter #52
+2023-03-29 10:20:03.108890 ---> running QED iter #53
+2023-03-29 10:20:12.891111 ---> running cex validation iter #53
+2023-03-29 10:20:13.480217 ---> finish iter #53
+2023-03-29 10:20:13.480368 ---> running QED iter #54
+2023-03-29 10:20:23.005651 ---> running cex validation iter #54
+2023-03-29 10:20:23.626562 ---> finish iter #54
+2023-03-29 10:20:23.626713 ---> running QED iter #55
+2023-03-29 10:20:33.778820 ---> running cex validation iter #55
+2023-03-29 10:20:43.549695 ---> finish iter #55
+2023-03-29 10:20:43.549836 ---> running QED iter #56
+2023-03-29 10:20:54.428317 ---> running cex validation iter #56
+2023-03-29 10:20:56.354365 ---> finish iter #56
+2023-03-29 10:20:56.354508 ---> running QED iter #57
+2023-03-29 10:21:07.589903 ---> running cex validation iter #57
+2023-03-29 10:21:10.213783 ---> finish iter #57
+2023-03-29 10:21:10.213912 ---> running QED iter #58
+2023-03-29 10:21:20.271945 ---> running cex validation iter #58
+2023-03-29 10:21:20.963925 ---> finish iter #58
+2023-03-29 10:21:20.964069 ---> running QED iter #59
+2023-03-29 10:21:30.423697 ---> running cex validation iter #59
+2023-03-29 10:21:33.289838 ---> finish iter #59
+2023-03-29 10:21:33.289987 ---> running QED iter #60
+2023-03-29 10:21:34.091295 ---> cexgen failed.
+2023-03-29 10:48:51.358598 ---> running QED iter #60
+2023-03-29 10:49:00.788297 ---> running cex validation iter #60
+2023-03-29 10:49:03.229082 ---> finish iter #60
+2023-03-29 10:49:03.229240 ---> running QED iter #61
+2023-03-29 10:49:12.753293 ---> running cex validation iter #61
+2023-03-29 10:49:57.222568 ---> finish iter #61
+2023-03-29 10:49:57.222733 ---> running QED iter #62
+2023-03-29 10:50:06.996673 ---> running cex validation iter #62
+2023-03-29 10:50:13.555522 ---> finish iter #62
+2023-03-29 10:50:13.555653 ---> running QED iter #63
+2023-03-29 10:50:22.951120 ---> running cex validation iter #63
+2023-03-29 10:50:23.247565 ---> finish iter #63
+2023-03-29 10:50:23.247696 ---> running QED iter #64
+2023-03-29 10:50:32.830208 ---> running cex validation iter #64
+2023-03-29 10:50:37.415428 ---> finish iter #64
+2023-03-29 10:50:37.415577 ---> running QED iter #65
+2023-03-29 10:50:46.872723 ---> running cex validation iter #65
+2023-03-29 10:50:51.900409 ---> finish iter #65
+2023-03-29 10:50:51.900592 ---> running QED iter #66
+2023-03-29 10:51:01.365101 ---> running cex validation iter #66
+2023-03-29 10:51:07.270724 ---> finish iter #66
+2023-03-29 10:51:07.270884 ---> running QED iter #67
+2023-03-29 10:51:16.834081 ---> running cex validation iter #67
+2023-03-29 10:51:27.333603 ---> finish iter #67
+2023-03-29 10:51:27.333777 ---> running QED iter #68
+2023-03-29 10:51:36.918169 ---> running cex validation iter #68
+2023-03-29 10:51:37.256143 ---> finish iter #68
+2023-03-29 10:51:37.256292 ---> running QED iter #69
+2023-03-29 10:51:46.774503 ---> running cex validation iter #69
+2023-03-29 10:51:47.121265 ---> finish iter #69
+2023-03-29 10:51:47.121544 ---> running QED iter #70
+2023-03-29 10:51:56.635997 ---> running cex validation iter #70
+2023-03-29 10:51:57.370684 ---> finish iter #70
+2023-03-29 10:51:57.370841 ---> running QED iter #71
+2023-03-29 10:52:07.008810 ---> running cex validation iter #71
+2023-03-29 10:52:07.690997 ---> finish iter #71
+2023-03-29 10:52:07.691138 ---> running QED iter #72
+2023-03-29 10:52:17.509067 ---> running cex validation iter #72
+2023-03-29 10:52:17.870836 ---> finish iter #72
+2023-03-29 10:52:17.871077 ---> running QED iter #73
+2023-03-29 10:52:27.847351 ---> running cex validation iter #73
+2023-03-29 10:52:28.194028 ---> finish iter #73
+2023-03-29 10:52:28.194163 ---> running QED iter #74
+2023-03-29 10:52:38.069583 ---> running cex validation iter #74
+2023-03-29 10:52:38.402420 ---> finish iter #74
+2023-03-29 10:52:38.402549 ---> running QED iter #75
+2023-03-29 10:52:48.279359 ---> running cex validation iter #75
+2023-03-29 10:53:04.252693 ---> finish iter #75
+2023-03-29 10:53:04.252820 ---> running QED iter #76
+2023-03-29 10:53:14.911648 ---> running cex validation iter #76
+2023-03-29 10:53:34.335222 ---> finish iter #76
+2023-03-29 10:53:34.335369 ---> running QED iter #77
+2023-03-29 10:53:45.836248 ---> running cex validation iter #77
+2023-03-29 10:53:46.568922 ---> finish iter #77
+2023-03-29 10:53:46.569057 ---> running QED iter #78
+2023-03-29 10:53:58.338831 ---> running cex validation iter #78
+2023-03-29 10:53:58.803194 ---> finish iter #78
+2023-03-29 10:53:58.803331 ---> running QED iter #79
+2023-03-29 10:54:10.688949 ---> running cex validation iter #79
+2023-03-29 10:54:11.388663 ---> finish iter #79
+2023-03-29 10:54:11.388819 ---> running QED iter #80
+2023-03-29 10:54:23.147568 ---> running cex validation iter #80
+2023-03-29 10:54:29.581272 ---> finish iter #80
+2023-03-29 10:54:29.581425 ---> running QED iter #81
+2023-03-29 10:54:50.255882 ---> running cex validation iter #81
+2023-03-29 10:54:50.875278 ---> finish iter #81
+2023-03-29 10:54:50.875430 ---> running QED iter #82
+2023-03-29 10:55:11.635001 ---> running cex validation iter #82
+2023-03-29 10:55:23.201446 ---> finish iter #82
+2023-03-29 10:55:23.201608 ---> running QED iter #83
+2023-03-29 10:55:44.118077 ---> running cex validation iter #83
+2023-03-29 10:55:48.696126 ---> finish iter #83
+2023-03-29 10:55:48.696302 ---> running QED iter #84
+2023-03-29 10:56:10.046823 ---> running cex validation iter #84
+2023-03-29 10:56:10.703663 ---> finish iter #84
+2023-03-29 10:56:10.703817 ---> running QED iter #85
+2023-03-29 10:56:32.202305 ---> running cex validation iter #85
+2023-03-29 10:56:32.822300 ---> finish iter #85
+2023-03-29 10:56:32.822475 ---> running QED iter #86
+2023-03-29 10:56:56.050680 ---> running cex validation iter #86
+2023-03-29 10:57:20.890284 ---> finish iter #86
+2023-03-29 10:57:20.890442 ---> running QED iter #87
+2023-03-29 10:57:45.316973 ---> running cex validation iter #87
+2023-03-29 10:57:45.858979 ---> finish iter #87
+2023-03-29 10:57:45.859143 ---> running QED iter #88
+2023-03-29 10:58:09.120615 ---> running cex validation iter #88
+2023-03-29 10:58:20.302961 ---> finish iter #88
+2023-03-29 10:58:20.303103 ---> running QED iter #89
+2023-03-29 10:58:45.743243 ---> running cex validation iter #89
+2023-03-29 10:59:05.163526 ---> finish iter #89
+2023-03-29 10:59:05.163871 ---> running QED iter #90
+2023-03-29 10:59:30.639075 ---> running cex validation iter #90
+2023-03-29 10:59:31.101089 ---> finish iter #90
+2023-03-29 10:59:31.101252 ---> running QED iter #91
+2023-03-29 10:59:55.402552 ---> running cex validation iter #91
+2023-03-29 10:59:57.058403 ---> finish iter #91
+2023-03-29 10:59:57.058564 ---> running QED iter #92
+2023-03-29 11:00:21.938722 ---> running cex validation iter #92
+2023-03-29 11:00:22.272958 ---> finish iter #92
+2023-03-29 11:00:22.273121 ---> running QED iter #93
+2023-03-29 11:00:47.575334 ---> running cex validation iter #93
+2023-03-29 11:00:49.037378 ---> finish iter #93
+2023-03-29 11:00:49.037553 ---> running QED iter #94
+2023-03-29 11:01:14.784025 ---> running cex validation iter #94
+2023-03-29 11:01:15.583624 ---> finish iter #94
+2023-03-29 11:01:15.583785 ---> running QED iter #95
+2023-03-29 11:01:41.421208 ---> running cex validation iter #95
+2023-03-29 11:01:43.111766 ---> finish iter #95
+2023-03-29 11:01:43.111958 ---> running QED iter #96
+2023-03-29 11:02:09.529934 ---> running cex validation iter #96
+2023-03-29 11:02:09.869548 ---> finish iter #96
+2023-03-29 11:02:09.869722 ---> running QED iter #97
+2023-03-29 11:02:35.868204 ---> running cex validation iter #97
+2023-03-29 11:02:36.206237 ---> finish iter #97
+2023-03-29 11:02:36.206421 ---> running QED iter #98
+2023-03-29 11:03:02.312689 ---> running cex validation iter #98
+2023-03-29 11:03:05.131377 ---> finish iter #98
+2023-03-29 11:03:05.131550 ---> running QED iter #99
+2023-03-29 11:03:31.718614 ---> running cex validation iter #99
+2023-03-29 11:03:32.384599 ---> finish iter #99
+2023-03-29 11:03:32.384857 ---> running QED iter #100
+2023-03-29 11:03:58.679430 ---> running cex validation iter #100
+2023-03-29 11:03:59.439609 ---> finish iter #100
+2023-03-29 11:03:59.439918 ---> running QED iter #101
+2023-03-29 11:04:29.120193 ---> running cex validation iter #101
+2023-03-29 11:04:30.877848 ---> finish iter #101
+2023-03-29 11:04:30.878021 ---> running QED iter #102
+2023-03-29 11:05:00.485868 ---> running cex validation iter #102
+2023-03-29 11:05:03.155291 ---> finish iter #102
+2023-03-29 11:05:03.155498 ---> running QED iter #103
+2023-03-29 11:05:33.116117 ---> running cex validation iter #103
+2023-03-29 11:05:33.509350 ---> finish iter #103
+2023-03-29 11:05:33.509540 ---> running QED iter #104
+2023-03-29 11:06:00.912761 ---> running cex validation iter #104
+2023-03-29 11:06:01.236665 ---> finish iter #104
+2023-03-29 11:06:01.236822 ---> running QED iter #105
+2023-03-29 11:06:30.041681 ---> running cex validation iter #105
+2023-03-29 11:06:30.512214 ---> finish iter #105
+2023-03-29 11:06:30.512611 ---> running QED iter #106
+2023-03-29 11:07:00.396077 ---> running cex validation iter #106
+2023-03-29 11:07:26.456166 ---> finish iter #106
+2023-03-29 11:07:26.456335 ---> running QED iter #107
+2023-03-29 11:07:56.799442 ---> running cex validation iter #107
+2023-03-29 11:07:57.179984 ---> finish iter #107
+2023-03-29 11:07:57.180183 ---> running QED iter #108
+2023-03-29 11:08:25.848454 ---> running cex validation iter #108
+2023-03-29 11:08:26.180254 ---> finish iter #108
+2023-03-29 11:08:26.180428 ---> running QED iter #109
+2023-03-29 11:08:56.849009 ---> running cex validation iter #109
+2023-03-29 11:09:00.272620 ---> finish iter #109
+2023-03-29 11:09:00.272779 ---> running QED iter #110
+2023-03-29 11:09:29.364859 ---> running cex validation iter #110
+2023-03-29 11:09:29.725327 ---> finish iter #110
+2023-03-29 11:09:29.725503 ---> running QED iter #111
+2023-03-29 11:09:58.665364 ---> running cex validation iter #111
+2023-03-29 11:09:59.005510 ---> finish iter #111
+2023-03-29 11:09:59.006111 ---> running QED iter #112
+2023-03-29 11:10:28.536673 ---> running cex validation iter #112
+2023-03-29 11:10:31.449171 ---> finish iter #112
+2023-03-29 11:10:31.449336 ---> running QED iter #113
+2023-03-29 11:10:59.484677 ---> running cex validation iter #113
+2023-03-29 11:11:10.036339 ---> finish iter #113
+2023-03-29 11:11:10.036500 ---> running QED iter #114
+2023-03-29 11:11:37.968721 ---> running cex validation iter #114
+2023-03-29 11:11:57.946870 ---> finish iter #114
+2023-03-29 11:11:57.947035 ---> running QED iter #115
+2023-03-29 11:12:25.712862 ---> running cex validation iter #115
+2023-03-29 11:12:30.896837 ---> finish iter #115
+2023-03-29 11:12:30.897010 ---> running QED iter #116
+2023-03-29 11:12:58.837328 ---> running cex validation iter #116
+2023-03-29 11:13:06.628513 ---> finish iter #116
+2023-03-29 11:13:06.628656 ---> running QED iter #117
+2023-03-29 11:13:34.836784 ---> running cex validation iter #117
+2023-03-29 11:13:36.385092 ---> finish iter #117
+2023-03-29 11:13:36.385237 ---> running QED iter #118
+2023-03-29 11:14:04.703432 ---> running cex validation iter #118
+2023-03-29 11:14:05.098345 ---> finish iter #118
+2023-03-29 11:14:05.098491 ---> running QED iter #119
+2023-03-29 11:14:34.423886 ---> running cex validation iter #119
+2023-03-29 11:14:35.005836 ---> finish iter #119
+2023-03-29 11:14:35.005982 ---> running QED iter #120
+2023-03-29 11:15:03.806864 ---> running cex validation iter #120
+2023-03-29 11:15:04.361019 ---> finish iter #120
+2023-03-29 11:15:04.361170 ---> running QED iter #121
+2023-03-29 11:15:33.543759 ---> running cex validation iter #121
+2023-03-29 11:16:44.709777 ---> finish iter #121
+2023-03-29 11:16:44.709965 ---> running QED iter #122
+2023-03-29 11:17:13.494581 ---> running cex validation iter #122
+2023-03-29 11:18:24.678768 ---> envinv size is strange! 264078 ---> 264078
+2023-03-29 12:00:34.960683 ---> running QED iter #122
+2023-03-29 12:00:42.015677 ---> running cex validation iter #122
+2023-03-29 12:01:54.602074 ---> envinv size is strange! 264078 ---> 264078
+2023-03-30 09:15:15.913183 ---> running QED iter #122
+2023-03-30 09:15:16.063418 ---> cexgen failed.

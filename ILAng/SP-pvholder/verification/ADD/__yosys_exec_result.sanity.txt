@@ -1,0 +1,768 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.25+3 (git sha1 f2c689403, gcc 9.4.0-1ubuntu1~20.04.1 -fPIC -Os)
+
+
+-- Executing script file `gen_sanity_prop.ys' --
+
+1. Executing Verilog-2005 frontend: wrapper.v
+Parsing SystemVerilog input from `wrapper.v' to AST representation.
+Generating RTLIL representation for module `\wrapper'.
+Generating RTLIL representation for module `\simplePipe__DOT__ADD'.
+Generating RTLIL representation for module `\pipeline_v'.
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \wrapper
+Used module:     \pipeline_v
+Used module:     \simplePipe__DOT__ADD
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \wrapper
+Used module:     \pipeline_v
+Used module:     \simplePipe__DOT__ADD
+Removed 0 unused modules.
+Module wrapper directly or indirectly contains formal properties -> setting "keep" attribute.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\wrapper.$proc$wrapper.v:351$167'.
+Cleaned up 1 empty switch.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$wrapper.v:712$270 in module pipeline_v.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:699$269 in module pipeline_v.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:680$259 in module pipeline_v.
+Marked 2 switch rules as full_case in process $proc$wrapper.v:636$215 in module pipeline_v.
+Marked 2 switch rules as full_case in process $proc$wrapper.v:624$211 in module pipeline_v.
+Marked 2 switch rules as full_case in process $proc$wrapper.v:612$207 in module pipeline_v.
+Marked 2 switch rules as full_case in process $proc$wrapper.v:600$203 in module pipeline_v.
+Marked 2 switch rules as full_case in process $proc$wrapper.v:488$190 in module simplePipe__DOT__ADD.
+Marked 3 switch rules as full_case in process $proc$wrapper.v:351$167 in module wrapper.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:263$10 in module wrapper.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:259$9 in module wrapper.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:255$8 in module wrapper.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:251$6 in module wrapper.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:247$1 in module wrapper.
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 14 redundant assignments.
+Promoted 3 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~39 debug messages>
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:712$270'.
+     1/3: $1$memwr$\registers$wrapper.v:714$196_EN[7:0]$276
+     2/3: $1$memwr$\registers$wrapper.v:714$196_DATA[7:0]$275
+     3/3: $1$memwr$\registers$wrapper.v:714$196_ADDR[1:0]$274
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:699$269'.
+     1/3: $0\ex_wb_reg_wen[0:0]
+     2/3: $0\ex_wb_rd[1:0]
+     3/3: $0\ex_wb_val[7:0]
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:680$259'.
+     1/5: $0\id_ex_reg_wen[0:0]
+     2/5: $0\id_ex_rd[1:0]
+     3/5: $0\id_ex_op[1:0]
+     4/5: $0\id_ex_rs2_val[7:0]
+     5/5: $0\id_ex_rs1_val[7:0]
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:636$215'.
+     1/1: $0\reg_3_w_stage[1:0]
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:624$211'.
+     1/1: $0\reg_2_w_stage[1:0]
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:612$207'.
+     1/1: $0\reg_1_w_stage[1:0]
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:600$203'.
+     1/1: $0\reg_0_w_stage[1:0]
+Creating decoders for process `\simplePipe__DOT__ADD.$proc$wrapper.v:488$190'.
+     1/5: $0\__COUNTER_start__n3[7:0]
+     2/5: $0\r3[7:0]
+     3/5: $0\r2[7:0]
+     4/5: $0\r1[7:0]
+     5/5: $0\r0[7:0]
+Creating decoders for process `\wrapper.$proc$wrapper.v:351$167'.
+     1/18: $0\__auxvar3__delay_d_1[0:0]
+     2/18: $0\__auxvar2__delay_d_1[0:0]
+     3/18: $0\__auxvar1__delay_d_1[0:0]
+     4/18: $0\__auxvar0__delay_d_1[0:0]
+     5/18: $0\__auxvar7__recorder[7:0]
+     6/18: $0\__auxvar6__recorder[7:0]
+     7/18: $0\__auxvar5__recorder[7:0]
+     8/18: $0\__auxvar4__recorder[7:0]
+     9/18: $0\ppl_stage_wb[0:0]
+    10/18: $0\ppl_stage_ex[0:0]
+    11/18: $0\__auxvar7__recorder_sn_condmet[0:0]
+    12/18: $0\__auxvar7__recorder_sn_vhold[7:0]
+    13/18: $0\__auxvar6__recorder_sn_condmet[0:0]
+    14/18: $0\__auxvar6__recorder_sn_vhold[7:0]
+    15/18: $0\__auxvar5__recorder_sn_condmet[0:0]
+    16/18: $0\__auxvar5__recorder_sn_vhold[7:0]
+    17/18: $0\__auxvar4__recorder_sn_condmet[0:0]
+    18/18: $0\__auxvar4__recorder_sn_vhold[7:0]
+Creating decoders for process `\wrapper.$proc$wrapper.v:267$17'.
+     1/1: $0\__RESETED__[0:0]
+Creating decoders for process `\wrapper.$proc$wrapper.v:263$10'.
+     1/1: $0\__2ndENDED__[0:0]
+Creating decoders for process `\wrapper.$proc$wrapper.v:259$9'.
+     1/1: $0\__ENDED__[0:0]
+Creating decoders for process `\wrapper.$proc$wrapper.v:255$8'.
+     1/1: $0\__STARTED__[0:0]
+Creating decoders for process `\wrapper.$proc$wrapper.v:251$6'.
+     1/1: $0\__START__[0:0]
+Creating decoders for process `\wrapper.$proc$wrapper.v:247$1'.
+     1/1: $0\__CYCLE_CNT__[7:0]
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\pipeline_v.$memwr$\registers$wrapper.v:714$196_ADDR' using process `\pipeline_v.$proc$wrapper.v:712$270'.
+  created $dff cell `$procdff$483' with positive edge clock.
+Creating register for signal `\pipeline_v.$memwr$\registers$wrapper.v:714$196_DATA' using process `\pipeline_v.$proc$wrapper.v:712$270'.
+  created $dff cell `$procdff$484' with positive edge clock.
+Creating register for signal `\pipeline_v.$memwr$\registers$wrapper.v:714$196_EN' using process `\pipeline_v.$proc$wrapper.v:712$270'.
+  created $dff cell `$procdff$485' with positive edge clock.
+Creating register for signal `\pipeline_v.\ex_wb_val' using process `\pipeline_v.$proc$wrapper.v:699$269'.
+  created $dff cell `$procdff$486' with positive edge clock.
+Creating register for signal `\pipeline_v.\ex_wb_rd' using process `\pipeline_v.$proc$wrapper.v:699$269'.
+  created $dff cell `$procdff$487' with positive edge clock.
+Creating register for signal `\pipeline_v.\ex_wb_reg_wen' using process `\pipeline_v.$proc$wrapper.v:699$269'.
+  created $dff cell `$procdff$488' with positive edge clock.
+Creating register for signal `\pipeline_v.\id_ex_rs1_val' using process `\pipeline_v.$proc$wrapper.v:680$259'.
+  created $dff cell `$procdff$489' with positive edge clock.
+Creating register for signal `\pipeline_v.\id_ex_rs2_val' using process `\pipeline_v.$proc$wrapper.v:680$259'.
+  created $dff cell `$procdff$490' with positive edge clock.
+Creating register for signal `\pipeline_v.\id_ex_op' using process `\pipeline_v.$proc$wrapper.v:680$259'.
+  created $dff cell `$procdff$491' with positive edge clock.
+Creating register for signal `\pipeline_v.\id_ex_rd' using process `\pipeline_v.$proc$wrapper.v:680$259'.
+  created $dff cell `$procdff$492' with positive edge clock.
+Creating register for signal `\pipeline_v.\id_ex_reg_wen' using process `\pipeline_v.$proc$wrapper.v:680$259'.
+  created $dff cell `$procdff$493' with positive edge clock.
+Creating register for signal `\pipeline_v.\reg_3_w_stage' using process `\pipeline_v.$proc$wrapper.v:636$215'.
+  created $dff cell `$procdff$494' with positive edge clock.
+Creating register for signal `\pipeline_v.\reg_2_w_stage' using process `\pipeline_v.$proc$wrapper.v:624$211'.
+  created $dff cell `$procdff$495' with positive edge clock.
+Creating register for signal `\pipeline_v.\reg_1_w_stage' using process `\pipeline_v.$proc$wrapper.v:612$207'.
+  created $dff cell `$procdff$496' with positive edge clock.
+Creating register for signal `\pipeline_v.\reg_0_w_stage' using process `\pipeline_v.$proc$wrapper.v:600$203'.
+  created $dff cell `$procdff$497' with positive edge clock.
+Creating register for signal `\simplePipe__DOT__ADD.\r0' using process `\simplePipe__DOT__ADD.$proc$wrapper.v:488$190'.
+  created $dff cell `$procdff$498' with positive edge clock.
+Creating register for signal `\simplePipe__DOT__ADD.\r1' using process `\simplePipe__DOT__ADD.$proc$wrapper.v:488$190'.
+  created $dff cell `$procdff$499' with positive edge clock.
+Creating register for signal `\simplePipe__DOT__ADD.\r2' using process `\simplePipe__DOT__ADD.$proc$wrapper.v:488$190'.
+  created $dff cell `$procdff$500' with positive edge clock.
+Creating register for signal `\simplePipe__DOT__ADD.\r3' using process `\simplePipe__DOT__ADD.$proc$wrapper.v:488$190'.
+  created $dff cell `$procdff$501' with positive edge clock.
+Creating register for signal `\simplePipe__DOT__ADD.\__COUNTER_start__n3' using process `\simplePipe__DOT__ADD.$proc$wrapper.v:488$190'.
+  created $dff cell `$procdff$502' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar4__recorder' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$503' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar4__recorder_sn_vhold' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$504' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar4__recorder_sn_condmet' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$505' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar5__recorder' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$506' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar5__recorder_sn_vhold' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$507' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar5__recorder_sn_condmet' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$508' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar6__recorder' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$509' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar6__recorder_sn_vhold' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$510' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar6__recorder_sn_condmet' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$511' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar7__recorder' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$512' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar7__recorder_sn_vhold' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$513' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar7__recorder_sn_condmet' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$514' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar0__delay_d_1' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$515' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar1__delay_d_1' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$516' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar2__delay_d_1' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$517' with positive edge clock.
+Creating register for signal `\wrapper.\__auxvar3__delay_d_1' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$518' with positive edge clock.
+Creating register for signal `\wrapper.\ppl_stage_ex' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$519' with positive edge clock.
+Creating register for signal `\wrapper.\ppl_stage_wb' using process `\wrapper.$proc$wrapper.v:351$167'.
+  created $dff cell `$procdff$520' with positive edge clock.
+Creating register for signal `\wrapper.\__RESETED__' using process `\wrapper.$proc$wrapper.v:267$17'.
+  created $dff cell `$procdff$521' with positive edge clock.
+Creating register for signal `\wrapper.\__2ndENDED__' using process `\wrapper.$proc$wrapper.v:263$10'.
+  created $dff cell `$procdff$522' with positive edge clock.
+Creating register for signal `\wrapper.\__ENDED__' using process `\wrapper.$proc$wrapper.v:259$9'.
+  created $dff cell `$procdff$523' with positive edge clock.
+Creating register for signal `\wrapper.\__STARTED__' using process `\wrapper.$proc$wrapper.v:255$8'.
+  created $dff cell `$procdff$524' with positive edge clock.
+Creating register for signal `\wrapper.\__START__' using process `\wrapper.$proc$wrapper.v:251$6'.
+  created $dff cell `$procdff$525' with positive edge clock.
+Creating register for signal `\wrapper.\__CYCLE_CNT__' using process `\wrapper.$proc$wrapper.v:247$1'.
+  created $dff cell `$procdff$526' with positive edge clock.
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\pipeline_v.$proc$wrapper.v:712$270'.
+Removing empty process `pipeline_v.$proc$wrapper.v:712$270'.
+Found and cleaned up 1 empty switch in `\pipeline_v.$proc$wrapper.v:699$269'.
+Removing empty process `pipeline_v.$proc$wrapper.v:699$269'.
+Found and cleaned up 1 empty switch in `\pipeline_v.$proc$wrapper.v:680$259'.
+Removing empty process `pipeline_v.$proc$wrapper.v:680$259'.
+Found and cleaned up 2 empty switches in `\pipeline_v.$proc$wrapper.v:636$215'.
+Removing empty process `pipeline_v.$proc$wrapper.v:636$215'.
+Found and cleaned up 2 empty switches in `\pipeline_v.$proc$wrapper.v:624$211'.
+Removing empty process `pipeline_v.$proc$wrapper.v:624$211'.
+Found and cleaned up 2 empty switches in `\pipeline_v.$proc$wrapper.v:612$207'.
+Removing empty process `pipeline_v.$proc$wrapper.v:612$207'.
+Found and cleaned up 2 empty switches in `\pipeline_v.$proc$wrapper.v:600$203'.
+Removing empty process `pipeline_v.$proc$wrapper.v:600$203'.
+Found and cleaned up 8 empty switches in `\simplePipe__DOT__ADD.$proc$wrapper.v:488$190'.
+Removing empty process `simplePipe__DOT__ADD.$proc$wrapper.v:488$190'.
+Found and cleaned up 9 empty switches in `\wrapper.$proc$wrapper.v:351$167'.
+Removing empty process `wrapper.$proc$wrapper.v:351$167'.
+Found and cleaned up 1 empty switch in `\wrapper.$proc$wrapper.v:267$17'.
+Removing empty process `wrapper.$proc$wrapper.v:267$17'.
+Found and cleaned up 2 empty switches in `\wrapper.$proc$wrapper.v:263$10'.
+Removing empty process `wrapper.$proc$wrapper.v:263$10'.
+Found and cleaned up 2 empty switches in `\wrapper.$proc$wrapper.v:259$9'.
+Removing empty process `wrapper.$proc$wrapper.v:259$9'.
+Found and cleaned up 2 empty switches in `\wrapper.$proc$wrapper.v:255$8'.
+Removing empty process `wrapper.$proc$wrapper.v:255$8'.
+Found and cleaned up 2 empty switches in `\wrapper.$proc$wrapper.v:251$6'.
+Removing empty process `wrapper.$proc$wrapper.v:251$6'.
+Found and cleaned up 2 empty switches in `\wrapper.$proc$wrapper.v:247$1'.
+Removing empty process `wrapper.$proc$wrapper.v:247$1'.
+Cleaned up 39 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pipeline_v.
+<suppressed ~7 debug messages>
+Optimizing module simplePipe__DOT__ADD.
+<suppressed ~4 debug messages>
+Optimizing module wrapper.
+<suppressed ~3 debug messages>
+
+2.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pipeline_v.
+Optimizing module simplePipe__DOT__ADD.
+Optimizing module wrapper.
+
+2.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pipeline_v..
+Finding unused cells or wires in module \simplePipe__DOT__ADD..
+Finding unused cells or wires in module \wrapper..
+Removed 6 unused cells and 202 unused wires.
+<suppressed ~9 debug messages>
+
+2.5. Executing CHECK pass (checking for obvious problems).
+Checking module pipeline_v...
+Checking module simplePipe__DOT__ADD...
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [7] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [6] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [5] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [4] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [3] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [2] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [1] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [0] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [7] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [6] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [5] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [4] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [3] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [2] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [1] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [0] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [7] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [6] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [5] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [4] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [3] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [2] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [1] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [0] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [7] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [6] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [5] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [4] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [3] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [2] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [1] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [0] is used but has no driver.
+Checking module wrapper...
+Found and reported 32 problems.
+
+2.6. Executing OPT pass (performing simple optimizations).
+
+2.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pipeline_v.
+Optimizing module simplePipe__DOT__ADD.
+Optimizing module wrapper.
+
+2.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pipeline_v'.
+<suppressed ~42 debug messages>
+Finding identical cells in module `\simplePipe__DOT__ADD'.
+Finding identical cells in module `\wrapper'.
+<suppressed ~123 debug messages>
+Removed a total of 55 cells.
+
+2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \pipeline_v..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \simplePipe__DOT__ADD..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~57 debug messages>
+
+2.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \pipeline_v.
+    Consolidated identical input bits for $mux cell $procmux$282:
+      Old ports: A=8'00000000, B=8'11111111, Y=$0$memwr$\registers$wrapper.v:714$196_EN[7:0]$273
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\registers$wrapper.v:714$196_EN[7:0]$273 [0]
+      New connections: $0$memwr$\registers$wrapper.v:714$196_EN[7:0]$273 [7:1] = { $0$memwr$\registers$wrapper.v:714$196_EN[7:0]$273 [0] $0$memwr$\registers$wrapper.v:714$196_EN[7:0]$273 [0] $0$memwr$\registers$wrapper.v:714$196_EN[7:0]$273 [0] $0$memwr$\registers$wrapper.v:714$196_EN[7:0]$273 [0] $0$memwr$\registers$wrapper.v:714$196_EN[7:0]$273 [0] $0$memwr$\registers$wrapper.v:714$196_EN[7:0]$273 [0] $0$memwr$\registers$wrapper.v:714$196_EN[7:0]$273 [0] }
+  Optimizing cells in module \pipeline_v.
+  Optimizing cells in module \simplePipe__DOT__ADD.
+  Optimizing cells in module \wrapper.
+Performed a total of 1 changes.
+
+2.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pipeline_v'.
+Finding identical cells in module `\simplePipe__DOT__ADD'.
+Finding identical cells in module `\wrapper'.
+<suppressed ~21 debug messages>
+Removed a total of 7 cells.
+
+2.6.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pipeline_v..
+Finding unused cells or wires in module \simplePipe__DOT__ADD..
+Finding unused cells or wires in module \wrapper..
+Removed 0 unused cells and 59 unused wires.
+<suppressed ~2 debug messages>
+
+2.6.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pipeline_v.
+Optimizing module simplePipe__DOT__ADD.
+Optimizing module wrapper.
+
+2.6.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \pipeline_v..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \simplePipe__DOT__ADD..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~50 debug messages>
+
+2.6.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \pipeline_v.
+  Optimizing cells in module \simplePipe__DOT__ADD.
+  Optimizing cells in module \wrapper.
+Performed a total of 0 changes.
+
+2.6.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pipeline_v'.
+Finding identical cells in module `\simplePipe__DOT__ADD'.
+Finding identical cells in module `\wrapper'.
+Removed a total of 0 cells.
+
+2.6.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pipeline_v..
+Finding unused cells or wires in module \simplePipe__DOT__ADD..
+Finding unused cells or wires in module \wrapper..
+
+2.6.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pipeline_v.
+Optimizing module simplePipe__DOT__ADD.
+Optimizing module wrapper.
+
+2.6.14. Finished OPT passes. (There is nothing left to do.)
+
+2.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 30 address bits (of 32) from memory read port pipeline_v.$memrd$\registers$wrapper.v:663$232 (registers).
+Removed top 30 address bits (of 32) from memory read port pipeline_v.$memrd$\registers$wrapper.v:664$234 (registers).
+Removed top 30 address bits (of 32) from memory read port pipeline_v.$memrd$\registers$wrapper.v:665$236 (registers).
+Removed top 30 address bits (of 32) from memory read port pipeline_v.$memrd$\registers$wrapper.v:666$237 (registers).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$eq$wrapper.v:592$197 ($eq).
+Removed top 1 bits (of 2) from port A of cell pipeline_v.$or$wrapper.v:606$206 ($or).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$eq$wrapper.v:617$208 ($eq).
+Removed top 1 bits (of 2) from port A of cell pipeline_v.$or$wrapper.v:618$210 ($or).
+Removed top 1 bits (of 2) from port A of cell pipeline_v.$or$wrapper.v:630$214 ($or).
+Removed top 1 bits (of 2) from port A of cell pipeline_v.$or$wrapper.v:642$218 ($or).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$eq$wrapper.v:653$220 ($eq).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$eq$wrapper.v:658$226 ($eq).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$eq$wrapper.v:673$252 ($eq).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$eq$wrapper.v:677$256 ($eq).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$eq$wrapper.v:694$260 ($eq).
+Removed top 1 bits (of 2) from wire pipeline_v.reg_0_w_stage_nxt.
+Removed top 1 bits (of 2) from wire pipeline_v.reg_1_w_stage_nxt.
+Removed top 1 bits (of 2) from wire pipeline_v.reg_2_w_stage_nxt.
+Removed top 1 bits (of 2) from wire pipeline_v.reg_3_w_stage_nxt.
+Removed top 1 bits (of 2) from port B of cell simplePipe__DOT__ADD.$eq$wrapper.v:459$168 ($eq).
+Removed top 1 bits (of 2) from port B of cell simplePipe__DOT__ADD.$eq$wrapper.v:466$171 ($eq).
+Removed top 1 bits (of 2) from port B of cell simplePipe__DOT__ADD.$eq$wrapper.v:474$177 ($eq).
+Removed top 1 bits (of 2) from port B of cell simplePipe__DOT__ADD.$eq$wrapper.v:481$184 ($eq).
+Removed top 31 bits (of 32) from port B of cell simplePipe__DOT__ADD.$ge$wrapper.v:499$192 ($ge).
+Removed top 24 bits (of 32) from port B of cell simplePipe__DOT__ADD.$lt$wrapper.v:499$193 ($lt).
+Removed top 31 bits (of 32) from port B of cell simplePipe__DOT__ADD.$add$wrapper.v:500$195 ($add).
+Removed top 24 bits (of 32) from port Y of cell simplePipe__DOT__ADD.$add$wrapper.v:500$195 ($add).
+Removed top 24 bits (of 32) from wire simplePipe__DOT__ADD.$add$wrapper.v:500$195_Y.
+Removed top 4 bits (of 8) from wire simplePipe__DOT__ADD.n22.
+Removed top 24 bits (of 32) from port B of cell wrapper.$lt$wrapper.v:249$3 ($lt).
+Removed top 31 bits (of 32) from port B of cell wrapper.$add$wrapper.v:249$5 ($add).
+Removed top 24 bits (of 32) from port Y of cell wrapper.$add$wrapper.v:249$5 ($add).
+Removed top 24 bits (of 32) from wire wrapper.$add$wrapper.v:249$5_Y.
+
+2.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pipeline_v..
+Finding unused cells or wires in module \simplePipe__DOT__ADD..
+Finding unused cells or wires in module \wrapper..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~3 debug messages>
+
+2.9. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.10. Executing OPT pass (performing simple optimizations).
+
+2.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pipeline_v.
+Optimizing module simplePipe__DOT__ADD.
+Optimizing module wrapper.
+
+2.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pipeline_v'.
+Finding identical cells in module `\simplePipe__DOT__ADD'.
+Finding identical cells in module `\wrapper'.
+Removed a total of 0 cells.
+
+2.10.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pipeline_v..
+Finding unused cells or wires in module \simplePipe__DOT__ADD..
+Finding unused cells or wires in module \wrapper..
+
+2.10.4. Finished fast OPT passes.
+
+2.11. Printing statistics.
+
+=== pipeline_v ===
+
+   Number of wires:                101
+   Number of wire bits:            352
+   Number of public wires:          38
+   Number of public wire bits:     157
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 84
+     $add                            1
+     $and                            1
+     $dff                           12
+     $eq                            15
+     $logic_and                      4
+     $logic_not                      5
+     $logic_or                       2
+     $mem_v2                         1
+     $mux                           38
+     $or                             4
+     $sub                            1
+
+=== simplePipe__DOT__ADD ===
+
+   Number of wires:                 66
+   Number of wire bits:            343
+   Number of public wires:          45
+   Number of public wire bits:     196
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 47
+     $add                            2
+     $dff                            5
+     $eq                             8
+     $ge                             1
+     $logic_and                      1
+     $logic_not                      3
+     $lt                             1
+     $mux                           26
+
+=== wrapper ===
+
+   Number of wires:                213
+   Number of wire bits:            522
+   Number of public wires:          96
+   Number of public wire bits:     300
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                176
+     $add                            1
+     $assert                         2
+     $assume                         1
+     $dff                           24
+     $eq                            17
+     $logic_and                     41
+     $logic_not                     17
+     $logic_or                      29
+     $lt                             1
+     $mux                           40
+     $not                            1
+     pipeline_v                      1
+     simplePipe__DOT__ADD            1
+
+=== design hierarchy ===
+
+   wrapper                           1
+     pipeline_v                      1
+     simplePipe__DOT__ADD            1
+
+   Number of wires:                380
+   Number of wire bits:           1217
+   Number of public wires:         179
+   Number of public wire bits:     653
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                305
+     $add                            4
+     $and                            1
+     $assert                         2
+     $assume                         1
+     $dff                           41
+     $eq                            40
+     $ge                             1
+     $logic_and                     46
+     $logic_not                     25
+     $logic_or                      31
+     $lt                             2
+     $mem_v2                         1
+     $mux                          104
+     $not                            1
+     $or                             4
+     $sub                            1
+
+2.12. Executing CHECK pass (checking for obvious problems).
+Checking module pipeline_v...
+Checking module simplePipe__DOT__ADD...
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [7] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [6] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [5] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [4] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [3] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [2] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [1] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r0_randinit [0] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [7] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [6] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [5] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [4] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [3] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [2] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [1] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r1_randinit [0] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [7] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [6] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [5] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [4] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [3] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [2] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [1] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r2_randinit [0] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [7] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [6] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [5] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [4] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [3] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [2] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [1] is used but has no driver.
+Warning: Wire simplePipe__DOT__ADD.\r3_randinit [0] is used but has no driver.
+Checking module wrapper...
+Found and reported 32 problems.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \wrapper
+Used module:     \simplePipe__DOT__ADD
+Used module:     \pipeline_v
+
+3.2. Analyzing design hierarchy..
+Top module:  \wrapper
+Used module:     \simplePipe__DOT__ADD
+Used module:     \pipeline_v
+Removed 0 unused modules.
+Module wrapper directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pipeline_v.
+Optimizing module simplePipe__DOT__ADD.
+Optimizing module wrapper.
+
+5. Executing MEMORY pass.
+
+5.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+5.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+5.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing pipeline_v.registers write port 0.
+
+5.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+5.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\registers'[0] in module `\pipeline_v': no output FF found.
+Checking read port `\registers'[1] in module `\pipeline_v': no output FF found.
+Checking read port `\registers'[2] in module `\pipeline_v': no output FF found.
+Checking read port `\registers'[3] in module `\pipeline_v': no output FF found.
+Checking read port `\registers'[4] in module `\pipeline_v': no output FF found.
+Checking read port address `\registers'[0] in module `\pipeline_v': no address FF found.
+Checking read port address `\registers'[1] in module `\pipeline_v': no address FF found.
+Checking read port address `\registers'[2] in module `\pipeline_v': no address FF found.
+Checking read port address `\registers'[3] in module `\pipeline_v': no address FF found.
+Checking read port address `\registers'[4] in module `\pipeline_v': no address FF found.
+
+5.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pipeline_v..
+Finding unused cells or wires in module \simplePipe__DOT__ADD..
+Finding unused cells or wires in module \wrapper..
+
+5.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+Consolidating read ports of memory pipeline_v.registers by address:
+  Merging ports 0, 1 (address 2'11).
+  Merging ports 0, 2 (address 2'10).
+Consolidating read ports of memory pipeline_v.registers by address:
+
+5.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+5.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pipeline_v..
+Finding unused cells or wires in module \simplePipe__DOT__ADD..
+Finding unused cells or wires in module \wrapper..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+5.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+5.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \registers in module \pipeline_v:
+  created 4 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 6 $mux cells.
+  write interface: 4 write mux blocks.
+
+6. Executing FLATTEN pass (flatten design).
+Deleting now unused module pipeline_v.
+Deleting now unused module simplePipe__DOT__ADD.
+<suppressed ~2 debug messages>
+
+7. Executing SETUNDEF pass (replace undef values with defined constants).
+Using default as -undef with -expose.
+Exposing undriven wire \ILA.r0_randinit as input.
+Exposing undriven wire \ILA.r1_randinit as input.
+Exposing undriven wire \ILA.r2_randinit as input.
+Exposing undriven wire \ILA.r3_randinit as input.
+
+8. Executing SIM pass (simulate the circuit).
+Simulating cycle 0.
+Warning: Assert wrapper.sanitycheck (wrapper.v:349.1-349.54) failed.
+Assumption wrapper.all_assume (wrapper.v:346.1-346.52) failed.
+Simulating cycle 1.
+Warning: Assert wrapper.sanitycheck (wrapper.v:349.1-349.54) failed.
+Assumption wrapper.all_assume (wrapper.v:346.1-346.52) failed.
+Simulating cycle 2.
+Assumption wrapper.all_assume (wrapper.v:346.1-346.52) failed.
+
+9. Executing BTOR backend.
+
+9.1. Executing BMUXMAP pass.
+
+9.2. Executing DEMUXMAP pass.
+
+Warnings: 33 unique messages, 66 total
+End of script. Logfile hash: ed22b53ab5, CPU: user 0.10s system 0.00s, MEM: 14.79 MB peak
+Yosys 0.25+3 (git sha1 f2c689403, gcc 9.4.0-1ubuntu1~20.04.1 -fPIC -Os)
+Time spent: 23% 7x opt_clean (0 sec), 18% 7x opt_expr (0 sec), ...

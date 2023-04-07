@@ -1,0 +1,13 @@
+9 1 registers
+22 1 id_ex_rs1_val
+23 1 id_ex_rs2_val
+25 0 id_ex_op
+37 0 ex_wb_rd
+39 0 ex_wb_reg_wen
+41 1 ex_wb_val
+42 0 id_ex_rd
+43 0 id_ex_reg_wen
+45 0 reg_3_w_stage
+47 0 reg_2_w_stage
+52 0 reg_1_w_stage
+57 0 reg_0_w_stage

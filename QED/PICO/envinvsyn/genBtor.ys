@@ -1,0 +1,12 @@
+read_verilog -sv ../verilog/picorv32.v
+prep -top picorv32
+
+hierarchy -check
+proc
+chformal -assume -early;
+
+memory -nordff;
+flatten
+setundef -undriven -expose;
+sim -clock clk -resetn resetn -rstlen 1 -n 1 -w picorv32
+write_btor -s design.btor

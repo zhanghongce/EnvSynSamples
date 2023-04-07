@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/SPtest.dir/app/main.cc.o  -o SPtest  -Wl,-rpath,/usr/local/lib /usr/local/lib/libilang.so /usr/lib/x86_64-linux-gnu/libz3.so /usr/local/lib/libglogd.so.0.4.0 -pthread /usr/local/lib/libfmt.so.6.1.2 -Wl,--as-needed /usr/local/lib/libverilogparser.so /usr/local/lib/libvexpparser.so /usr/local/lib/libvcdparser.so /usr/local/lib/libsmtparser.so 
