@@ -2252,13 +2252,13 @@ assign dbg_reg_x31 = cpuregs[31];
 	end
 
 
-	reg [31:0] mem_la_addr_temp_buffer;
-	reg [31:0] qed_ifu_instruction_buffer;
-	always @(posedge clk) begin
-		mem_la_addr_temp_buffer<= mem_la_addr;
-		qed_ifu_instruction_buffer<=qed_ifu_instruction;
-	end
-	assume property (~(mem_valid&mem_ready&mem_instr)||(~(mem_addr == mem_la_addr_temp_buffer)||(qed_ifu_instruction_buffer==qed_ifu_instruction))) ;
+	// reg [31:0] mem_la_addr_temp_buffer;
+	// reg [31:0] qed_ifu_instruction_buffer;
+	// always @(posedge clk) begin
+	// 	mem_la_addr_temp_buffer<= mem_la_addr;
+	// 	qed_ifu_instruction_buffer<=qed_ifu_instruction;
+	// end
+	// assume property (~(mem_valid&mem_ready&mem_instr)||(~(mem_addr == mem_la_addr_temp_buffer)||(qed_ifu_instruction_buffer==qed_ifu_instruction))) ;
 //    always@(posedge clk) begin
 // 	if((num_orig_insts==0)&&(num_dup_insts==0))begin
 // 		assume property (cpuregs[1] == cpuregs[17]);

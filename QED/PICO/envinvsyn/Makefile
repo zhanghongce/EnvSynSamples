@@ -1,2 +1,5 @@
+d=$(shell date +%s)
+
 restart:
-	rm -f cegar.log cex.vcd envinv.smt2 COI.txt result.txt
+	mv envinv.smt2 envinv.smt2.$(d)
+	rm -f cegar.log cex.vcd COI.txt result.txt
