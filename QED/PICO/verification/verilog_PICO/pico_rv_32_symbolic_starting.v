@@ -55,7 +55,71 @@ module top
   (
    input clk,
    input [31:0] instruction,
-   input reset_x
+   input reset_x,
+   input qed_exec_dup,
+
+
+	input resetn,
+	output  trap,
+
+	output         mem_valid,
+	output         mem_instr,
+	// input             mem_ready,
+
+	output  [31:0] mem_addr,
+	output  [31:0] mem_wdata,
+	output  [ 3:0] mem_wstrb,
+	input      [31:0] mem_rdata,
+
+	// Look-Ahead Interface
+	output            mem_la_read,
+	output            mem_la_write,
+	output     [31:0] mem_la_addr,
+	output  [31:0] mem_la_wdata,
+	output  [ 3:0] mem_la_wstrb,
+
+	// Pico Co-Processor Interface (PCPI)
+	output         pcpi_valid,
+	output  [31:0] pcpi_insn,
+	output     [31:0] pcpi_rs1,
+	output     [31:0] pcpi_rs2,
+	input             pcpi_wr,
+	input      [31:0] pcpi_rd,
+	input             pcpi_wait,
+	input             pcpi_ready,
+
+	// IRQ Interface
+	input      [31:0] irq,
+	output  [31:0] eoi,
+
+	output         rvfi_valid,
+	output  [63:0] rvfi_order,
+	output  [31:0] rvfi_insn,
+	output         rvfi_trap,
+	output         rvfi_halt,
+	output         rvfi_intr,
+	output  [ 1:0] rvfi_mode,
+	output  [ 4:0] rvfi_rs1_addr,
+	output  [ 4:0] rvfi_rs2_addr,
+	output  [31:0] rvfi_rs1_rdata,
+	output  [31:0] rvfi_rs2_rdata,
+	output  [ 4:0] rvfi_rd_addr,
+	output  [31:0] rvfi_rd_wdata,
+	output  [31:0] rvfi_pc_rdata,
+	output  [31:0] rvfi_pc_wdata,
+	output  [31:0] rvfi_mem_addr,
+	output  [ 3:0] rvfi_mem_rmask,
+	output  [ 3:0] rvfi_mem_wmask,
+	output  [31:0] rvfi_mem_rdata,
+	output  [31:0] rvfi_mem_wdata,
+
+	// Trace Interface
+	output         trace_valid,
+	output  [35:0] trace_data,
+
+	input [4:0] dummy_read_rd,
+	output [31:0] dummy_reg_rdata
+
    );
 //    always @* begin
 //       no_reset: assume(reset_x);
@@ -143,64 +207,13 @@ module top
       );
 */
    // EDIT: wire up the instruction to the new inst1 port
-   wire trap;
-   wire mem_valid;
-   wire mem_instr;
-   wire mem_ready;
-   wire [31:0] mem_addr;
-   wire [31:0] mem_wdata;
-   wire [3:0] mem_wstrb;
-   wire [31:0] mem_rdata;
-   wire mem_la_read;
-   wire mem_la_write;
-   wire [31:0] mem_la_addr;
-	wire [31:0] mem_la_wdata;
-	wire [ 3:0] mem_la_wstrb;
-
-	// Pico Co-Processor Interface (PCPI)
-	wire        pcpi_valid;
-	wire [31:0] pcpi_insn;
-	wire     [31:0] pcpi_rs1;
-	wire     [31:0] pcpi_rs2;
-	wire             pcpi_wr;
-	wire      [31:0] pcpi_rd;
-	wire             pcpi_wait;
-	wire             pcpi_ready;
-
-	// IRQ Interface
-	wire      [31:0] irq;
-	wire [31:0] eoi;
-	wire [31:0] mem_rdata;
-	wire        rvfi_valid;
-	wire [63:0] rvfi_order;
-	wire [31:0] rvfi_insn;
-	wire        rvfi_trap;
-	wire       rvfi_halt;
-	wire        rvfi_intr;
-	wire [ 1:0] rvfi_mode;
-	wire [ 4:0] rvfi_rs1_addr;
-	wire [ 4:0] rvfi_rs2_addr;
-	wire [31:0] rvfi_rs1_rdata;
-	wire [31:0] rvfi_rs2_rdata;
-	wire [ 4:0] rvfi_rd_addr;
-	wire [31:0] rvfi_rd_wdata;
-	wire [31:0] rvfi_pc_rdata;
-	wire [31:0] rvfi_pc_wdata;
-	wire [31:0] rvfi_mem_addr;
-	wire [ 3:0] rvfi_mem_rmask;
-	wire [ 3:0] rvfi_mem_wmask;
-	wire [31:0] rvfi_mem_rdata;
-	wire [31:0] rvfi_mem_wdata;
-
-	// Trace Interface
-	wire        trace_valid;
-	wire [35:0] trace_data;   
+   
    picorv32 RTL
      (
       .instruction(instruction),
 	 .mem_rdata(mem_rdata),
       .clk(clk),
-      .resetn(),
+      .resetn(resetn),
 	 .outside_resetn(reset_x),
 	 .irq(irq),
 	 .pcpi_ready(pcpi_ready),
@@ -244,7 +257,11 @@ module top
 	 .rvfi_mem_rdata(rvfi_mem_rdata),
 	 .rvfi_mem_wdata(rvfi_mem_wdata),
 	 .trace_valid(trace_valid),
-	 .trace_data(trace_data)
+	 .trace_data(trace_data),
+	 .qed_exec_dup(qed_exec_dup),
+
+	 .dummy_read_rd(dummy_read_rd),
+	 .dummy_reg_rdata(dummy_reg_rdata)
       );
 
 //    assign dmem_addr = prog_loading ? prog_loadaddr : dmem_addr_core;
@@ -276,6 +293,7 @@ module picorv32 (
 	input clk, input resetn,
 	input wire        outside_resetn, 
 	input wire  [31:0] instruction,
+
 	output reg trap,
 
 	output reg        mem_valid,
@@ -331,7 +349,12 @@ module picorv32 (
 
 	// Trace Interface
 	output reg        trace_valid,
-	output reg [35:0] trace_data
+	output reg [35:0] trace_data,
+
+	input 		           qed_exec_dup,
+
+	input [4:0] dummy_read_rd,
+	output [31:0] dummy_reg_rdata
 );
 	parameter ENABLE_COUNTERS = 1;
 	parameter ENABLE_COUNTERS64 = 1;
@@ -401,7 +424,7 @@ module picorv32 (
 	reg [31:0] timer;
 
 	reg [31:0] cpuregs [0:regfile_size-1];
-
+	assign dummy_reg_rdata = cpuregs[dummy_read_rd];
 /*
 	integer i;
 	initial begin
@@ -611,8 +634,6 @@ assign dbg_reg_x31 = cpuregs[31];
 	///Now we try to use the qed to generate the instruction.
 
 	wire 		           qed_vld_out;
-	(* keep *)
-	wire 		           qed_exec_dup;
 	wire [31:0] 		   qed_ifu_instruction;
 
 	qed qed0 ( // Inputs
@@ -2320,13 +2341,14 @@ assign dbg_reg_x31 = cpuregs[31];
      end
 
    assign qed_ready = (num_orig_insts == num_dup_insts)&&(num_orig_insts!=0);
+   wire __all_assert_property__ = (cpuregs[1] == cpuregs[17])&&(cpuregs[2] == cpuregs[18])&&(cpuregs[3] == cpuregs[19])&&(cpuregs[4] == cpuregs[20])&&
+	   (cpuregs[5] == cpuregs[21])&&(cpuregs[6] == cpuregs[22])&&(cpuregs[7] == cpuregs[23])&&(cpuregs[8] == cpuregs[24])&&(cpuregs[9] == cpuregs[25])&&
+	   (cpuregs[10] == cpuregs[26])&&(cpuregs[11] == cpuregs[27])&&(cpuregs[12] == cpuregs[28])&&(cpuregs[13] == cpuregs[29])&&(cpuregs[14] == cpuregs[30])&&
+	   (cpuregs[15] == cpuregs[31]);
 //    assert property (qed_vld_out==1);
    always @(posedge clk) begin
 	if (qed_ready&&(qed_reach_commit)) begin
-	   sqed: assert property ((cpuregs[1] == cpuregs[17])&&(cpuregs[2] == cpuregs[18])&&(cpuregs[3] == cpuregs[19])&&(cpuregs[4] == cpuregs[20])&&
-	   (cpuregs[5] == cpuregs[21])&&(cpuregs[6] == cpuregs[22])&&(cpuregs[7] == cpuregs[23])&&(cpuregs[8] == cpuregs[24])&&(cpuregs[9] == cpuregs[25])&&
-	   (cpuregs[10] == cpuregs[26])&&(cpuregs[11] == cpuregs[27])&&(cpuregs[12] == cpuregs[28])&&(cpuregs[13] == cpuregs[29])&&(cpuregs[14] == cpuregs[30])&&
-	   (cpuregs[15] == cpuregs[31]));
+	   assert property (__all_assert_property__);
 	end
      end	
 

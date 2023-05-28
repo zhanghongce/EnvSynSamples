@@ -19,7 +19,7 @@ hierarchy -check;
 # (because the clock hasn't toggled)
 # this command ensures that assumptions
 # hold at every state
-chformal -assume -early;
+# chformal -assume -early;
 
 # this processes memories
 # nomap means it will keep them as arrays
@@ -34,11 +34,15 @@ flatten;
 # -rstlen configures how long the reset is active (recommended to keep it active for the whole simulation)
 # -w tells it to write back the final state of the simulation as the initial state in the btor2 file
 # another useful option is -zinit which zero initializes any uninitialized state
-sim -clock clk -resetn reset_x -n 1 -rstlen 1 -w top
+# sim -clock clk -resetn reset_x -n 1 -rstlen 1 -w top
 
 # This turns all undriven signals into
 # inputs
 setundef -undriven -expose;
+sim -clock clk -resetn reset_x -n 1 -rstlen 1 -w top
+opt;
+
+dffunmap;
 
 # This writes to a file in BTOR2 format
 write_btor -s pico.btor2
