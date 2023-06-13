@@ -1,0 +1,885 @@
+ILA wrapper detected!
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+__auxvar97__recorder@3 : [0:0],
+ILA.x9@3 : [0:0],
+__ENDED__@3 : [0:0],
+RTL.rvfi_valid@3 : [0:0],
+__RESETED__@3 : [0:0],
+__STARTED__@3 : [0:0],
+__START__@3 : [0:0],
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+__STARTED__@2 : [0:0],
+__RESETED__@2 : [0:0],
+RTL.cpu_state@2 : [7:0],
+rst@2 : [0:0],
+__START__@2 : [0:0],
+RTL.dbg_valid_insn@2 : [0:0],
+RTL.decoder_trigger@2 : [0:0],
+dummy_reset@2 : [0:0],
+RTL.rvfi_valid@2 : [0:0],
+__ENDED__@2 : [0:0],
+ILA.x9@2 : [0:0],
+__auxvar97__recorder@2 : [0:0],
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+RTL.cpu_state@1 : [7:0],
+RTL.rvfi_valid@1 : [0:0],
+__STARTED__@1 : [0:0],
+__ENDED__@1 : [0:0],
+dummy_reset@1 : [0:0],
+RTL.dbg_valid_insn@1 : [0:0],
+__VLG_I_mem_ready@1 : [0:0],
+RTL.mem_state@1 : [0:0],
+RTL.mem_do_rdata@1 : [0:0],
+RTL.mem_valid@1 : [0:0],
+RTL.mem_do_rinst@1 : [0:0],
+__RESETED__@1 : [0:0],
+RTL.trap@1 : [0:0],
+RTL.reg_pc@1 : [1:0],
+__auxvar97__recorder@1 : [0:0],
+__START__@1 : [0:0],
+RTL.mem_do_wdata@1 : [0:0],
+rst@1 : [0:0],
+RTL.decoder_trigger@1 : [0:0],
+ILA.x9@1 : [0:0],
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+RTL.mem_do_rdata@0 : [0:0],
+RTL.decoder_trigger@0 : [0:0],
+RTL.cpu_state@0 : [7:0],
+dummy_reset@0 : [0:0],
+RTL.mem_do_wdata@0 : [0:0],
+RTL.mem_state@0 : [1:0],
+RTL.trap@0 : [0:0],
+RTL.dbg_valid_insn@0 : [0:0],
+RTL.reg_pc@0 : [1:0],
+__ILA_I_inst@0 : [14:12],[31:25],[7:0],
+__RESETED__@0 : [0:0],
+__ENDED__@0 : [0:0],
+RTL.latched_branch@0 : [0:0],
+RTL.latched_store@0 : [0:0],
+RTL.reg_next_pc@0 : [1:0],
+RTL.mem_do_rinst@0 : [0:0],
+__STARTED__@0 : [0:0],
+RTL.mem_valid@0 : [0:0],
+ILA.x9@0 : [0:0],
+__auxvar97__recorder@0 : [0:0],
+__START__@0 : [0:0],
+RTL.do_waitirq@0 : [0:0],
+rst@0 : [0:0],
+SV __START__ is in constraints
+SV __START__ is triggered at Cycle #0
+added (ite (and (and (not (= ((_ zero_extend 0) (bvand (bvand (bvcomp ((_ extract 6 0) __ILA_I_inst) ((_ zero_extend 1) #b110011)) (ite (not (distinct ((_ extract 14 12) __ILA_I_inst) #b000)) #b1 #b0)) (ite (not (distinct ((_ extract 31 25) __ILA_I_inst) #b0000000)) #b1 #b0))) #b0)) (not (= ((_ zero_extend 0) #b1) #b0))) (not (= RTL.rvfi_valid #b0))) #b1 #b0) in next round.
+SV __auxvar97__recorder is in constraints
+SV __auxvar97__recorder is triggered at Cycle #1
+added ((_ extract 319 288) (ite (= #b0 #b1) (concat RTL.cpuregs[31] (concat RTL.cpuregs[30] (concat RTL.cpuregs[29] (concat RTL.cpuregs[28] (concat RTL.cpuregs[27] (concat RTL.cpuregs[26] (concat RTL.cpuregs[25] (concat RTL.cpuregs[24] (concat RTL.cpuregs[23] (concat RTL.cpuregs[22] (concat RTL.cpuregs[21] (concat RTL.cpuregs[20] (concat RTL.cpuregs[19] (concat RTL.cpuregs[18] (concat RTL.cpuregs[17] RTL.cpuregs[16]))))))))))))))) (concat RTL.cpuregs[15] (concat RTL.cpuregs[14] (concat RTL.cpuregs[13] (concat RTL.cpuregs[12] (concat RTL.cpuregs[11] (concat RTL.cpuregs[10] (concat RTL.cpuregs[9] (concat RTL.cpuregs[8] (concat RTL.cpuregs[7] (concat RTL.cpuregs[6] (concat RTL.cpuregs[5] (concat RTL.cpuregs[4] (concat RTL.cpuregs[3] (concat RTL.cpuregs[2] (concat RTL.cpuregs[1] RTL.cpuregs[0]))))))))))))))))) in next round.
+SV RTL.mem_valid is NOT in constraints
+SV __STARTED__ is NOT in constraints
+SV RTL.mem_do_rinst is NOT in constraints
+SV ILA.x9 is in constraints
+SV ILA.x9 is triggered at Cycle #0
+added (ite (not (= __START__ #b0)) (ite (= ILA.x9 __auxvar96__recorder) #b1 #b0) (ite (not (= (bvand (bvand (bvand (bvand RTL.rvfi_valid __STARTED__) __STARTED__) __RESETED__) (bvnot __ENDED__)) #b0)) (ite (= ILA.x9 __auxvar97__recorder) #b1 #b0) #b1)) in next round.
+SV RTL.mem_do_rdata is NOT in constraints
+SV RTL.do_waitirq is NOT in constraints
+SV RTL.decoder_trigger is NOT in constraints
+SV RTL.cpu_state is NOT in constraints
+SV RTL.mem_do_wdata is NOT in constraints
+SV RTL.mem_state is NOT in constraints
+SV RTL.trap is NOT in constraints
+SV RTL.dbg_valid_insn is NOT in constraints
+SV RTL.reg_pc is NOT in constraints
+SV __ENDED__ is NOT in constraints
+SV __RESETED__ is NOT in constraints
+SV RTL.latched_branch is NOT in constraints
+SV RTL.reg_next_pc is NOT in constraints
+SV RTL.latched_store is NOT in constraints
+----------------END of a round ----------------
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+RTL.rvfi_valid@0 : [0:0],
+__ILA_I_inst@0 : [14:12],[6:0],[31:25],
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+__START__@0 : [0:0],
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+RTL.cpuregs[9]@1 : [0:0],
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+RTL.latched_compr@0 : [0:0],
+RTL.reg_pc@0 : [0:0],
+RTL.latched_branch@0 : [0:0],
+RTL.cpu_state@0 : [7:0],
+RTL.latched_rd@0 : [4:0],
+dummy_reset@0 : [0:0],
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+__STARTED__@1 : [0:0],
+__auxvar31__delay_d_1@1 : [0:0],
+__auxvar97__recorder_sn_condmet@1 : [0:0],
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+__auxvar97__recorder_sn_condmet@0 : [0:0],
+__auxvar31__delay_d_1@0 : [0:0],
+rst@0 : [0:0],
+RTL.latched_branch@0 : [0:0],
+__START__@0 : [0:0],
+RTL.cpu_state@0 : [7:0],
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+__auxvar96__recorder@0 : [31:0],
+ILA.x9@0 : [31:0],
+__START__@0 : [0:0],
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+__START__@0 : [0:0],
+SV ILA.x9 is in constraints
+SV ILA.x9 is triggered at Cycle #0
+added (ite (not (= __START__ #b0)) (ite (= ILA.x9 __auxvar96__recorder) #b1 #b0) (ite (not (= (bvand (bvand (bvand (bvand RTL.rvfi_valid __STARTED__) __STARTED__) __RESETED__) (bvnot __ENDED__)) #b0)) (ite (= ILA.x9 __auxvar97__recorder) #b1 #b0) #b1)) in next round.
+SV __auxvar31__delay_d_1 is NOT in constraints
+SV __auxvar97__recorder_sn_condmet is NOT in constraints
+SV RTL.latched_rd is NOT in constraints
+SV __auxvar96__recorder is in constraints
+SV __auxvar96__recorder is triggered at Cycle #0
+added ((_ extract 319 288) (ite (= #b0 #b1) (concat RTL.cpuregs[31] (concat RTL.cpuregs[30] (concat RTL.cpuregs[29] (concat RTL.cpuregs[28] (concat RTL.cpuregs[27] (concat RTL.cpuregs[26] (concat RTL.cpuregs[25] (concat RTL.cpuregs[24] (concat RTL.cpuregs[23] (concat RTL.cpuregs[22] (concat RTL.cpuregs[21] (concat RTL.cpuregs[20] (concat RTL.cpuregs[19] (concat RTL.cpuregs[18] (concat RTL.cpuregs[17] RTL.cpuregs[16]))))))))))))))) (concat RTL.cpuregs[15] (concat RTL.cpuregs[14] (concat RTL.cpuregs[13] (concat RTL.cpuregs[12] (concat RTL.cpuregs[11] (concat RTL.cpuregs[10] (concat RTL.cpuregs[9] (concat RTL.cpuregs[8] (concat RTL.cpuregs[7] (concat RTL.cpuregs[6] (concat RTL.cpuregs[5] (concat RTL.cpuregs[4] (concat RTL.cpuregs[3] (concat RTL.cpuregs[2] (concat RTL.cpuregs[1] RTL.cpuregs[0]))))))))))))))))) in next round.
+SV RTL.latched_compr is NOT in constraints
+SV RTL.rvfi_valid is NOT in constraints
+----------------END of a round ----------------
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+__auxvar96__recorder@0 : [31:0],
+ILA.x9@0 : [31:0],
+__START__@0 : [0:0],
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+__START__@0 : [0:0],
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+RTL.cpuregs[9]@0 : [31:0],
+[get var in COI] in:
+ (Omitted). 
+[get var in COI] out:
+RTL.latched_branch@0 : [0:0],
+__START__@0 : [0:0],
+RTL.cpu_state@0 : [7:0],
+__auxvar96__recorder_sn_condmet@0 : [0:0],
+SV __auxvar96__recorder_sn_condmet is NOT in constraints
+SV RTL.cpuregs[9] is NOT in constraints
+----------------END of a round ----------------
+[COI check] sv ((_ extract 31 0) RTL.cpuregs[9]@0) is locked as ((_ extract 31 0) #b00000000000000000000000000000001)
+[COI check] sv ((_ extract 0 0) __auxvar96__recorder_sn_condmet@0) is locked as ((_ extract 0 0) #b0)
+[COI check] sv ((_ extract 4 0) RTL.latched_rd@0) is locked as ((_ extract 4 0) #b01001)
+[COI check] sv ((_ extract 0 0) __auxvar97__recorder_sn_condmet@0) is locked as ((_ extract 0 0) #b0)
+[COI check] sv ((_ extract 0 0) RTL.latched_compr@0) is locked as ((_ extract 0 0) #b0)
+[COI check] removing sv __auxvar96__recorder
+[COI check] sv ((_ extract 0 0) RTL.latched_store@0) is locked as ((_ extract 0 0) #b0)
+[COI check] sv ((_ extract 0 0) __auxvar31__delay_d_1@0) is locked as ((_ extract 0 0) #b0)
+[COI check] sv ((_ extract 1 0) RTL.reg_next_pc@0) is locked as ((_ extract 1 0) #b00000000000000000000000000000000)
+[COI check] sv ((_ extract 0 0) RTL.rvfi_valid@0) is locked as ((_ extract 0 0) #b1)
+[COI check] sv ((_ extract 0 0) RTL.latched_branch@0) is locked as ((_ extract 0 0) #b1)
+[COI check] sv ((_ extract 0 0) __RESETED__@0) is locked as ((_ extract 0 0) #b1)
+[COI check] sv ((_ extract 0 0) __ENDED__@0) is locked as ((_ extract 0 0) #b0)
+[COI check] sv ((_ extract 1 0) RTL.reg_pc@0) is locked as ((_ extract 1 0) #b11111111111111111111111111111100)
+[COI check] sv ((_ extract 0 0) RTL.dbg_valid_insn@0) is locked as ((_ extract 0 0) #b1)
+[COI check] sv ((_ extract 0 0) __START__@0) is locked as ((_ extract 0 0) #b1)
+[COI check] removing sv __auxvar97__recorder
+[COI check] sv ((_ extract 0 0) RTL.mem_valid@0) is locked as ((_ extract 0 0) #b0)
+[COI check] sv ((_ extract 0 0) __STARTED__@0) is locked as ((_ extract 0 0) #b0)
+[COI check] sv ((_ extract 0 0) RTL.mem_do_rinst@0) is locked as ((_ extract 0 0) #b1)
+[COI check] removing sv ILA.x9
+[COI check] sv ((_ extract 0 0) RTL.mem_do_rdata@0) is locked as ((_ extract 0 0) #b0)
+[COI check] sv ((_ extract 0 0) RTL.decoder_trigger@0) is locked as ((_ extract 0 0) #b0)
+[COI check] sv ((_ extract 0 0) RTL.do_waitirq@0) is locked as ((_ extract 0 0) #b0)
+[COI check] sv ((_ extract 7 0) RTL.cpu_state@0) is locked as ((_ extract 7 0) #b01000000)
+[COI check] sv ((_ extract 0 0) RTL.mem_do_wdata@0) is locked as ((_ extract 0 0) #b0)
+[COI check] sv ((_ extract 1 0) RTL.mem_state@0) is locked as ((_ extract 1 0) #b00)
+[COI check] sv ((_ extract 0 0) RTL.trap@0) is locked as ((_ extract 0 0) #b0)
+[COI check] input __ILA_I_inst@0 is locked as #b00000000000000000000000000110011
+[COI check] input state2744@0 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar49__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x3_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar46__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar51__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar45__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar41__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x25_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input input2674@0 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar37__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x12_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar36__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar33__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar32__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_pcpi_ready@0 is locked as #b0
+[COI check] input ____auxvar38__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_mem_rdata@0 is locked as #b00000000001010000111000000110011
+[COI check] input __VLG_I_irq@0 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar64__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.pc_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar44__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar34__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x10_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x11_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x15_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x29_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar75__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar48__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar53__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_pcpi_wr@0 is locked as #b0
+[COI check] input ILA.x9_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x26_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar43__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x1_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x30_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x16_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar42__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x2_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x13_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar57__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar40__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_pcpi_rd@0 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x4_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar47__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar52__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x7_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar61__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x27_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x14_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar90__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x31_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input input3955@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x8_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x5_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x0_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x6_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input input3542@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar66__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar68__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar69__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar39__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar71__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar72__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar74__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar76__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar77__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar78__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar79__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar80__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar81__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar82__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar83__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar94__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input input3954@0 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar89__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar67__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar96__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar50__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input input3547@0 is locked as #b11111
+[COI check] input ____auxvar93__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar92__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar73__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_pcpi_wait@0 is locked as #b0
+[COI check] input rst@0 is locked as #b0
+[COI check] input ____auxvar88__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input input2653@0 is locked as #b11111111111111111111111100000000
+[COI check] input ____auxvar87__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input clk@0 is locked as #b0
+[COI check] input ____auxvar86__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar85__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar65__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_mem_ready@0 is locked as #b0
+[COI check] input ____auxvar35__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar60__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar59__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar58__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar56__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x19_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar55__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar98__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar54__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar97__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x18_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar95__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x22_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar91__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x20_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x28_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x23_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar84__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x21_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar70__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x24_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar63__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input dummy_reset@0 is locked as #b0
+[COI check] input ILA.x17_randinit@0 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar62__recorder_init__@0 is locked as #b11111111111111111111111111111111
+[COI check] input __ILA_I_inst@1 is locked as #b00000001111000001000010010110011
+[COI check] input state2744@1 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar49__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x3_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar46__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar51__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar45__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar41__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x25_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input input2674@1 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar37__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x12_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar36__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar33__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar32__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_pcpi_ready@1 is locked as #b0
+[COI check] input ____auxvar38__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_mem_rdata@1 is locked as #b00000000001000000111110100110011
+[COI check] input __VLG_I_irq@1 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar64__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.pc_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar44__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar34__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x10_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x11_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x15_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x29_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar75__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar48__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar53__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_pcpi_wr@1 is locked as #b0
+[COI check] input ILA.x9_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x26_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar43__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x1_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x30_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x16_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar42__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x2_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x13_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar57__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar40__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_pcpi_rd@1 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x4_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar47__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar52__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x7_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar61__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x27_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x14_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar90__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x31_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input input3955@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x8_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x5_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x0_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x6_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input input3542@1 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar66__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar68__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar69__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar39__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar71__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar72__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar74__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar76__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar77__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar78__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar79__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar80__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar81__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar82__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar83__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar94__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input input3954@1 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar89__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar67__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar96__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar50__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input input3547@1 is locked as #b00000
+[COI check] input ____auxvar93__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar92__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar73__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_pcpi_wait@1 is locked as #b0
+[COI check] input rst@1 is locked as #b0
+[COI check] input ____auxvar88__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input input2653@1 is locked as #b11111111111111111111111100000000
+[COI check] input ____auxvar87__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input clk@1 is locked as #b0
+[COI check] input ____auxvar86__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar85__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar65__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_mem_ready@1 is locked as #b1
+[COI check] input ____auxvar35__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar60__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar59__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar58__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar56__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x19_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar55__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar98__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar54__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar97__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x18_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar95__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x22_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar91__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x20_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x28_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x23_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar84__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x21_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar70__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x24_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar63__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input dummy_reset@1 is locked as #b0
+[COI check] input ILA.x17_randinit@1 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar62__recorder_init__@1 is locked as #b11111111111111111111111111111111
+[COI check] input __ILA_I_inst@2 is locked as #b00000001111000001000010010110011
+[COI check] input state2744@2 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar49__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x3_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar46__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar51__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar45__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar41__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x25_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input input2674@2 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar37__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x12_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar36__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar33__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar32__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_pcpi_ready@2 is locked as #b0
+[COI check] input ____auxvar38__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_mem_rdata@2 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_irq@2 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar64__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.pc_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar44__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar34__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x10_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x11_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x15_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x29_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar75__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar48__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar53__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_pcpi_wr@2 is locked as #b0
+[COI check] input ILA.x9_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x26_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar43__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x1_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x30_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x16_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar42__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x2_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x13_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar57__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar40__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_pcpi_rd@2 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x4_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar47__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar52__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x7_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar61__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x27_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x14_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar90__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x31_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input input3955@2 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x8_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x5_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x0_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x6_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input input3542@2 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar66__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar68__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar69__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar39__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar71__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar72__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar74__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar76__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar77__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar78__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar79__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar80__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar81__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar82__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar83__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar94__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input input3954@2 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar89__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar67__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar96__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar50__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input input3547@2 is locked as #b01001
+[COI check] input ____auxvar93__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar92__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar73__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_pcpi_wait@2 is locked as #b0
+[COI check] input rst@2 is locked as #b0
+[COI check] input ____auxvar88__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input input2653@2 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar87__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input clk@2 is locked as #b0
+[COI check] input ____auxvar86__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar85__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar65__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input __VLG_I_mem_ready@2 is locked as #b1
+[COI check] input ____auxvar35__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar60__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar59__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar58__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar56__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x19_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar55__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar98__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar54__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar97__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x18_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar95__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x22_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar91__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x20_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x28_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x23_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar84__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x21_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar70__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input ILA.x24_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar63__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input dummy_reset@2 is locked as #b0
+[COI check] input ILA.x17_randinit@2 is locked as #b11111111111111111111111111111111
+[COI check] input ____auxvar62__recorder_init__@2 is locked as #b11111111111111111111111111111111
+[COI check] input __ILA_I_inst@3 is locked as #b00000000000000000000000000110011
+[COI check] input state2744@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar49__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x3_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar46__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar51__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar45__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar41__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x25_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input input2674@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar37__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x12_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar36__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar33__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar32__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input __VLG_I_pcpi_ready@3 is locked as #b0
+[COI check] input ____auxvar38__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input __VLG_I_mem_rdata@3 is locked as #b00000000000000000000000000000000
+[COI check] input __VLG_I_irq@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar64__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.pc_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar44__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar34__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x10_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x11_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x15_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x29_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar75__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar48__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar53__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input __VLG_I_pcpi_wr@3 is locked as #b0
+[COI check] input ILA.x9_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x26_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar43__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x1_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x30_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x16_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar42__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x2_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x13_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar57__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar40__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input __VLG_I_pcpi_rd@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x4_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar47__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar52__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x7_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar61__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x27_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x14_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar90__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x31_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input input3955@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x8_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x5_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x0_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x6_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input input3542@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar66__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar68__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar69__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar39__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar71__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar72__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar74__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar76__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar77__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar78__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar79__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar80__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar81__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar82__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar83__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar94__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input input3954@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar89__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar67__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar96__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar50__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input input3547@3 is locked as #b00000
+[COI check] input ____auxvar93__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar92__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar73__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input __VLG_I_pcpi_wait@3 is locked as #b0
+[COI check] input rst@3 is locked as #b0
+[COI check] input ____auxvar88__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input input2653@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar87__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input clk@3 is locked as #b0
+[COI check] input ____auxvar86__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar85__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar65__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input __VLG_I_mem_ready@3 is locked as #b0
+[COI check] input ____auxvar35__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar60__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar59__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar58__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar56__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x19_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar55__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar98__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar54__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar97__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x18_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar95__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x22_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar91__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x20_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x28_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x23_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar84__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x21_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar70__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x24_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar63__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input dummy_reset@3 is locked as #b0
+[COI check] input ILA.x17_randinit@3 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar62__recorder_init__@3 is locked as #b00000000000000000000000000000000
+[COI check] input __ILA_I_inst@4 is locked as #b00000000000000000000000000000000
+[COI check] input state2744@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar49__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x3_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar46__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar51__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar45__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar41__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x25_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input input2674@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar37__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x12_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar36__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar33__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar32__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input __VLG_I_pcpi_ready@4 is locked as #b0
+[COI check] input ____auxvar38__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input __VLG_I_mem_rdata@4 is locked as #b00000000000000000000000000000000
+[COI check] input __VLG_I_irq@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar64__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.pc_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar44__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar34__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x10_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x11_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x15_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x29_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar75__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar48__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar53__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input __VLG_I_pcpi_wr@4 is locked as #b0
+[COI check] input ILA.x9_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x26_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar43__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x1_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x30_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x16_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar42__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x2_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x13_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar57__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar40__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input __VLG_I_pcpi_rd@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x4_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar47__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar52__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x7_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar61__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x27_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x14_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar90__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x31_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input input3955@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x8_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x5_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x0_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x6_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input input3542@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar66__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar68__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar69__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar39__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar71__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar72__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar74__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar76__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar77__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar78__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar79__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar80__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar81__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar82__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar83__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar94__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input input3954@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar89__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar67__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar96__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar50__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input input3547@4 is locked as #b00000
+[COI check] input ____auxvar93__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar92__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar73__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input __VLG_I_pcpi_wait@4 is locked as #b0
+[COI check] input rst@4 is locked as #b0
+[COI check] input ____auxvar88__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input input2653@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar87__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input clk@4 is locked as #b0
+[COI check] input ____auxvar86__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar85__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar65__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input __VLG_I_mem_ready@4 is locked as #b0
+[COI check] input ____auxvar35__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar60__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar59__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar58__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar56__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x19_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar55__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar98__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar54__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar97__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x18_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar95__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x22_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar91__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x20_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x28_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x23_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar84__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x21_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar70__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input ILA.x24_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar63__recorder_init__@4 is locked as #b00000000000000000000000000000000
+[COI check] input dummy_reset@4 is locked as #b0
+[COI check] input ILA.x17_randinit@4 is locked as #b00000000000000000000000000000000
+[COI check] input ____auxvar62__recorder_init__@4 is locked as #b00000000000000000000000000000000
+COI check passed
+sat
+b0
+Trace written to cex.vcd
+Datapath reg: 59 , aux var removal: 0, COI in range: 18
+PROPERTY:(bvnot (bvand (bvnot trap) (bvand rvfi_valid (bvand (bvnot mem_valid) (bvand (ite (= #b00 mem_state) #b1 #b0) (bvand (bvnot mem_do_wdata) (bvand mem_do_rinst (bvand (bvnot mem_do_rdata) (bvand (bvnot latched_store) (bvand (bvnot latched_compr) (bvand latched_branch (bvand (bvnot do_waitirq) (bvand (bvnot decoder_trigger) (bvand (ite (= #b01000000 cpu_state) #b1 #b0) dbg_valid_insn))))))))))))))
+Solving property: (bvnot (bvand (bvnot trap) (bvand rvfi_valid (bvand (bvnot mem_valid) (bvand (ite (= #b00 mem_state) #b1 #b0) (bvand (bvnot mem_do_wdata) (bvand mem_do_rinst (bvand (bvnot mem_do_rdata) (bvand (bvnot latched_store) (bvand (bvnot latched_compr) (bvand latched_branch (bvand (bvnot do_waitirq) (bvand (bvnot decoder_trigger) (bvand (ite (= #b01000000 cpu_state) #b1 #b0) dbg_valid_insn))))))))))))))
+The current step in the PDR is: 0
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+The current step in the PDR is: 1
+The current step in the PDR is: 2
+Blocking phase at frame 2
+.Propagation phase at frame 2
+Failed to reset solver (underlying solver must not support it). Disabling solver resets for rest of run.
+0 1 0 
+The current step in the PDR is: 3
+Blocking phase at frame 3
+...Propagation phase at frame 3
+0 2 3 1 
+The current step in the PDR is: 4
+Blocking phase at frame 4
+..Propagation phase at frame 4
+0 2 6 3 3 
+The current step in the PDR is: 5
+Blocking phase at frame 5
+...Propagation phase at frame 5
+0 3 5 11 19 21 
+The current step in the PDR is: 6
+Blocking phase at frame 6
+..Propagation phase at frame 6
+0 3 6 11 23 13 25 
+The current step in the PDR is: 7
+Blocking phase at frame 7
+.Reachable, removing filter, after: [rm 0V][Keep 18 V][rm 59V]
+Now work on PROPERTY:(bvnot (bvand (bvnot trap) (bvand rvfi_valid (bvand (bvnot mem_valid) (bvand (ite (= #b00 mem_state) #b1 #b0) (bvand (bvnot mem_do_wdata) (bvand mem_do_rinst (bvand (bvnot mem_do_rdata) (bvand (bvnot latched_store) (bvand (bvnot latched_compr) (bvand latched_branch (bvand (bvnot do_waitirq) (bvand (bvnot decoder_trigger) (bvand (ite (= #b01000000 cpu_state) #b1 #b0) dbg_valid_insn))))))))))))))
+Solving property: (bvnot (bvand (bvnot trap) (bvand rvfi_valid (bvand (bvnot mem_valid) (bvand (ite (= #b00 mem_state) #b1 #b0) (bvand (bvnot mem_do_wdata) (bvand mem_do_rinst (bvand (bvnot mem_do_rdata) (bvand (bvnot latched_store) (bvand (bvnot latched_compr) (bvand latched_branch (bvand (bvnot do_waitirq) (bvand (bvnot decoder_trigger) (bvand (ite (= #b01000000 cpu_state) #b1 #b0) dbg_valid_insn))))))))))))))
+The current step in the PDR is: 0
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+The current step in the PDR is: 1
+The current step in the PDR is: 2
+Blocking phase at frame 2
+.Propagation phase at frame 2
+Failed to reset solver (underlying solver must not support it). Disabling solver resets for rest of run.
+0 1 0 
+The current step in the PDR is: 3
+Blocking phase at frame 3
+..Propagation phase at frame 3
+0 2 2 1 
+The current step in the PDR is: 4
+Blocking phase at frame 4
+..Propagation phase at frame 4
+0 2 4 2 3 
+The current step in the PDR is: 5
+Blocking phase at frame 5
+.Reachable, removing filter, after: [rm 0V][Keep 18 V]
+Now work on PROPERTY:(bvnot (bvand (bvnot trap) (bvand rvfi_valid (bvand (ite (= #b00 ((_ extract 1 0) reg_pc)) #b1 #b0) (bvand (bvand (bvnot mem_valid) (bvand (ite (= #b00 mem_state) #b1 #b0) (bvand (bvnot mem_do_wdata) (bvand mem_do_rinst (bvand (bvnot mem_do_rdata) (bvand (bvnot latched_store) (bvand (bvand (bvnot latched_compr) (bvand latched_branch (bvand (bvnot do_waitirq) (bvand (bvnot decoder_trigger) (bvand dbg_valid_insn (ite (and (= #b00000000000000000000000000000001 |cpuregs[9]|) (= #b01000000 cpu_state)) #b1 #b0)))))) (ite (= latched_rd #b01001) #b1 #b0)))))))) (ite (= #b00 ((_ extract 1 0) reg_next_pc)) #b1 #b0))))))
+Solving property: (bvnot (bvand (bvnot trap) (bvand rvfi_valid (bvand (ite (= #b00 ((_ extract 1 0) reg_pc)) #b1 #b0) (bvand (bvand (bvnot mem_valid) (bvand (ite (= #b00 mem_state) #b1 #b0) (bvand (bvnot mem_do_wdata) (bvand mem_do_rinst (bvand (bvnot mem_do_rdata) (bvand (bvnot latched_store) (bvand (bvand (bvnot latched_compr) (bvand latched_branch (bvand (bvnot do_waitirq) (bvand (bvnot decoder_trigger) (bvand dbg_valid_insn (ite (and (= |cpuregs[9]| #b00000000000000000000000000000001) (= #b01000000 cpu_state)) #b1 #b0)))))) (ite (= latched_rd #b01001) #b1 #b0)))))))) (ite (= #b00 ((_ extract 1 0) reg_next_pc)) #b1 #b0))))))
+The current step in the PDR is: 0
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+The current step in the PDR is: 1
+The current step in the PDR is: 2
+Blocking phase at frame 2
+.Propagation phase at frame 2
+Failed to reset solver (underlying solver must not support it). Disabling solver resets for rest of run.
+0 1 0 
+The current step in the PDR is: 3
+Blocking phase at frame 3
+.....Propagation phase at frame 3
+0 2 5 1 
+The current step in the PDR is: 4
+Blocking phase at frame 4
+...Propagation phase at frame 4
+0 2 7 4 1 
+The current step in the PDR is: 5
+Blocking phase at frame 5
+..WARNING : advancing iter from 0 to 81
+2023-04-21 20:19:19.809909 ---> running QED iter #81
+2023-04-21 20:19:23.551113 ---> running cex validation iter #81
+2023-04-21 20:19:35.841103 ---> envinv size is strange! 204048 ---> 204048

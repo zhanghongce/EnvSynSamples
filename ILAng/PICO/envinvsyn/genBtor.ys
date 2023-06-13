@@ -9,4 +9,5 @@ memory -nordff;
 flatten
 setundef -undriven -expose;
 sim -clock clk -resetn resetn -rstlen 1 -n 1 -w picorv32
-write_btor -s design.btor
+write_btor -s -x -i design.info design.btor
+write_verilog design.v

@@ -200,7 +200,3 @@
 (define-fun |value.__auxvar97__recorder| ((|RTL__DOT__dbg_reg_x9| (_ BitVec 32))) (_ BitVec 32) |RTL__DOT__dbg_reg_x9|)
 (define-fun |cond.__auxvar98__recorder| ((|__START__| (_ BitVec 1)) (|RTL__DOT__rvfi_valid| (_ BitVec 1)) (|__auxvar98__recorder_sn_condmet| (_ BitVec 1)) (|__STARTED__| (_ BitVec 1))) Bool (and (and (or (not (= |__START__| #b0)) (not (= |__STARTED__| #b0))) (not (not (= |__auxvar98__recorder_sn_condmet| #b0)))) (not (= (bvand |RTL__DOT__rvfi_valid| |__STARTED__|) #b0))))
 (define-fun |value.__auxvar98__recorder| ((|RTL__DOT__rvfi_insn| (_ BitVec 32))) (_ BitVec 32) |RTL__DOT__rvfi_insn|)
-
-
-(define-fun |cond.__ILA_I_inst| ((|__START__| (_ BitVec 1))) Bool (not (= |__START__| #b0)))
-(define-fun |value.__ILA_I_inst| ((|__auxvar98__recorder| (_ BitVec 32))) (_ BitVec 32) |__auxvar98__recorder|)

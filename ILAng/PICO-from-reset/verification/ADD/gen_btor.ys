@@ -9,4 +9,4 @@ memory ;
 flatten
 setundef -undriven -expose;
 sim -clock clk -reset rst -rstlen 1 -n 1 -w wrapper
-write_btor -x -s problem.btor2
+write_btor  -s problem.btor2
